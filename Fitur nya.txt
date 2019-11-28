@@ -40,11 +40,11 @@ Fitur :
         - Update (Admin)
 
 - Presensi
-    - Guru
     - Siswa
         - Tambah (Guru, Admin)
+        - Update (Guru, Admin)
         - Melihat
 
 - Feedback
-    - Menulis Feedback
-    - Membaca Feedback
+    - Menulis Feedback (Siswa, Guru, Admin)
+    - Membaca Feedback ()
