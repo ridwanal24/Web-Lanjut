@@ -1,1 +1,17 @@
-Huhuhuh
+Fitur : 
+- Login
+    - Siswa
+    - Guru
+    - Admin
+
+- Data
+    - Siswa
+    - Guru
+
+- Update
+    - Data Siswa
+    - Data Guru
+
+- Lihat Jadwal
+    - Guru
+    - Siswa 
