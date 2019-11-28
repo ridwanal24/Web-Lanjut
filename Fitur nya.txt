@@ -11,7 +11,10 @@ Fitur :
 - Update
     - Data Siswa
     - Data Guru
+    - Data Admin
 
 - Lihat Jadwal
     - Guru
     - Siswa 
+
+- 
