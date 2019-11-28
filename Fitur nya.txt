@@ -30,8 +30,10 @@ Fitur :
 - Jadwal
     - Guru
         - Melihat (Guru, Siswa, Admin)
-        - 
-    - Siswa 
+        - Update (Admin)
+    - Siswa
+        - Melihat (Guru, Siswa, Admin)
+        - Update (Admin)
 
 - Presensi
     - Guru
