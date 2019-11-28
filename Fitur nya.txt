@@ -1,4 +1,5 @@
 Fitur : 
+
 - Login
     - Siswa
         * NIS
@@ -30,7 +31,7 @@ Fitur :
         - Melihat (Admin)
         - Update (Admin)
         - Delete (Admin)
-        
+
 - Jadwal
     - Guru
         - Melihat (Guru, Siswa, Admin)
