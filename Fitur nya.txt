@@ -1,22 +1,41 @@
 Fitur : 
 - Login
     - Siswa
-        * 
+        * NIS
+        * Password
     - Guru
+        * NIK
+        * Password
     - Admin
+        * Username
+        * Password
 
 - Data
     - Siswa
+        - Tambah (Admin)
+        - Melihat (Admin, Siswa, Guru)
+        - Update (Siswa, Admin)
+        - Delete (Admin)
     - Guru
-
-- Update
-    - Data Siswa
-    - Data Guru
-    - Data Admin
-
-- Lihat Jadwal
+        - Tambah (Admin)
+        - Melihat (Admin, Siswa, Guru)
+        - Update (Guru, Admin)
+        - Delete (Admin)
+    - Admin
+        - Tambah (Admin)
+        - Melihat (Admin)
+        - Update (Admin)
+        - Delete (Admin)
+        
+- Jadwal
     - Guru
+        - Melihat (Guru, Siswa, Admin)
+        - 
     - Siswa 
+
+- Presensi
+    - Guru
+    - Siswa
 
 - Feedback
     - Menulis Feedback
