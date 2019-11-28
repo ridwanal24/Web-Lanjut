@@ -12,16 +12,20 @@ Fitur :
 
 - Data
     - Siswa
+        - Pencarian (Admin, Siswa, Guru)
         - Tambah (Admin)
         - Melihat (Admin, Siswa, Guru)
+            - Pencarian (Admin, Siswa, Guru)
         - Update (Siswa, Admin)
         - Delete (Admin)
     - Guru
         - Tambah (Admin)
         - Melihat (Admin, Siswa, Guru)
+            - Pencarian (Admin, Siswa, Guru)
         - Update (Guru, Admin)
         - Delete (Admin)
     - Admin
+        - Pencarian (Admin)
         - Tambah (Admin)
         - Melihat (Admin)
         - Update (Admin)
@@ -38,6 +42,8 @@ Fitur :
 - Presensi
     - Guru
     - Siswa
+        - Tambah (Guru, Admin)
+        - Melihat
 
 - Feedback
     - Menulis Feedback
