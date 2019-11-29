@@ -49,3 +49,7 @@ Fitur :
 - Feedback
     - Menulis Feedback (Siswa, Guru, Admin)
     - Membaca Feedback ()
+
+#Keterangan
+    * Variabel
+  (...) User
