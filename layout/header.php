@@ -43,8 +43,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Admin</a>
+          <a class="dropdown-item" href="#">Guru</a>
+          <a class="dropdown-item" href="#">Siswa</a>
           </li>
         </ul>
       </div>
