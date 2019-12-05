@@ -1,8 +1,5 @@
 <?php
-include 'layout/header.php';
-?>
-<?php
-	 
+	include 'koneksi.php';	 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
@@ -12,17 +9,13 @@ include 'layout/header.php';
 	if($cek > 0){
 		session_start();
 		
-		
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "admin";
 		//$_SESSION['loginType'];
+		echo $_SESSION['username'];
 		header("location:dashboard.php");
 	}else{
 		header("location:login_admin.php");	
 	}
 	
-?>
-
-<?php
-include 'layout/footer.php';
 ?>

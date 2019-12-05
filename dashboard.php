@@ -1,5 +1,6 @@
 <?php
-if (($_SESSION['username'])=="admin") {
+session_start();
+if (!isset($_SESSION['status'])&&$_SESSION['status']=="admin") {
 	echo "Silahkan login dulu ";
 }else{
 
