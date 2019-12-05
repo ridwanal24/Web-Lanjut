@@ -1,26 +1,22 @@
 <?php
-include 'layout/header.php';
-?>
-<?php
-	 
-	$username = $_POST['username'];
-	$password = ($_POST['password']);
+	include 'koneksi.php';	 
+	$nip = $_POST['nip'];
+	$password = $_POST['password'];
 	
-	$login = mysql_query("select * from admin where username='$username' and password='$password'");
+	$login = mysql_query("select * from guru where nip='$nip' and pass='$password'");
 	$cek = mysql_num_rows($login);
-	
+	$row=mysql_fetch_array($login);
+
 	if($cek > 0){
 		session_start();
-		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		$_SESSION['loginType'];
-		header("location:dashboard.php");
+		
+		$_SESSION['username'] = $row['nama'];
+		$_SESSION['status'] = "guru";
+		//$_SESSION['loginType'];
+
+		header("location:home.php");
 	}else{
-		header("location:dashboard.php");	
+		header("location:login_guru.php");	
 	}
 	
-?>
-
-<?php
-include 'layout/footer.php';
 ?>

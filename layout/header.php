@@ -1,6 +1,5 @@
 <?php
   include 'koneksi.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +43,16 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">
+                Services
+            </a>
           </li>
+              <?php
+                if (!isset($_SESSION['status'])) {
+                  # code...
+                
+              ?>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,6 +60,21 @@
           <a class="dropdown-item" href="login_guru.php">Guru</a>
           <a class="dropdown-item" href="login_siswa.php">Siswa</a>
           </li>
+          <?php }
+            else{
+              ?>
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php
+            echo $_SESSION['username'];
+            ?>
+              
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="logout.php">Keluar</a>
+          </li>
+              <?php
+            }
+          ?>
         </ul>
       </div>
     </div>
