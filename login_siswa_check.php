@@ -1,8 +1,7 @@
 <?php
 include 'layout/header.php';
 ?>
-<?php
-	 
+<?php	 
 	$username = $_POST['username'];
 	$password = ($_POST['password']);
 	

@@ -10,13 +10,14 @@
 	if($cek > 0){
 		session_start();
 		
+		/*Ambil data nama guru*/
 		$_SESSION['username'] = $row['nama'];
+		/*Status Login*/
 		$_SESSION['status'] = "guru";
-		//$_SESSION['loginType'];
-
+		/*Redirect Home*/
 		header("location:home.php");
 	}else{
-		header("location:login_guru.php");	
+		
 	}
 	
 ?>

@@ -47,10 +47,10 @@
                 Services
             </a>
           </li>
+              
+              <!-- Change Login Menu to User's Name -->
               <?php
                 if (!isset($_SESSION['status'])) {
-                  # code...
-                
               ?>
 
           <li class="nav-item dropdown">
@@ -75,6 +75,8 @@
               <?php
             }
           ?>
+          <!-- End Of Change User's Name -->
+        
         </ul>
       </div>
     </div>

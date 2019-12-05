@@ -11,11 +11,10 @@
 		
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "admin";
-		//$_SESSION['loginType'];
 		echo $_SESSION['username'];
 		header("location:dashboard.php");
 	}else{
-		header("location:login_admin.php");	
+		
 	}
 	
 ?>
