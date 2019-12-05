@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2019 at 05:19 PM
+-- Generation Time: Dec 05, 2019 at 03:53 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,6 +19,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_sekolahmu`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `username` varchar(100) NOT NULL,
+  `pass` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `pass`) VALUES
+('admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -99,6 +117,13 @@ CREATE TABLE IF NOT EXISTS `guru` (
   `idJabatan` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`nip`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `pass`, `idJabatan`) VALUES
+(100001, 'Muhammad Ruslan', 'Jalan Kuningan No. 2 Depok Sleman', 'L', '1975-11-05 00:00:00', 'Bantul', 1234, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -108,7 +133,14 @@ CREATE TABLE IF NOT EXISTS `guru` (
 CREATE TABLE IF NOT EXISTS `jabatan` (
 `idJabatan` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jabatan`
+--
+
+INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
+(1, 'Kepala Sekolah');
 
 -- --------------------------------------------------------
 
@@ -238,6 +270,12 @@ CREATE TABLE IF NOT EXISTS `tugasmapel` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+ ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `agenda`
@@ -374,7 +412,7 @@ MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
-MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `jurusan`
 --
