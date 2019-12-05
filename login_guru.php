@@ -13,7 +13,7 @@ include 'layout/header.php';
 					
 					<input type="text" class="form-control" name="nip" placeholder="Nomor Induk Pegawai" id="nip">
 				<br>	
-					<input type="text" class="form-control" name="password" placeholder="Password" id="password">
+					<input type="password" class="form-control" name="password" placeholder="Password" id="password">
 
 				</div>
 				<br>

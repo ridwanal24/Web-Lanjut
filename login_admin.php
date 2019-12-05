@@ -13,7 +13,7 @@ include 'layout/header.php';
 					
 					<input type="text" class="form-control" name="username" placeholder="Username" id="username">
 				<br>	
-					<input type="text" class="form-control" name="password" placeholder="Password" id="password">
+					<input type="password" class="form-control" name="password" placeholder="Password" id="password">
 
 				</div>
 				<br>
