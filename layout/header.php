@@ -68,7 +68,9 @@
               
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
           <a class="dropdown-item" href="logout.php">Keluar</a>
+          
           </li>
               <?php
             }
