@@ -12,7 +12,7 @@
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "admin";
 		echo $_SESSION['username'];
-		header("location:dashboard.php");
+		header("location:dashboard/");
 	}else{
 		
 	}
