@@ -7,7 +7,7 @@ include 'layout/header.php';
 	<div class="row">
 		<div class="col-4"></div>
 		<div class="col-4">
-			<h1 class="text-center">Login Admin</h1>
+			<h1 class="text-center">Login Siswa</h1>
 			<br><br>
 			<form action="login_siswa_check.php" method="post">
 				<div class="form-group">
