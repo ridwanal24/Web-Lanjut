@@ -1,5 +1,9 @@
+
+
 <?php
 session_start();
+include '../layout/header.php';
+
 if (!isset($_SESSION['status'])&&$_SESSION['status']=="admin") {
 	echo "Silahkan login dulu ";
 }else{
@@ -23,4 +27,5 @@ if (!isset($_SESSION['status'])&&$_SESSION['status']=="admin") {
 </div>
 <?php
 }
+include '../layout/footer.php';
 ?>
