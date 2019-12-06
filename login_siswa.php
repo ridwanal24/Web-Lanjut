@@ -13,12 +13,12 @@ include 'layout/header.php';
 				<div class="form-group">
 					
 					<input type="text" class="form-control" name="nis" placeholder="Nomor Induk Siswa" id="nis">
-				<br>	
+					<br>	
 					<input type="password" class="form-control" name="password" placeholder="Password" id="password">
 
 				</div>
 				<br>
-			<center><input type="submit" class="text-center btn btn-primary" name="submit" value="Login"></center>	
+				<center><input type="submit" class="text-center btn btn-primary" name="submit" value="Login"></center>	
 			</form>
 		</div>
 		<div class="col-4"></div>

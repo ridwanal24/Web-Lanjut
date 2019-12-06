@@ -31,35 +31,35 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <?php
-            if (isset($_SESSION['username'])) {
-              ?>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          
-              
-              <!-- Change Login Menu to User's Name -->
-              
-<?php
-            if (isset($_SESSION['username'])) {
-              ?>
-             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      if (isset($_SESSION['username'])) {
+        ?>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
             
             
-            <?php echo $_SESSION['username'];
-            }
-            ?>
+            <!-- Change Login Menu to User's Name -->
+            
+            <?php
+            if (isset($_SESSION['username'])) {
+              ?>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  
+                  
+                  <?php echo $_SESSION['username'];
+                }
+                ?>
+                
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                <a class="dropdown-item" href="logout.php">Keluar</a>
+                
+              </li>
+              <!-- End Of Change User's Name -->
               
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <a class="dropdown-item" href="logout.php">Keluar</a>
-          
-          </li>
-          <!-- End Of Change User's Name -->
-        
-        </ul>
+            </ul>
+          </div>
+        <?php } ?>
       </div>
-    <?php } ?>
-    </div>
-  </nav>
+    </nav>

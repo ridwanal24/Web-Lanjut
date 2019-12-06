@@ -1,20 +1,20 @@
 <?php
-	include 'koneksi.php';	 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+include 'koneksi.php';	 
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$login = mysql_query("select * from admin where username='$username' and pass='$password'");
+$cek = mysql_num_rows($login);
+
+if($cek > 0){
+	session_start();
 	
-	$login = mysql_query("select * from admin where username='$username' and pass='$password'");
-	$cek = mysql_num_rows($login);
+	$_SESSION['username'] = $username;
+	$_SESSION['status'] = "admin";
+	echo $_SESSION['username'];
+	header("location:dashboard/");
+}else{
 	
-	if($cek > 0){
-		session_start();
-		
-		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "admin";
-		echo $_SESSION['username'];
-		header("location:dashboard/");
-	}else{
-		
-	}
-	
+}
+
 ?>

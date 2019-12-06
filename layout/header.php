@@ -42,42 +42,42 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-                Services
+              Services
             </a>
           </li>
-              
-              <!-- Change Login Menu to User's Name -->
-              <?php
-                if (!isset($_SESSION['status'])) {
-              ?>
+          
+          <!-- Change Login Menu to User's Name -->
+          <?php
+          if (!isset($_SESSION['status'])) {
+            ?>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="login_admin.php">Admin</a>
-          <a class="dropdown-item" href="login_guru.php">Guru</a>
-          <a class="dropdown-item" href="login_siswa.php">Siswa</a>
-          </li>
-          <?php }
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="login_admin.php">Admin</a>
+                <a class="dropdown-item" href="login_guru.php">Guru</a>
+                <a class="dropdown-item" href="login_siswa.php">Siswa</a>
+              </li>
+            <?php }
             else{
               ?>
-             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php
-            echo $_SESSION['username'];
-            ?>
-              
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <a class="dropdown-item" href="logout.php">Keluar</a>
-          
-          </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php
+                echo $_SESSION['username'];
+                ?>
+                
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                <a class="dropdown-item" href="logout.php">Keluar</a>
+                
+              </li>
               <?php
             }
-          ?>
-          <!-- End Of Change User's Name -->
-        
-        </ul>
+            ?>
+            <!-- End Of Change User's Name -->
+            
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
