@@ -30,28 +30,24 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <?php
+            if (isset($_SESSION['username'])) {
+              ?>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           
               
               <!-- Change Login Menu to User's Name -->
-              <?php
-                if (!isset($_SESSION['status'])) {
-              ?>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="login_admin.php">Admin</a>
-          <a class="dropdown-item" href="login_guru.php">Guru</a>
-          <a class="dropdown-item" href="login_siswa.php">Siswa</a>
-          </li>
-          <?php }
-            else{
+              
+<?php
+            if (isset($_SESSION['username'])) {
               ?>
              <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php
-            echo $_SESSION['username'];
+            <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            
+            
+            <?php echo $_SESSION['username'];
+            }
             ?>
               
             </a>
@@ -60,12 +56,10 @@
           <a class="dropdown-item" href="logout.php">Keluar</a>
           
           </li>
-              <?php
-            }
-          ?>
           <!-- End Of Change User's Name -->
         
         </ul>
       </div>
+    <?php } ?>
     </div>
   </nav>
