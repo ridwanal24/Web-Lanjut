@@ -1,19 +1,21 @@
 <?php
 session_start();
+include '../layout/header.php';
 if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
   echo "<center>Untuk mengakses halaman ini, Anda harus login <br>";
   echo "<a href=index.php><b>LOGIN</b></a></center>";
 }
 else{
 ?>
-<html lang="en">
+<!-- <html lang="en">
 <head>
  <meta charset="UTF-8">
  <title>Data Siswa Sekolahku</title>
  <link rel="stylesheet" href="css/guru.css">
 
 </head>
-<body>
+<body> -->
+
 <form action="guru_aksi_input.php" class="content" method="post">
 		<h1 align="center">Input Data Guru</h1>
 		<table border="0">

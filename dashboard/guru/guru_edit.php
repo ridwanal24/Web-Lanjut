@@ -15,6 +15,7 @@ else{
 
 </head>
 <body> -->
+	<br>
 	<form action="guru_aksi_edit.php" method="post" enctype="multipart/form-data">
 <!-- 	<form action="guru_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
 		<?php 
@@ -23,6 +24,7 @@ else{
 		$query=mysql_query("select * from guru where nip='$nip'");
 		?>
 		<h1 align="center">Edit Data Siswa</h1>
+		<br>
 		<table border="0">
 		<?php
 		while($row=mysql_fetch_array($query)){
@@ -95,11 +97,13 @@ else{
 		</tr>
 		<td></td>
 		<td></td>
-		<td><input type="submit" class="btn" value="Update" /></td>
+		
+		<td><input type="submit" class="btn btn-primary" value="Update" /></td>
 		</tr>
 		<?php } ?>
 		</table>
 	</form>
+	<br>
 
 <!-- </body>
 </html> -->

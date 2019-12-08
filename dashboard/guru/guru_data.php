@@ -26,7 +26,7 @@ else{
 						<div class="row">
 							<div class="col-md-8"></div>
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Guru" /></center></div>
-							<div class="col-md-2"><center><a href="cetak_guru.php"><input type="button" class="btn bg-primary btn-primary" value="Download Excel" /></a></center></div>
+							<div class="col-md-2"><center><a href="cetak_guru.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 						</div>
 						
 						<br>
