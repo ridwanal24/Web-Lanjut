@@ -1,4 +1,6 @@
 <?php
+session_start();
+include 'koneksi.php';
 include 'layout/header.php';
 ?>
 
