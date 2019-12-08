@@ -9,26 +9,31 @@ if ((!isset($_SESSION['status'])) && ($_SESSION['status']!="admin")) {
 	<?php
 }else if ((isset($_SESSION['status'])) && ($_SESSION['status']=="admin")){
 	?>
+
 	<div class="container-fluid">
-		<br>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-1"></div>
+			<div class="text-center col-md-10">
 				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-action active">
-						<center><h5>Dashboard Admin</h5></center>
+					<a href="#" class="list-group-item list-group-item-action disabled active">
+						Dashboard Admin
 					</a>
-					<a href="guru/index.php" class="list-group-item list-group-item-action">Kelola Data Guru</a>
+					<a href="guru/" class="list-group-item list-group-item-action">Kelola Data Guru</a>
 					<a href="#" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
-					<a href="#" class="list-group-item list-group-item-action">Kelola Daftar Fasilitas</a>
-					<a href="#" class="list-group-item list-group-item-action">Kelola Apapun Itu</a>
+					<a href="#" class="list-group-item list-group-item-action">Kelola Data Admin</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
+					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
 				</div>
 			</div>
-			<div class="col-md-8">			
-			
-			</div>
+			<div class="col-md-1"></div>
 		</div>
 	</div>
-	<br>
+
 	<?php
 }else{
 	echo "<center>Silahkan login sebagai admin </center>";

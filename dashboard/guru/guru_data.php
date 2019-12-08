@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../layout/header.php';
-if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
+if (empty($_SESSION['username']) AND empty($_SESSION['status'])) {
   echo "<center>Untuk mengakses halaman ini, Anda harus login <br>";
   echo "<a href=index.php><b>LOGIN</b></a></center>";
 }
@@ -14,9 +14,11 @@ else{
  <link rel="stylesheet" href="css/guru.css">
 </head>
 <body> -->
+	<br>
 	<form action="guru_tambah.php">
 	<!-- <form action="guru_tambah.php" class="content"> -->
-		<input type="submit" class="btn btn-primary" value="Tambah Guru" />
+		<center><input type="submit" class="btn btn-primary" value="Tambah Guru" /></center>
+		<br>
 		<table width="950" border="1" align="center" cellpadding="2" cellspacing="1" bgcolor="#000000" celpading="2" celspacing="1" >
 		<tr class="bg-light">
 		<!-- <tr bgcolor="#38FE03"> -->
@@ -109,9 +111,10 @@ else{
 			 </td>
 			 </tr>
 		</table>
-		<a href="cetak_guru.php"><input type="button" class="btn bg-primary btn-primary" value="Download Excel" /></a>
+		<br>
+		<center><a href="cetak_guru.php"><input type="button" class="btn bg-primary btn-primary" value="Download Excel" /></a></center>
 	</form>
-
+<br>
 <!-- </body>
 </html> -->
 <?php }

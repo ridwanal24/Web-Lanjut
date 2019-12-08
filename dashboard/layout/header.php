@@ -65,6 +65,7 @@
       </div>
     </nav>
  <!-- Batas -->
+ <!-- 
     <div class="container-fluid">
     <br>
     <div class="row">
@@ -79,4 +80,4 @@
           <a href="#" class="list-group-item list-group-item-action">Kelola Apapun Itu</a>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9"> -->
