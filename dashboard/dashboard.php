@@ -3,7 +3,7 @@ session_start();
 include 'layout/header.php';
 
 if (!isset($_SESSION['status'])) {
-	echo "Silahkan login dulu ";
+	echo "<center>Silahkan login dulu</center>";
 }else{
 	?>
 	<div class="container-fluid">
