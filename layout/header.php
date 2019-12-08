@@ -42,10 +42,15 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              Services
+              Daftar Guru
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Daftar Siswa
+            </a>
+          </li>
+
           <!-- Change Login Menu to User's Name -->
           <?php
           if (!isset($_SESSION['status'])) {
