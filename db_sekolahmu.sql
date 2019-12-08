@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2019 at 03:42 PM
+-- Generation Time: Dec 08, 2019 at 09:38 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -98,7 +98,17 @@ CREATE TABLE IF NOT EXISTS `galeri` (
 `idGaleri` int(11) NOT NULL,
   `pathVideo` varchar(100) DEFAULT NULL,
   `pathImg` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2147483647 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`idGaleri`, `pathVideo`, `pathImg`) VALUES
+(660100001, NULL, './assets/img/galeri/classroom.jpg'),
+(660100002, NULL, './assets/img/galeri/high_school.jpg'),
+(660100003, NULL, './assets/img/galeri/computer_eng.jpg'),
+(660100004, NULL, './assets/img/galeri/electrician.jpg');
 
 -- --------------------------------------------------------
 
@@ -508,7 +518,7 @@ MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2147483647;
 --
 -- AUTO_INCREMENT for table `jabatan`
 --
