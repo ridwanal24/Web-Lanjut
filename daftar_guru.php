@@ -9,7 +9,7 @@ if (isset( $_SESSION['status'])) {
 
 <div class="container-fluid">
 	<br>
-	<center><p class="h1">DAFTAR SISWA</p></center>
+	<center><p class="h1">DAFTAR GURU</p></center>
 	<br>
 
 	<br>
