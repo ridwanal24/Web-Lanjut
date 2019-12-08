@@ -1,10 +1,13 @@
 <?php
 session_start();
 include 'layout/header.php';
-
-if (!isset($_SESSION['status'])) {
-	echo "<center>Silahkan login dulu</center>";
-}else{
+echo "<br>";
+if ((!isset($_SESSION['status'])) && ($_SESSION['status']!="admin")) {
+	echo "<center>Silahkan login sebagai admin </center>";
+	?>
+	<center><a href="../index.php"><button type="button" class="btn btn-primary text-light">LOGIN</button></a></center>
+	<?php
+}else if ((isset($_SESSION['status'])) && ($_SESSION['status']=="admin")){
 	?>
 	<div class="container-fluid">
 		<br>
@@ -26,6 +29,12 @@ if (!isset($_SESSION['status'])) {
 	</div>
 	<br>
 	<?php
+}else{
+	echo "<center>Silahkan login sebagai admin </center>";
+	?>
+	<center><a href="../index.php"><button type="button" class="btn btn-primary text-light">LOGIN</button></a></center>
+	<?php
 }
+echo "<br>";
 include 'layout/footer.php';
 ?>
