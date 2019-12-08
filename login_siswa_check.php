@@ -1,26 +1,23 @@
 <?php
-include 'koneksi.php';
-include 'layout/header.php';
-?>
-<?php	 
-$username = $_POST['username'];
-$password = ($_POST['password']);
+include 'koneksi.php';	 
+$nis = $_POST['nis'];
+$password = $_POST['password'];
 
-$login = mysql_query("select * from admin where username='$username' and password='$password'");
+$login = mysql_query("select * from siswa where nis='$nis' and pass='$password'");
 $cek = mysql_num_rows($login);
+$row=mysql_fetch_array($login);
 
 if($cek > 0){
 	session_start();
-	$_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	$_SESSION['loginType'];
-	header("location:dashboard.php");
+	
+	/*Ambil data nama siswa*/
+	$_SESSION['username'] = $row['nama'];
+	/*Status Login*/
+	$_SESSION['status'] = "siswa";
+	/*Redirect Home*/
+	header("location:home.php");
 }else{
-	header("location:dashboard.php");	
+	
 }
 
-?>
-
-<?php
-include 'layout/footer.php';
 ?>
