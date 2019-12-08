@@ -22,7 +22,6 @@ include 'layout/header.php';
             while($rows = mysqli_fetch_array($sth)) {
                 $img_src = $rows['pathImg'];
                 ?>
-
                 <img src="<?php echo $img_src;?>" alt="" width="500" height="300"/>
                 <?php
                     }
