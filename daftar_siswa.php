@@ -18,17 +18,17 @@ include 'layout/header.php';
 								<label class="text-light" for="kelas">Kelas</label>
 								<select id="kelas" class="form-control">
 									<option selected>Pilih Kelas...</option>
-									<option>10</option>
-									<option>11</option>
-									<option>12</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
 								</select>
 							</div>
 							<div class="form-group col-md-5">
 								<label class="text-light" for="jurusan">Jurusan</label>
 								<select id="jurusan" class="form-control">
 									<option selected>Pilih Jurusan...</option>
-									<option>Komputer Jaringan</option>
-									<option>Instalasi Pemanfaatan Tenaga Listrik</option>
+									<option value="1">Komputer Jaringan</option>
+									<option value="2">Instalasi Pemanfaatan Tenaga Listrik</option>
 								</select>
 							</div>
 
@@ -38,7 +38,7 @@ include 'layout/header.php';
 							</div>
 						</div>
 					</form>
-					<!-- End Form Pilihan Kelas --> 
+					<!-- End of Form Pilihan Kelas --> 
 				
 		</div>
 		<div class="col-md-2"></div>

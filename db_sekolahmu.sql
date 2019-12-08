@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2019 at 03:53 PM
+-- Generation Time: Dec 08, 2019 at 09:10 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -151,7 +151,15 @@ INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
 CREATE TABLE IF NOT EXISTS `jurusan` (
 `idJurusan` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jurusan`
+--
+
+INSERT INTO `jurusan` (`idJurusan`, `nama`) VALUES
+(1, 'Teknik Komputer Jaringan'),
+(2, 'Teknik Instalasi Pemanfaatan Tenaga Listrik');
 
 -- --------------------------------------------------------
 
@@ -176,7 +184,19 @@ CREATE TABLE IF NOT EXISTS `kelas` (
 `idKelas` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `idJurusan` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelas`
+--
+
+INSERT INTO `kelas` (`idKelas`, `nama`, `idJurusan`) VALUES
+(1, '10', 1),
+(2, '11', 1),
+(3, '12', 1),
+(4, '10', 2),
+(5, '11', 2),
+(6, '12', 2);
 
 -- --------------------------------------------------------
 
@@ -253,8 +273,82 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `tempatLahir` varchar(100) NOT NULL,
   `pathImage` varchar(100) DEFAULT NULL,
   `idKelas` int(11) DEFAULT NULL,
-  `pass` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pass` int(11) DEFAULT NULL,
+  `agama` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=681 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `pathImage`, `idKelas`, `pass`, `agama`) VALUES
+(614, 'Muhammad Alfian ', 'Banua Kepayang', 'L', '2003-02-05 00:00:00', 'Barabai ', NULL, 1, NULL, 'Islam'),
+(615, 'Muhammad Arsyad', 'Banua Kepayang', 'L', '2003-04-25 00:00:00', 'Barabai', NULL, 1, NULL, 'Islam'),
+(616, 'Dinda Nurwulan Agustin', 'Banua Kepayang', 'P', '2003-08-24 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(617, 'Nursifa Salsabila', 'Banua Kepayang', 'P', '2003-06-23 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(618, 'Meta Adilla', 'Banua Kepayang', 'P', '2003-06-01 00:00:00', 'Banua Kepayang', NULL, 1, NULL, 'Islam'),
+(619, 'Norlatifah Azlina', 'Banua Kepayang', 'P', '2003-09-21 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(620, 'Dhea Azizah', 'Banua Kepayang', 'P', '2003-01-27 00:00:00', 'Barabai', NULL, 1, NULL, 'Islam'),
+(621, 'Dicky Septiawan', 'Banua Kepayang', 'L', '2003-09-17 00:00:00', 'Barabai', NULL, 1, NULL, 'Islam'),
+(622, 'Aisyah Asura', 'Banua Kepayang', 'P', '2003-01-29 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(623, 'Aulia Rahmadana', 'Banua Kepayang', 'P', '2003-02-11 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(624, 'Imelda Selvia Ningrum', 'Banua Kepayang', 'P', '2003-07-08 00:00:00', 'HST', NULL, 1, NULL, 'Islam'),
+(625, 'Muhammad Fauzan', 'Banua Kepayang', 'L', '2003-01-22 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(626, 'M. Resky Fadillah', 'Banua Kepayang', 'L', '2003-06-18 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(627, 'M. Ridha Paratama', 'Banua Kepayang', 'L', '2003-06-24 00:00:00', 'Amuntai', NULL, 2, NULL, 'Islam'),
+(628, 'M. Akbar Fadillah', 'Banua Kepayang', 'L', '2003-05-08 00:00:00', 'Banjarmasin', NULL, 2, NULL, 'Islam'),
+(629, 'Nor Muhammad Muhibbin', 'Banua Kepayang', 'L', '2003-08-08 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(630, 'Nadia Azmi Haliza', 'Banua Kepayang', 'P', '2003-12-21 00:00:00', 'Balikpapan', NULL, 2, NULL, 'Islam'),
+(631, 'Norlatifah', 'Banua Kepayang', 'P', '2003-12-17 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(632, 'Siti Fatimah', 'Banua Kepayang', 'P', '2003-10-26 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(633, 'Suaibatul Aslamiah', 'Banua Kepayang', 'P', '2003-07-18 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(634, 'Wina Amalia', 'Banua Kepayang', 'P', '2003-11-17 00:00:00', 'HST', NULL, 2, NULL, 'Islam'),
+(635, 'Muhammad Haiqi', 'Banua Kepayang', 'L', '2003-03-12 00:00:00', 'Banjarmasin', NULL, 2, NULL, 'Islam'),
+(636, 'Vivi Ariyanti', 'Banua Kepayang', 'P', '2002-11-04 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(637, 'Siti Zhofirah', 'Banua Kepayang', 'P', '2002-12-29 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(638, 'Arya Pranata', 'Banua Kepayang', 'L', '2002-09-11 00:00:00', 'Pangkalanbun', NULL, 3, NULL, 'Islam'),
+(639, 'Nor Maulina', 'Banua Kepayang', 'P', '2002-03-08 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(640, 'Laura Fahrianisa', 'Banua Kepayang', 'P', '2002-01-15 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(641, 'Nurul Aulia', 'Banua Kepayang', 'P', '2002-10-15 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(642, 'Muhammad Riswan Alfianor', 'Banua Kepayang', 'L', '2002-08-23 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(643, 'Siti Nurhaliza', 'Banua Kepayang', 'P', '2002-10-08 00:00:00', 'HST', NULL, 3, NULL, 'Islam'),
+(644, 'Aulia Nurhidayah', 'Banua Kepayang', 'P', '2002-12-05 00:00:00', 'Bahaur Hulu', NULL, 3, NULL, 'Islam'),
+(645, 'Nor Aidi', 'Banua Kepayang', 'L', '2003-03-10 00:00:00', 'Tabalong', NULL, 3, NULL, 'Islam'),
+(646, 'Jahratun Nisa', 'Banua Kepayang', 'P', '2002-02-25 00:00:00', 'Banjarmasin', NULL, 3, NULL, 'Islam'),
+(647, 'Muhammad Risky', 'Banua Kepayang', 'L', '2002-09-06 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(648, 'Nur Asyifa', 'Banua Kepayang', 'P', '2002-11-01 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(649, 'Sarifatul Asmaniah', 'Banua Kepayang', 'P', '2002-09-07 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(650, 'Muhammad Rifky', 'Banua Kepayang', 'L', '2002-05-06 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(651, 'M. Reno Ramadhani', 'Banua Kepayang', 'L', '2002-09-15 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(652, 'Aini Shahib', 'Banua Kepayang', 'L', '2002-07-10 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(653, 'Muhammad Naufal', 'Banua Kepayang', 'L', '2002-03-27 00:00:00', 'Bawan', NULL, 4, NULL, 'Islam'),
+(654, 'Akhmad Riyadi', 'Banua Kepayang', 'L', '2002-03-27 00:00:00', 'Amuntai', NULL, 4, NULL, 'Islam'),
+(655, 'Nazwa Nor Maghfirah', 'Banua Kepayang', 'P', '2002-04-21 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(656, 'Riska Aprilia Suswanti', 'Banua Kepayang', 'P', '2002-04-04 00:00:00', 'Banjarmasin', NULL, 4, NULL, 'Islam'),
+(657, 'Syaidatun Asiyah', 'Banua Kepayang', 'P', '2002-10-29 00:00:00', 'HST', NULL, 4, NULL, 'Islam'),
+(658, 'Muhammad Fateh Al-Mubarak', 'Banua Kepayang', 'L', '2001-07-07 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(659, 'Fathul Janah', 'Banua Kepayang', 'P', '2001-03-18 00:00:00', 'Banjarmasin', NULL, 5, NULL, 'Islam'),
+(660, 'Aulia Rahmah', 'Banua Kepayang', 'P', '2001-08-08 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(661, 'Mariyana', 'Banua Kepayang', 'P', '2001-09-07 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(662, 'M. Saufi', 'Banua Kepayang', 'L', '2001-04-30 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(663, 'Raudatu Sifa', 'Banua Kepayang', 'P', '2001-05-12 00:00:00', 'Banjarmasin', NULL, 5, NULL, 'Islam'),
+(664, 'M. Yusan Edo Ridani', 'Banua Kepayang', 'L', '2001-06-05 00:00:00', 'Gambut', NULL, 5, NULL, 'Islam'),
+(665, 'Rudi Hermansyah', 'Banua Kepayang', 'L', '2001-11-21 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(666, 'Nor Zulfa Adhia', 'Banua Kepayang', 'P', '2001-10-31 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(667, 'Zahratun Nafisah', 'Banua Kepayang', 'P', '2001-10-29 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(668, 'Akhmad Fahriannor', 'Banua Kepayang', 'L', '2001-04-21 00:00:00', 'HST', NULL, 5, NULL, 'Islam'),
+(669, 'M. Nazrillah Arrazah', 'Banua Kepayang', 'L', '2001-06-25 00:00:00', 'Banua Kepayang', NULL, 6, NULL, 'Islam'),
+(670, 'Muhammad Sahdi', 'Banua Kepayang', 'L', '2001-07-06 00:00:00', 'Banua Kepayang', NULL, 6, NULL, 'Islam'),
+(671, 'Nor Nabila Putri', 'Banua Kepayang', 'P', '2001-07-07 00:00:00', 'Banua Kepayang', NULL, 6, NULL, 'Islam'),
+(672, 'M. Ridho Muttaqin', 'Banua Kepayang', 'L', '2001-05-08 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(673, 'Romaysha Natasya', 'Banua Kepayang', 'P', '2001-02-01 00:00:00', 'Martapura', NULL, 6, NULL, 'Islam'),
+(674, 'Nurmayani Apriliana', 'Banua Kepayang', 'P', '2001-04-08 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(675, 'Ahmad Hanafi', 'Banua Kepayang', 'L', '2001-03-12 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(676, 'Nisna Rahayu', 'Banua Kepayang', 'P', '2001-03-26 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(677, 'Maulida Hasanah', 'Banua Kepayang', 'P', '2001-02-19 00:00:00', 'Banua Kepayang', NULL, 6, NULL, 'Islam'),
+(678, 'M. Hamzah', 'Banua Kepayang', 'L', '2001-10-24 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(679, 'Nur Asyifa', 'Banua Kepayang', 'P', '2001-05-03 00:00:00', 'HST', NULL, 6, NULL, 'Islam'),
+(680, 'M. Gustiansyah Ramadani', 'Banua Kepayang', 'L', '2001-08-21 00:00:00', 'Tapus Dalam', NULL, 6, NULL, 'Islam');
 
 -- --------------------------------------------------------
 
@@ -417,7 +511,7 @@ MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `kegiatan`
 --
@@ -427,7 +521,7 @@ MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `kritiksaran`
 --
@@ -447,7 +541,7 @@ MODIFY `idPengumuman` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=681;
 --
 -- Constraints for dumped tables
 --
