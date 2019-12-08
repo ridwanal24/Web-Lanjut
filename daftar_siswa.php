@@ -1,6 +1,10 @@
 <?php
+session_start();
 include 'koneksi.php';
 include 'layout/header.php';
+if (isset( $_SESSION['status'])) {
+	# code...
+
 ?>
 
 <div class="container-fluid">
@@ -11,35 +15,35 @@ include 'layout/header.php';
 		<div class="col-md-2"></div>
 		<div class="col-md-8 bg-dark">
 			
-					<!-- Form Pilihan Kelas -->
-					<form method="get">
-						<div class="form-row">
-							<div class="form-group col-md-5">
-								<label class="text-light" for="kelas">Kelas</label>
-								<select id="kelas" class="form-control">
-									<option selected>Pilih Kelas...</option>
-									<option value="10">10</option>
-									<option value="11">11</option>
-									<option value="12">12</option>
-								</select>
-							</div>
-							<div class="form-group col-md-5">
-								<label class="text-light" for="jurusan">Jurusan</label>
-								<select id="jurusan" class="form-control">
-									<option selected>Pilih Jurusan...</option>
-									<option value="1">Komputer Jaringan</option>
-									<option value="2">Instalasi Pemanfaatan Tenaga Listrik</option>
-								</select>
-							</div>
+			<!-- Form Pilihan Kelas -->
+			<form method="get">
+				<div class="form-row">
+					<div class="form-group col-md-5">
+						<label class="text-light" for="kelas">Kelas</label>
+						<select id="kelas" name="kelas" class="form-control">
+							<option selected>Pilih Kelas...</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+					<div class="form-group col-md-5">
+						<label class="text-light" for="jurusan">Jurusan</label>
+						<select id="jurusan" name="jurusan" class="form-control">
+							<option selected>Pilih Jurusan...</option>
+							<option value="1">Komputer Jaringan</option>
+							<option value="2">Instalasi Pemanfaatan Tenaga Listrik</option>
+						</select>
+					</div>
 
-							<div class="col-md-2">
-								<br>
-								<center><input type="submit" class="btn btn-light" name="submit" value="Tampilkan"></center>
-							</div>
-						</div>
-					</form>
-					<!-- End of Form Pilihan Kelas --> 
-				
+					<div class="col-md-2">
+						<br>
+						<center><input type="submit" class="btn btn-light" name="submit" value="Tampilkan"></center>
+					</div>
+				</div>
+			</form>
+			<!-- End of Form Pilihan Kelas --> 
+
 		</div>
 		<div class="col-md-2"></div>
 	</div>
@@ -53,20 +57,38 @@ include 'layout/header.php';
 						<th scope="col">No</th>
 						<th scope="col">Nama</th>
 						<th scope="col">Kelas</th>
+						<th scope="col">Jurusan</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Budi Setiawan</td>
-						<td>Binomo A</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Alan Suryajana</td>
-						<td>Trader A</td>
-					</tr>
 
+					<!-- PHP Show Data -->
+					<?php
+					if (isset($_GET['submit'])) {
+						$kelas = $_GET['kelas'];
+						$jurusan = $_GET['jurusan'];
+					
+
+					$query = "Select siswa.nama, kelas.nama as kelas, jurusan.nama as jurusan from siswa join kelas on siswa.idKelas = kelas.idKelas join jurusan on jurusan.idJurusan = kelas.idJurusan where kelas.nama=".$kelas." AND jurusan.idJurusan=".$jurusan;
+					$show=mysql_query($query);
+					$nomor=1;
+					while ($result=mysql_fetch_array($show)) {
+
+						?>
+						<tr>
+							<th scope="row"><?php echo $nomor;?></th>
+							<td><?php echo $result['nama'];?></td>
+							<td><?php echo $result['kelas'];?></td>
+							<td><?php echo $result['jurusan'];?></td>
+						</tr>		
+						<?php
+						$nomor++;
+					}
+					}
+					?>
+				
+					
+					<!-- End of PHP Show Data -->
 				</tbody>
 			</table>	
 		</div>
@@ -77,5 +99,16 @@ include 'layout/header.php';
 </div>
 
 <?php
+}else{
+	?>
+	<br>
+	<center>Silahkan Login Terlebih Dahulu</center>
+	<br>
+	<center><a href="login_siswa.php"><button type="button" class="btn btn-primary text-light">LOGIN SISWA</button></a></center>
+	<br>
+	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
+	<br>
+	<?php
+}
 include 'layout/footer.php';
 ?>
