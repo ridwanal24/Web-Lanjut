@@ -21,14 +21,14 @@ else{
 			<?php 
 			include "koneksi.php";
 			$nip=$_GET['nip'];
-			$query=mysql_query("select * from guru where nip='$nip'");
+			$query=mysql_query("SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan where nip='$nip'");
 			?>
 			<h1 align="center">Edit Data Siswa</h1>
 			<br>
 			<table border="0">
 				<?php
 				while($row=mysql_fetch_array($query)){
-					$jenis_kelamin=$row['jenis_kelamin'];
+					$jenis_kelamin=$row['gender'];
 					$agama=$row['agama'];
 					$jabatan=$row['jabatan'];
 					?>
@@ -43,23 +43,23 @@ else{
 					<tr>
 						<td><label for="nama_siswa">Nama Guru</label></td>
 						<td> : </td>
-						<td><input type="text" name="nama_guru" id="nama_guru" class="input1" placeholder="nama guru" value="<?php echo $row['nama_guru'];?>" required /></td>
+						<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" value="<?php echo $row['nama'];?>" required /></td>
 					</tr>
 					<tr>
 						<td><label for="tempat_lahir">Tempat Lahir</label></td>
 						<td> : </td>
-						<td><input type="text" name="tempat_lahir" id="tempat_lahir" class="input1" placeholder="tempat lahir" value="<?php echo $row['tempat_lahir'];?>" required /></td>
+						<td><input type="text" name="tempatLahir" id="tempat_lahir" class="input1" placeholder="tempat lahir" value="<?php echo $row['tempatLahir'];?>" required /></td>
 					</tr>
 					<td><label for="tanggal_lahir">Tanggal Lahir</label></td>
 					<td> : </td>
-					<td><input type="date" name="tanggal_lahir" id="tanggal_lahir" class="input1" placeholder="tanggal lahir" value="<?php echo $row['tanggal_lahir'];?>" required /></td>
+					<td><input type="date" name="tglLahir" id="tanggal_lahir" class="input1" placeholder="tanggal lahir" value="<?php echo $row['tglLahir'];?>" required /></td>
 				</tr>
 				<tr>
-					<td><label for="jenis_kelamin">Jenis Kelamin</label></td>
+					<td><label for="gender">Jenis Kelamin</label></td>
 					<td> : </td>
 					<td>
-						<input type="radio" name="jenis_kelamin" value="Laki-laki" id="jenis_kelamin" <?php if($jenis_kelamin=="Laki-laki"){echo "checked=\"checked\"";}?><label class="" for="">Laki-laki </label>
-						<input type="radio" name="jenis_kelamin" value="Perempuan" id="jenis_kelamin" <?php if($jenis_kelamin=="Perempuan"){echo "checked=\"checked\"";}?><label class="" for="">Perempuan </label>
+						<input type="radio" name="gender" value="L" id="jenis_kelamin" <?php if($jenis_kelamin=="L"){echo "checked=\"checked\"";}?><label class="" for="">Laki-laki </label>
+						<input type="radio" name="gender" value="P" id="jenis_kelamin" <?php if($jenis_kelamin=="P"){echo "checked=\"checked\"";}?><label class="" for="">Perempuan </label>
 					</td>
 				</tr>
 				<tr>
@@ -87,17 +87,18 @@ else{
 						<td>
 							<select name="jabatan" class="input5" required>
 								<option value="" selected="selected">--Pilih Jabatan
-									<option value="Guru Bahasa"<?php if ($jabatan=="Guru Bahasa") { echo "selected=\"selected\""; } ?>>Guru Bahasa</option>
-									<option value="Guru Olahraga"<?php if ($jabatan=="Guru Olahraga") { echo "selected=\"selected\""; } ?>>Guru Olahraga</option>
-									<option value="Guru Seni"<?php if ($jabatan=="Guru Seni") { echo "selected=\"selected\""; } ?>>Guru Seni</option>
-									<option value="Guru Musik"<?php if ($jabatan=="Guru Musik") { echo "selected=\"selected\""; } ?>>Guru Musik</option>
-									<option value="Guru Agama"<?php if ($jabatan=="Guru Agama") { echo "selected=\"selected\""; } ?>>Guru Agama</option>
+									<option value="1"<?php if ($jabatan=="Kepala Sekolah") { echo "selected=\"selected\""; } ?>>Kepala Sekolah</option>
+									<option value="2"<?php if ($jabatan=="Guru Bahasa") { echo "selected=\"selected\""; } ?>>Guru Bahasa</option>
+									<option value="3"<?php if ($jabatan=="Guru Olahraga") { echo "selected=\"selected\""; } ?>>Guru Olahraga</option>
+									<option value="4"<?php if ($jabatan=="Guru Seni") { echo "selected=\"selected\""; } ?>>Guru Seni</option>
+									<option value="5"<?php if ($jabatan=="Guru Musik") { echo "selected=\"selected\""; } ?>>Guru Musik</option>
+									<option value="6"<?php if ($jabatan=="Guru Agama") { echo "selected=\"selected\""; } ?>>Guru Agama</option>
 								</select>
 							</td>
 						</tr>
 						<td></td>
 						<td></td>
-						
+
 						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
 					</tr>
 				<?php } ?>

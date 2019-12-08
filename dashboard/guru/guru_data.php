@@ -56,7 +56,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT * FROM guru limit $posisi, $batas";
+								$tampil="SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -68,10 +68,10 @@ else{
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['nip']; ?></td>
-										<td align="center"><?php echo $dataTampil['nama_guru']; ?></td>
-										<td align="center"><?php echo $dataTampil['tempat_lahir']; ?></td>
-										<td align="center"><?php echo $dataTampil['tanggal_lahir']; ?></td>
-										<td align="center"><?php echo $dataTampil['jenis_kelamin']; ?></td>
+										<td align="center"><?php echo $dataTampil['nama']; ?></td>
+										<td align="center"><?php echo $dataTampil['tempatLahir']; ?></td>
+										<td align="center"><?php echo $dataTampil['tglLahir']; ?></td>
+										<td align="center"><?php echo $dataTampil['gender']; ?></td>
 										<td align="center"><?php echo $dataTampil['agama']; ?></td>
 										<td align="center"><?php echo $dataTampil['alamat']; ?></td>
 										<td align="center"><?php echo $dataTampil['jabatan']; ?></td>

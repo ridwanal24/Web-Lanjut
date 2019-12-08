@@ -22,7 +22,7 @@ header("Content-Disposition: attachment; filename=Data_Guru.xls");
 		<?php
 			include "koneksi.php";
 			$no=0;
-			  $tampil="SELECT * FROM guru";
+			  $tampil= "SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan";
 			  $qryTampil=mysql_query($tampil);
 			  if ($qryTampil === FALSE) {
 					die(mysql_error());
@@ -34,10 +34,10 @@ header("Content-Disposition: attachment; filename=Data_Guru.xls");
 			<tr bgcolor="#FFFFFF">
 			<td align="center"><?php echo $no ; ?></td>
 			<td align="center"><?php echo $dataTampil['nip']; ?></td>
-			<td><?php echo $dataTampil['nama_guru']; ?></td>
-			<td><?php echo $dataTampil['tempat_lahir']; ?></td>
-			<td><?php echo $dataTampil['tanggal_lahir']; ?></td>
-			<td><?php echo $dataTampil['jenis_kelamin']; ?></td>
+			<td><?php echo $dataTampil['nama']; ?></td>
+			<td><?php echo $dataTampil['tempatLahir']; ?></td>
+			<td><?php echo $dataTampil['tglLahir']; ?></td>
+			<td><?php echo $dataTampil['gender']; ?></td>
 			<td><?php echo $dataTampil['agama']; ?></td>
 			<td><?php echo $dataTampil['alamat']; ?></td>
 			<td><?php echo $dataTampil['jabatan']; ?></td>
