@@ -21,7 +21,7 @@ if (isset( $_SESSION['status'])) {
 					<div class="form-group col-md-5">
 						<label class="text-light" for="kelas">Kelas</label>
 						<select id="kelas" name="kelas" class="form-control">
-							<option selected>Pilih Kelas...</option>
+							<option value="0" selected>Pilih Kelas...</option>
 							<option value="10">10</option>
 							<option value="11">11</option>
 							<option value="12">12</option>
@@ -30,7 +30,7 @@ if (isset( $_SESSION['status'])) {
 					<div class="form-group col-md-5">
 						<label class="text-light" for="jurusan">Jurusan</label>
 						<select id="jurusan" name="jurusan" class="form-control">
-							<option selected>Pilih Jurusan...</option>
+							<option value="0" selected>Pilih Jurusan...</option>
 							<option value="1">Komputer Jaringan</option>
 							<option value="2">Instalasi Pemanfaatan Tenaga Listrik</option>
 						</select>
@@ -64,7 +64,7 @@ if (isset( $_SESSION['status'])) {
 
 					<!-- PHP Show Data -->
 					<?php
-					if (isset($_GET['submit'])) {
+					if (/*isset($_GET['submit'])&& */isset($_GET['kelas'])&&isset($_GET['jurusan'])) {
 						$kelas = $_GET['kelas'];
 						$jurusan = $_GET['jurusan'];
 					
