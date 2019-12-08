@@ -1,3 +1,8 @@
+</div>
+    </div>
+  </div>
+  <br>
+  
   <!-- Footer -->
   <footer class="py-5 bg-primary">
     <div class="container">

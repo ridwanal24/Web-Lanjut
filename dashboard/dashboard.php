@@ -17,13 +17,14 @@ if ((!isset($_SESSION['status'])) && ($_SESSION['status']!="admin")) {
 					<a href="#" class="list-group-item list-group-item-action active">
 						<center><h5>Dashboard Admin</h5></center>
 					</a>
+					<a href="guru/index.php" class="list-group-item list-group-item-action">Kelola Data Guru</a>
 					<a href="#" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
-					<a href="#" class="list-group-item list-group-item-action">Kelola Data Guru</a>
 					<a href="#" class="list-group-item list-group-item-action">Kelola Daftar Fasilitas</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Apapun Itu</a>
+					<a href="#" class="list-group-item list-group-item-action">Kelola Apapun Itu</a>
 				</div>
 			</div>
 			<div class="col-md-8">			
+			
 			</div>
 		</div>
 	</div>
