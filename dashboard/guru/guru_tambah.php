@@ -28,22 +28,22 @@ else{
 			<tr>
 				<td><label for="nama_siswa">Nama Guru</label></td>
 				<td>:</td>
-				<td><input type="text" name="nama_guru" id="nama_guru" class="input1" placeholder="nama guru" required /></td>
+				<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" required /></td>
 			</tr>
 			<tr>
 				<td><label for="tempat_lahir">Tempat Lahir</label></td>
 				<td>:</td>
-				<td><input type="text" name="tempat_lahir" id="tempat_lahir" class="input1" placeholder="tempat lahir" required /></td>
+				<td><input type="text" name="tempatLahir" id="tempat_lahir" class="input1" placeholder="tempat lahir" required /></td>
 			</tr>
 			<td><label for="tanggal_lahir">Tanggal Lahir</label></td>
 			<td>:</td>
-			<td><input type="date" name="tanggal_lahir" id="tanggal_lahir" class="input1" placeholder="tanggal lahir" required /></td>
+			<td><input type="date" name="tglLahir" id="tanggal_lahir" class="input1" placeholder="tanggal lahir" required /></td>
 		</tr>
 		<tr>
 			<td><label for="jenis_kelamin">Jenis Kelamin</label></td>
 			<td>:</td>
-			<td><input type="radio" name="jenis_kelamin" value="Laki-laki" id="jenis_kelamin" required/><label class="" for="">Laki-laki </label>
-				<input type="radio" name="jenis_kelamin" value="Perempuan" id="jenis_kelamin" required/><label class="" for="">Perempuan </label></td>
+			<td><input type="radio" name="gender" value="Laki-laki" id="jenis_kelamin" required/><label class="" for="">Laki-laki </label>
+				<input type="radio" name="gender" value="Perempuan" id="jenis_kelamin" required/><label class="" for="">Perempuan </label></td>
 			</tr>
 			<tr>
 				<td><label for="agama">Agama</label></td>
@@ -67,11 +67,12 @@ else{
 					<td>:</td>
 					<td><select name="jabatan" class="input5" required>
 						<option value="" selected="selected">--Pilih Jabatan
-							<option value="Guru Bahasa">Guru Bahasa</option>
-							<option value="Guru Olahraga">Guru Olahraga</option>
-							<option value="Guru Seni">Guru Seni</option>
-							<option value="Guru Musik">Guru Musik</option>
-							<option value="Guru Agama">Guru Agama</option>
+							<option value="1">Kepala Sekolah</option>
+							<option value="2">Guru Bahasa</option>
+							<option value="3">Guru Olahraga</option>
+							<option value="4">Guru Seni</option>
+							<option value="5">Guru Musik</option>
+							<option value="6">Guru Agama</option>
 						</select></td>
 					</tr>
 					<tr>
