@@ -9,6 +9,43 @@ include 'layout/header.php';
 	<br>
 	<div class="row">
 		<div class="col-md-2"></div>
+		<div class="col-md-8 bg-dark">
+			
+					<!-- Form Pilihan Kelas -->
+					<form method="get">
+						<div class="form-row">
+							<div class="form-group col-md-5">
+								<label class="text-light" for="kelas">Kelas</label>
+								<select id="kelas" class="form-control">
+									<option selected>Pilih Kelas...</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+							</div>
+							<div class="form-group col-md-5">
+								<label class="text-light" for="jurusan">Jurusan</label>
+								<select id="jurusan" class="form-control">
+									<option selected>Pilih Jurusan...</option>
+									<option>Komputer Jaringan</option>
+									<option>Instalasi Pemanfaatan Tenaga Listrik</option>
+								</select>
+							</div>
+
+							<div class="col-md-2">
+								<br>
+								<center><input type="submit" class="btn btn-light" name="submit" value="Tampilkan"></center>
+							</div>
+						</div>
+					</form>
+					<!-- End Form Pilihan Kelas --> 
+				
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<table class="table table-striped">
 				<thead class="thead-dark">
@@ -36,7 +73,7 @@ include 'layout/header.php';
 		<div class="col-md-2"></div>
 	</div>
 
-<br>	
+	<br>	
 </div>
 
 <?php
