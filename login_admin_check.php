@@ -8,6 +8,7 @@ $cek = mysql_num_rows($login);
 
 if($cek > 0){
 	session_start();
+	
 	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "admin";
 	echo $_SESSION['username'];

@@ -41,7 +41,7 @@
             <a class="nav-link" href="galeri.php">Galeri</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="daftar_guru.php">
               Daftar Guru
             </a>
           </li>

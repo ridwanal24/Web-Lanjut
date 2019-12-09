@@ -12,6 +12,7 @@
 
   <title>Sekolahmu</title>
 
+  <link rel="stylesheet" href="css/guru.css">
   <!-- Bootstrap core CSS -->
   
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,3 +64,20 @@
         <?php } ?>
       </div>
     </nav>
+ <!-- Batas -->
+ <!-- 
+    <div class="container-fluid">
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active">
+            <center><h5>Dashboard Admin</h5></center>
+          </a>
+          <a href="index.php" class="list-group-item list-group-item-action">Kelola Data Guru</a>
+          <a href="#" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
+          <a href="#" class="list-group-item list-group-item-action">Kelola Daftar Fasilitas</a>
+          <a href="#" class="list-group-item list-group-item-action">Kelola Apapun Itu</a>
+        </div>
+      </div>
+      <div class="col-md-9"> -->
