@@ -14,7 +14,13 @@ if($cek > 0){
 	echo $_SESSION['username'];
 	header("location:dashboard/");
 }else{
-	
+	echo "<script>if(confirm('Username / Password Salah'))
+	{
+		document.location.href='login_siswa.php'
+	}else{
+		document.location.href='login_siswa.php'	
+	}
+	;</script>";
 }
 
 ?>
