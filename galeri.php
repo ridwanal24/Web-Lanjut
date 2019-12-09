@@ -18,7 +18,9 @@ include 'layout/header.php';
         $sth = $db->query($sql);
 
         $file_path = './assets/img/galeri/';
-
+        ?>
+            <div class="blok-level mx-auto margin">
+        <?php
             while($rows = mysqli_fetch_array($sth)) {
                 $img_src = $rows['pathImg'];
                 ?>
