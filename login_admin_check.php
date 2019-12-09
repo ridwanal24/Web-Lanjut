@@ -16,9 +16,9 @@ if($cek > 0){
 }else{
 	echo "<script>if(confirm('Username / Password Salah'))
 	{
-		document.location.href='login_siswa.php'
+		document.location.href='login_admin.php'
 	}else{
-		document.location.href='login_siswa.php'	
+		document.location.href='login_admin.php'	
 	}
 	;</script>";
 }
