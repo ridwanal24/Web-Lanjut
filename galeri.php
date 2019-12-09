@@ -10,26 +10,34 @@ include 'layout/header.php';
 	<br>
 
     <br>
-	<div class="row">
-		<div class="col-md-2"></div>
-        <?php
-        $db = new mysqli("localhost","root","","db_sekolahmu");
-        $sql = "SELECT pathImg, pathVideo FROM galeri ";
-        $sth = $db->query($sql);
+    <div class="row">
+      <div class="col-md-2"></div>
+      <?php
+      $db = new mysqli("localhost","root","","db_sekolahmu");
+      $sql = "SELECT pathImg, pathVideo FROM galeri ";
+      $sth = $db->query($sql);
 
-        $file_path = './assets/img/galeri/';
-        ?>
-            <div class="mx-auto margin">
-        <?php
+      $file_path = './assets/img/galeri/';
+      ?>
+      <div class="container">
+        <div class="row">
+          
+            <?php
             while($rows = mysqli_fetch_array($sth)) {
                 $img_src = $rows['pathImg'];
                 ?>
-                <img src="<?php echo $img_src;?>" alt="" width="500" height="300"/>
+                <div class="col-md-4">
+                <img src="<?php echo $img_src;?>" class="rounded m-1 img-fluid"/>
+                </div>
                 <?php
-                    }
-                ?>
+            }
+            ?>
+        
     </div>
 </div>
-    <?php
+</div>
+</div>
+
+<?php
 include 'layout/footer.php';
 ?>
