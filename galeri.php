@@ -19,7 +19,7 @@ include 'layout/header.php';
 
         $file_path = './assets/img/galeri/';
         ?>
-            <div class="blok-level mx-auto margin">
+            <div class="mx-auto margin">
         <?php
             while($rows = mysqli_fetch_array($sth)) {
                 $img_src = $rows['pathImg'];
