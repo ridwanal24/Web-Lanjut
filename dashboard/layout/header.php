@@ -12,7 +12,7 @@
 
   <title>Sekolahmu</title>
 
-  <link rel="stylesheet" href="css/guru.css">
+  <!-- <link rel="stylesheet" href="css/guru.css"> -->
   <!-- Bootstrap core CSS -->
   
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
