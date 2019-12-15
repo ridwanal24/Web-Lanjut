@@ -14,8 +14,8 @@ if (isset( $_SESSION['status'])) {
 
 	<br>
 	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
 			<table class="table table-striped">
 				<thead class="thead-dark">
 					<tr>
@@ -23,6 +23,8 @@ if (isset( $_SESSION['status'])) {
 						<th scope="col">Nama</th>
 						<th scope="col">Jabatan</th>
 						<th scope="col">Agama</th>
+						<th scope="col">Pilihan</th>
+
 					</tr>
 				</thead>
 				<tbody>
@@ -33,7 +35,7 @@ if (isset( $_SESSION['status'])) {
 						
 					
 
-					$query = "select guru.nama, jabatan.nama as jabatan, agama from guru join jabatan on jabatan.idJabatan = guru.idJabatan";
+					$query = "select nip, guru.nama, jabatan.nama as jabatan, agama from guru join jabatan on jabatan.idJabatan = guru.idJabatan";
 					$show=mysql_query($query);
 					$nomor=1;
 					while ($result=mysql_fetch_array($show)) {
@@ -44,6 +46,11 @@ if (isset( $_SESSION['status'])) {
 							<td><?php echo $result['nama'];?></td>
 							<td><?php echo $result['jabatan'];?></td>
 							<td><?php echo $result['agama'];?></td>
+							<td><?php 
+							$nip=$result['nip'];
+							?>
+							<a class="btn btn-danger text-light" href="profile_guru.php?nip=<?php echo $nip;?>">Lihat Profil</a>
+							</td>
 						</tr>		
 						<?php
 						$nomor++;
@@ -56,7 +63,7 @@ if (isset( $_SESSION['status'])) {
 				</tbody>
 			</table>	
 		</div>
-		<div class="col-md-2"></div>
+		<div class="col-md-1"></div>
 	</div>
 
 	<br>	
