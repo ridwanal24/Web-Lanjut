@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2019 at 09:08 AM
+-- Generation Time: Dec 15, 2019 at 02:27 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -88,8 +88,21 @@ CREATE TABLE `fasilitas` (
   `idFasilitas` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
   `jumlah` int(11) DEFAULT NULL,
-  `pathImg` varchar(100) DEFAULT NULL
+  `pathImg` varchar(100) DEFAULT NULL,
+  `deskripsi` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fasilitas`
+--
+
+INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`) VALUES
+(1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum\'at.'),
+(2, 'Aula', 1, NULL, 'Aula digunakan untuk agenda penting semisal musyawarah antara guru dengan orang tua wali, pembekalan UN, pentas seni, dan lain sebagainya'),
+(3, 'Kantin', 1, NULL, 'Kantin sangat dijaga kebersihannya. Makanan yang tersedia cukup bervariasi sehingga membuat siswa bisa tenang sejenak setelah belajar seharian'),
+(4, 'Perpustakaan', 1, NULL, 'Sudah menerapkan perpustakaan online, sehingga proses peminjaman buku serta pengembalian dan pengecekan buku lebih cepat'),
+(5, 'Bengkel Listrik', 1, NULL, 'Memiliki peralatan yang memadai untuk melakukan pengukuran arus listrik, praktik instalasi, pemanfaatan listrik untuk kebutuhan idustri, dan lain-lain.'),
+(6, 'Labolatorium Komputer', 3, NULL, 'Lab ber AC dan memiliki komputer yang cukup agar para siswa bersemangat dalam belajar merakit pc, praktek jaringan, dan lain lain.');
 
 -- --------------------------------------------------------
 
@@ -546,7 +559,7 @@ ALTER TABLE `ekstra`
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `galeri`
