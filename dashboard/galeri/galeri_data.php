@@ -95,7 +95,7 @@ else{
 									<td colspan="11">
 										<?php
 			//hitung jumlah data
-										$jml_data = mysql_num_rows(mysql_query("SELECT * FROM guru"));
+										$jml_data = mysql_num_rows(mysql_query("SELECT * FROM galeri"));
 			//Jumlah JmlHalaman
 			$JmlHalaman = ceil($jml_data/$batas); //ceil digunakan untuk pembulatan keatas
 			if ( $pg > 1 ) {
