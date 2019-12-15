@@ -58,7 +58,7 @@ if (isset( $_SESSION['status'])) {
 						<th scope="col">Nama</th>
 						<th scope="col">Kelas</th>
 						<th scope="col">Jurusan</th>
-						<th scope="col"> </th>
+						<th scope="col">Pilihan</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -84,7 +84,7 @@ if (isset( $_SESSION['status'])) {
 							<td><?php 
 							$nis=$result['nis'];
 							?>
-							<a class="btn btn-light" href="profile_siswa.php?nis=<?php echo $nis;?>">LihatProfil</a>
+							<a class="btn btn-danger text-light" href="profile_siswa.php?nis=<?php echo $nis;?>">Lihat Profil</a>
 							</td>
 						</tr></a>		
 						<?php
