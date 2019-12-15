@@ -19,7 +19,7 @@ if ((!isset($_SESSION['status'])) && ($_SESSION['status']!="admin")) {
 						Dashboard Admin
 					</a>
 					<a href="guru/" class="list-group-item list-group-item-action">Kelola Data Guru</a>
-					<a href="#" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
+					<a href="siswa/" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
 					<a href="#" class="list-group-item list-group-item-action">Kelola Data Admin</a>
 					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
 					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>

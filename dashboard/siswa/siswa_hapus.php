@@ -1,6 +1,6 @@
  <?php ob_start();
  include "koneksi.php";
- mysql_query("delete from guru where nip='$_GET[nip]'");
+ mysql_query("delete from guru where nip='$_GET[nis]'");
  {
  	echo '<script language="javascript">
  	alert ("Data Guru Berhasil Dihapus");

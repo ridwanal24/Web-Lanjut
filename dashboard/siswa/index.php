@@ -1,3 +1,3 @@
 <?php
-	header("Location: guru_data.php");
+	header("Location: siswa_data.php");
 ?>

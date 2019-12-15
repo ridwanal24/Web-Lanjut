@@ -16,19 +16,19 @@ else{
 </head>
 <body> -->
 	<br>
-	<form action="guru_aksi_input.php" method="post">
+	<form action="siswa_aksi_input.php" method="post">
 		<h1 align="center">Input Data Guru</h1>
 		<br>
 		<table border="0">
 			<tr>
-				<td><label for="nip">NIP</label></td>
+				<td><label for="nis">NIS</label></td>
 				<td>:</td>
-				<td><input type="text" name="nip" id="nip" class="input1" placeholder="nip" required /></td>
+				<td><input type="text" name="nis" id="nis" class="input1" placeholder="nis" required /></td>
 			</tr>
 			<tr>
-				<td><label for="nama_siswa">Nama Guru</label></td>
+				<td><label for="nama_siswa">Nama Siswa</label></td>
 				<td>:</td>
-				<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" required /></td>
+				<td><input type="text" name="nama" id="nama_siswa" class="input1" placeholder="nama siswa" required /></td>
 			</tr>
 			<tr>
 				<td><label for="tempat_lahir">Tempat Lahir</label></td>
@@ -63,16 +63,16 @@ else{
 					<td><textarea name="alamat" id="alamat" class="input2" rows="5" cols="30" placeholder="alamat" required></textarea></td>
 				</tr>
 				<tr>
-					<td><label for="jabatan">Jabatan</label></td>
+					<td><label for="kelas">Kelas</label></td>
 					<td>:</td>
-					<td><select name="jabatan" class="input5" required>
-						<option value="" selected="selected">--Pilih Jabatan
-							<option value="1">Kepala Sekolah</option>
-							<option value="2">Guru Bahasa</option>
-							<option value="3">Guru Olahraga</option>
-							<option value="4">Guru Seni</option>
-							<option value="5">Guru Musik</option>
-							<option value="6">Guru Agama</option>
+					<td><select name="kelas" class="input5" required>
+						<option value="" selected="selected">--Pilih Kelas
+							<option value="1">10 TKJ</option>
+							<option value="2">11 TKJ</option>
+							<option value="3">12 TKJ</option>
+							<option value="4">10 TIPTL</option>
+							<option value="5">11 TIPTL</option>
+							<option value="6">12 TIPTL</option>
 						</select></td>
 					</tr>
 					<tr>

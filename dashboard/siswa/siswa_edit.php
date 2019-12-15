@@ -16,12 +16,12 @@ else{
 </head>
 <body> -->
 	<br>
-	<form action="guru_aksi_edit.php" method="post" enctype="multipart/form-data">
+	<form action="siswa_aksi_edit.php" method="post" enctype="multipart/form-data">
 		<!-- 	<form action="guru_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
 			<?php 
 			include "koneksi.php";
-			$nip=$_GET['nip'];
-			$query=mysql_query("SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan where nip='$nip'");
+			$nis=$_GET['nis'];
+			$query=mysql_query("SELECT siswa.nama,nis,alamat,gender,tglLahir,tempatLahir,agama, idKelas as kelas FROM siswa where nis='$nis'");
 			?>
 			<h1 align="center">Edit Data Siswa</h1>
 			<br>
@@ -30,20 +30,20 @@ else{
 				while($row=mysql_fetch_array($query)){
 					$jenis_kelamin=$row['gender'];
 					$agama=$row['agama'];
-					$jabatan=$row['jabatan'];
+					$kelas=$row['kelas'];
 					?>
 					<tr>
-						<td><input type="hidden" name="nip" value="<?php echo $row['nip'];?>" /></td>
+						<td><input type="hidden" name="nis" value="<?php echo $row['nis'];?>" /></td>
 					</tr>
 					<tr>
 						<td><label for="nip">NIP</label></td>
 						<td width="20px"> : </td>
-						<td><input type="text" name="nip" id="nip" class="input1" placeholder="nip"  disabled="disabled" value="<?php echo $row['nip'];?>" required /></td>
+						<td><input type="text" name="nis" id="nis" class="input1" placeholder="nis"  disabled="disabled" value="<?php echo $row['nis'];?>" required /></td>
 					</tr>
 					<tr>
-						<td><label for="nama_siswa">Nama Guru</label></td>
+						<td><label for="nama_siswa">Nama Siswa</label></td>
 						<td> : </td>
-						<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" value="<?php echo $row['nama'];?>" required /></td>
+						<td><input type="text" name="nama" id="nama_siswa" class="input1" placeholder="nama siswa" value="<?php echo $row['nama'];?>" required /></td>
 					</tr>
 					<tr>
 						<td><label for="tempat_lahir">Tempat Lahir</label></td>
@@ -82,17 +82,17 @@ else{
 						<td><textarea name="alamat" id="alamat" class="input2" rows="5" cols="30" placeholder="alamat" required><?php echo $row['alamat'];?></textarea></td>
 					</tr>
 					<tr>
-						<td><label for="jabatan">Jabatan</label></td>
+						<td><label for="kelas">Kelas</label></td>
 						<td> : </td>
 						<td>
-							<select name="jabatan" class="input5" required>
-								<option value="" selected="selected">--Pilih Jabatan
-									<option value="1"<?php if ($jabatan=="Kepala Sekolah") { echo "selected=\"selected\""; } ?>>Kepala Sekolah</option>
-									<option value="2"<?php if ($jabatan=="Guru Bahasa") { echo "selected=\"selected\""; } ?>>Guru Bahasa</option>
-									<option value="3"<?php if ($jabatan=="Guru Olahraga") { echo "selected=\"selected\""; } ?>>Guru Olahraga</option>
-									<option value="4"<?php if ($jabatan=="Guru Seni") { echo "selected=\"selected\""; } ?>>Guru Seni</option>
-									<option value="5"<?php if ($jabatan=="Guru Musik") { echo "selected=\"selected\""; } ?>>Guru Musik</option>
-									<option value="6"<?php if ($jabatan=="Guru Agama") { echo "selected=\"selected\""; } ?>>Guru Agama</option>
+							<select name="kelas" class="input5" required>
+								<option value="" selected="selected">--Pilih Kelas
+									<option value="1"<?php if ($kelas=="1") { echo "selected=\"selected\""; } ?>>10 TKJ</option>
+									<option value="2"<?php if ($kelas=="2") { echo "selected=\"selected\""; } ?>>11 TKJ</option>
+									<option value="3"<?php if ($kelas=="3") { echo "selected=\"selected\""; } ?>>12 TKJ</option>
+									<option value="4"<?php if ($kelas=="4") { echo "selected=\"selected\""; } ?>>10 TIPTL</option>
+									<option value="5"<?php if ($kelas=="5") { echo "selected=\"selected\""; } ?>>11 TIPTL</option>
+									<option value="6"<?php if ($kelas=="6") { echo "selected=\"selected\""; } ?>>12 TIPTL</option>
 								</select>
 							</td>
 						</tr>
