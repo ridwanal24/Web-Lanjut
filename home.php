@@ -72,7 +72,9 @@ include 'layout/header.php';
 
 </div>
 <!-- /.container -->
-
+<br>
+<br>
+<br>
 <?php
 include 'layout/footer.php';
 ?>
