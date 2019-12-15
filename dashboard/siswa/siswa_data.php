@@ -21,10 +21,27 @@ else{
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<br>
-				<form action="siswa_tambah.php">
+				<form action="#" method="get">
 					<!-- <form action="guru_tambah.php" class="content"> -->
 						<div class="row">
-							<div class="col-md-8"></div>
+									
+							<div class="col-md-12">
+										<div class="input-group">
+									  <input type="text" name="nis" class="form-control col-md-4" placeholder="Tulis NIS disini" aria-label="Recipient's username" aria-describedby="button-addon2">
+										  <div class="input-group-append">
+    										<input class="btn btn-primary text-light btn-outline-secondary" type="submit" value="Cari" name="submit" id="button-addon2"></input>
+										  </div>
+									</div>
+							</div>		
+									
+						</div>
+</form>
+					<form action="siswa_tambah.php">
+
+						<div class="row">
+							<div class="col-md-8">
+							</div>
+							
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Siswa" /></center></div>
 							<div class="col-md-2"><center><a href="cetak_siswa.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 						</div>
@@ -58,7 +75,12 @@ else{
 								}	
 								$no=0+$posisi;
 								
+								if (isset($_GET['submit'])) {
+									$tampil="select siswa.nama, nis, alamat, gender, tglLahir, tempatLahir, agama, kelas.nama as kelas, jurusan.nama as jurusan from siswa join kelas on kelas.idKelas=siswa.idKelas join jurusan on jurusan.idJurusan=kelas.idJurusan where nis=".$_GET['nis'];
+								}else{
+
 								$tampil="SELECT siswa.nama, nis, alamat, gender, tglLahir, tempatLahir, agama, kelas.nama as kelas, jurusan.nama as jurusan from siswa join kelas on kelas.idKelas=siswa.idKelas join jurusan on jurusan.idJurusan=kelas.idJurusan";
+								}
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -94,7 +116,10 @@ else{
 										<?php
 			//hitung jumlah data
 										$jml_data = mysql_num_rows(mysql_query("SELECT * FROM siswa"));
-			//Jumlah halaman
+								if(mysql_num_rows($qryTampil)==0){
+									echo "<br><br><center>Data Tidak Ditemukan</center><br><br>";
+								}
+			//Jumlah JmlHalaman
 			$JmlHalaman = ceil($jml_data/$batas); //ceil digunakan untuk pembulatan keatas
 			if ( $pg > 1 ) {
 				$link = $pg-1;
