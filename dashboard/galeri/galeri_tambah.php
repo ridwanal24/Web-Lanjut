@@ -15,12 +15,12 @@ else{
 			<tr>
 				<td><label for="pathVideo">Video</label></td>
 				<td>:</td>
-				<td><input type="text" name="video" id="video" class="input1" placeholder="video" required /></td>
+				<td><input type="text" name="video" id="video" class="input1" placeholder="video"/></td>
 			</tr>
 			<tr>
 				<td><label for="pathImg">Gambar</label></td>
 				<td>:</td>
-				<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar" required /></td>
+				<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar"/></td>
 			</tr>
 			<tr>
 				<td></td>
