@@ -89,7 +89,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
         	<br>
         	<br>
         	<br>
-          <a class="btn btn-primary card-title" href="siswa/">Artikel</a>
+          <a class="btn btn-primary card-title" href="artikel/">Artikel</a>
         </div>
       </div>
     </div>
