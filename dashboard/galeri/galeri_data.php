@@ -39,7 +39,7 @@ else{
 					<form action="galeri_tambah.php">
 
 						<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-10">
 							</div>
 							
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Galeri" /></center></div>
