@@ -82,7 +82,7 @@ else{
 										<td align="center"><?php echo $dataTampil['pathImg']; ?></td>
 										<td>
 											<div align="center">
-												<a href="galer_hapus.php?idGaleri=<?php echo $dataTampil['idGaleri'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
+												<a href="galeri_hapus.php?idGaleri=<?php echo $dataTampil['idGaleri'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
 											</td>
 											<td>
 												<a href="galeri_edit.php?idGaleri=<?php echo $dataTampil['idGaleri']; ?>"><img src="gambar/edit.png" width="20"></a>
