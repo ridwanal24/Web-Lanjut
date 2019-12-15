@@ -99,7 +99,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
       <div class="card h-100">
         <img class="card-img-top" src="img/galeri" alt="">
         <div class="card-body">
-          <a class="btn btn-primary" href="">Galeri</a>
+          <a class="btn btn-primary" href="galeri/">Galeri</a>
         </div>
       </div>
     </div>
