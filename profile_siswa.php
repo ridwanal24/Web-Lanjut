@@ -6,10 +6,17 @@ if (isset( $_SESSION['status'])) {
 
 $nis=$_GET['nis'];
 
-$query="select s.nama, s.alamat, s.gender, DATE_FORMAT(s.tglLahir, '%d %M %Y') as lahir , s.tempatLahir, s.agama, s.pathImg, k.nama as kelas, j.nama as jurusan FROM siswa s join kelas k on k.idKelas=s.idKelas join jurusan j ON j.idJurusan=k.idJurusan where nis=$nis";
+$query="select s.nama, s.alamat, s.gender, DATE_FORMAT(s.tglLahir, '%d %M %Y') as lahir , s.tempatLahir, s.agama, s.pathImg as foto, k.nama as kelas, j.nama as jurusan FROM siswa s join kelas k on k.idKelas=s.idKelas join jurusan j ON j.idJurusan=k.idJurusan where nis=$nis";
 $tampil=mysql_query($query);
 while ($result=mysql_fetch_array($tampil)) {
-	# code...
+	# File
+	$path = "assets/img/siswa/".$nis.".png";
+	if (file_exists($path)) {
+		$path="assets/img/siswa/".$nis.".png";
+	}
+	else{
+		$path="assets/img/siswa/default.png";
+	}
 
 ?>
 
@@ -29,7 +36,7 @@ Jurusan
 	<p class="h1 text-center" >Profil Siswa</p>
 		<div class="row">
 			<div class="col-md-4"></div>
-			<div class="col-md-4"><img src="assets/img/siswa/default.png" class="img-fluid img-thumbnail"></img>
+			<div class="col-md-4"><img src="<?php echo $path; ?>" class="img-fluid img-thumbnail"></img>
 			</div>
 			<div class="col-md-4"></div>
 		</div>
