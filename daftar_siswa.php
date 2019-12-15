@@ -68,9 +68,9 @@ if (isset( $_SESSION['status'])) {
 					if (/*isset($_GET['submit'])&& */isset($_GET['kelas']) AND isset($_GET['jurusan'])) {
 						$kelas = $_GET['kelas'];
 						$jurusan = $_GET['jurusan'];
-					
-
-					$query = "Select nis, siswa.nama, kelas.nama as kelas, jurusan.nama as jurusan from siswa join kelas on siswa.idKelas = kelas.idKelas join jurusan on jurusan.idJurusan = kelas.idJurusan where kelas.nama=".$kelas." AND jurusan.idJurusan=".$jurusan;
+						
+						$query = "Select nis, siswa.nama, kelas.nama as kelas, jurusan.nama as jurusan from siswa join kelas on siswa.idKelas = kelas.idKelas join jurusan on jurusan.idJurusan = kelas.idJurusan where kelas.nama=".$kelas." AND jurusan.idJurusan=".$jurusan;
+				
 					$show=mysql_query($query);
 					$nomor=1;
 					while ($result=mysql_fetch_array($show)) {

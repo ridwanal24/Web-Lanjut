@@ -7,21 +7,21 @@ if (isset( $_SESSION['status'])) {
 echo $_GET['nis'];
 ?>
 
-<table border="1">
-	<tr>
-		<td>PROFIL (NAMA SISWA)</td>
-	</tr>
-	<tr>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-	</tr>
-	<tr>
-		<td></td>
-	</tr>
+<!-- Profil
 
-</table>
+Nama
+Alamat
+Jenis Kelamin
+Tanggal Lahir
+Tempat Lahir
+Agama
+Kelas
+Jurusan
+ -->
+
+<div class="fluid-container">
+	
+</div>
 
 
 <?php
