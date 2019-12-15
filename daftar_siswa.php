@@ -84,7 +84,7 @@ if (isset( $_SESSION['status'])) {
 							<td><?php 
 							$nis=$result['nis'];
 							?>
-							<a class="btn btn-danger text-light" href="profile_siswa.php?nis=<?php echo $nis;?>">Lihat Profil</a>
+							<a class="btn btn-danger text-light" href="profile_siswa.php?nis=<?php echo $nis;?>&kelas=<?php echo $_GET['kelas'];?>&jurusan=<?php echo $_GET['jurusan'];?>">Lihat Profil</a>
 							</td>
 						</tr></a>		
 						<?php

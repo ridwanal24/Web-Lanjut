@@ -20,17 +20,6 @@ while ($result=mysql_fetch_array($tampil)) {
 
 ?>
 
-<!-- Profil
-
-Nama
-Alamat
-Jenis Kelamin
-Tanggal Lahir
-Tempat Lahir
-Agama
-Kelas
-Jurusan
- -->
 <br>
 <div class="container-fluid">
 	<p class="h1 text-center" >Profil Siswa</p>
@@ -78,7 +67,7 @@ Jurusan
 </DIV>		
 <br>
 <br>
-	<center><a class="btn btn-dark text-light" href="daftar_siswa.php">Kembali</a></center>
+	<center><a class="btn btn-dark text-light" href="daftar_siswa.php?kelas=<?php echo $_GET['kelas'];?>&jurusan=<?php echo $_GET['jurusan'];?>">Kembali</a></center>
 </div>
 
 <br>
