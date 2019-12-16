@@ -68,7 +68,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT judul as Judul, pathText as Isi, pathImage as Gambar FROM artikel limit $posisi, $batas";
+								$tampil="SELECT idArtikel, judul, pathText, pathImage FROM artikel limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());

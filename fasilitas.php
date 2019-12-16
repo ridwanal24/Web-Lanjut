@@ -19,11 +19,14 @@ $aksi=mysql_query($query);
 while ($result=mysql_fetch_array($aksi)) {
 $foto=$result['idFasilitas'];
 
+//Lokasi Image
 $path="assets/img/fasilitas/".$foto.".png";
 
+//Jika file ada
 if (file_exists($path)) {
   $path=$path;
 }else{
+  //Jika file tidak ada
   $path="assets/img/fasilitas/default.png";
 }
 
