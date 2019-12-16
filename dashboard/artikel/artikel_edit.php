@@ -38,14 +38,14 @@ else{
 						<td><input type="text" name="judul" id="judul" class="input1" placeholder="judul" value="<?php echo $row['judul'];?>"/></td>
 					</tr>
 					<tr>
-						<td><label for="pathText">Video</label></td>
+						<td><label for="pathText">Isi</label></td>
 						<td> : </td>
-						<td><input type="text" name="isi" id="isi" class="input1" placeholder="isi" value="<?php echo $row['pathText'];?>"/></td>
+						<td><input type="file" accept="application/pdf,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="isi" id="isi" class="input1" placeholder="isi" value="<?php echo $row['pathText'];?>"/></td>
 					</tr>
 					<tr>
 						<td><label for="pathImage">Gambar</label></td>
 						<td> : </td>
-						<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImage'];?>"/></td>
+						<td><input type="file" accept="image/*" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImage'];?>"/></td>
 					</tr>
 				    <tr>
 					    <td></td>

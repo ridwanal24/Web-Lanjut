@@ -2,7 +2,7 @@
 include "koneksi.php";
 $judul          = $_POST['judul'];
 $pathText     	= $_POST['pathText'];
-$pathImage        = $_POST['pathImage'];
+$pathImage      = $_POST['pathImage'];
 
 $query=mysql_query("UPDATE artikel SET judul='$judul', video='$pathVideo', gbr='$pathImage' WHERE id=$id");
 {

@@ -34,12 +34,12 @@ else{
 					<tr>
 						<td><label for="pathVideo">Video</label></td>
 						<td> : </td>
-						<td><input type="text" name="video" id="video" class="input1" placeholder="video" value="<?php echo $row['pathVideo'];?>"/></td>
+						<td><input type="text" accept="video/*" name="video" id="video" class="input1" placeholder="video" value="<?php echo $row['pathVideo'];?>"/></td>
 					</tr>
 					<tr>
 						<td><label for="pathImg">Gambar</label></td>
 						<td> : </td>
-						<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImg'];?>"/></td>
+						<td><input type="file" accept="image/*" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImg'];?>"/></td>
 					</tr>
 				    <tr>
 					    <td></td>

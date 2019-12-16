@@ -20,12 +20,12 @@ else{
             <tr>
 				<td><label for="pathText">Isi</label></td>
 				<td>:</td>
-				<td><input type="text" name="isi" id="isi" class="input1" placeholder="Masukkan Dokumen"/></td>
+				<td><input type="file" accept="application/pdf,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="isi" id="isi" class="input1" placeholder="Masukkan Dokumen"/></td>
 			</tr>
 			<tr>
 				<td><label for="pathImage">Gambar</label></td>
 				<td>:</td>
-				<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar"/></td>
+				<td><input type="file" accept="image/*" name="gbr" id="gbr" class="input1" placeholder="gambar"/></td>
 			</tr>
 			<tr>
 				<td></td>
