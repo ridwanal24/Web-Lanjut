@@ -41,6 +41,9 @@
             <a class="nav-link" href="galeri.php">Galeri</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="artikel.php">Artikel</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="fasilitas.php">Fasilitas</a>
           </li>
 
