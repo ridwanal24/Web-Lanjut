@@ -67,7 +67,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT pathVideo as Video, pathImg as Gambar FROM galeri limit $posisi, $batas";
+								$tampil="SELECT pathVideo, pathImg FROM galeri limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
