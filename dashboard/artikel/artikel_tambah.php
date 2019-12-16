@@ -23,7 +23,7 @@ else{
 				<td><input type="text" name="isi" id="isi" class="input1" placeholder="Masukkan Dokumen"/></td>
 			</tr>
 			<tr>
-				<td><label for="pathImg">Gambar</label></td>
+				<td><label for="pathImage">Gambar</label></td>
 				<td>:</td>
 				<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar"/></td>
 			</tr>

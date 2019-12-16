@@ -4,11 +4,11 @@
     // Ambil variabel yang dikirim dari form
     $judul = $_POST['judul'];
     $pathText = $_POST['pathText'];
-    $pathImg = $_POST['pathImg'];
+    $pathImage = $_POST['pathImage'];
   
     // Query Input Data
-    $input = "INSERT INTO artikel(judul, pathText, pathImg) 
-    VALUES ('$judul', '$pathText','$pathImg')";
+    $input = "INSERT INTO artikel(judul, pathText, pathImage) 
+    VALUES ('$judul', '$pathText','$pathImage')";
     $hasil = mysqli_query($konek,$input);
     // Apabila query untuk menginput data benar
     if($hasil){

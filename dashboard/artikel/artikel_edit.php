@@ -21,7 +21,7 @@ else{
 			<?php 
 			include "koneksi.php";
 			$id=$_GET['idArtikel'];
-			$query=mysql_query("SELECT judul, pathText, pathImg from artikel where idArtikel='$id'");
+			$query=mysql_query("SELECT judul, pathText, pathImage from artikel where idArtikel='$id'");
 			?>
 			<h1 align="center">Edit Data Artikel</h1>
 			<br>
@@ -30,7 +30,7 @@ else{
 				while($row=mysql_fetch_array($query)){
                     $judul=$row['judul'];
 					$pathText=$row['pathText'];
-					$pathImg=$row['pathImg'];
+					$pathImage=$row['pathImage'];
 					?>
                     <tr>
 						<td><label for="judul">Judul</label></td>
@@ -43,9 +43,9 @@ else{
 						<td><input type="text" name="isi" id="isi" class="input1" placeholder="isi" value="<?php echo $row['pathText'];?>"/></td>
 					</tr>
 					<tr>
-						<td><label for="pathImg">Gambar</label></td>
+						<td><label for="pathImage">Gambar</label></td>
 						<td> : </td>
-						<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImg'];?>"/></td>
+						<td><input type="text" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImage'];?>"/></td>
 					</tr>
 				    <tr>
 					    <td></td>
