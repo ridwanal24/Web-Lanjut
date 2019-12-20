@@ -106,6 +106,20 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
     <div class="col-md-1"></div>
 <!-- Baris Stop 2-->
 
+<br>
+<!-- Baris Mulai 3-->
+  	<div class="row text-center">
+  	<div class="col-md-1"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/admin.png" alt="">
+        <div class="card-body">
+          <a class="btn btn-primary card-title" href="">Admin</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Baris Stop 3-->
  	</div>
 	<?php
 }else{
