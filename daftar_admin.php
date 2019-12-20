@@ -32,7 +32,7 @@ if (isset( $_SESSION['status'])) {
 					<!-- PHP Show Data -->
 					<?php
 					
-					$query = "select nip, guru.nama, jabatan.nama as jabatan, agama from guru join jabatan on jabatan.idJabatan = guru.idJabatan";
+					$query = "select nip, admin.nama, jabatan.nama as jabatan, agama from admin join jabatan on jabatan.idJabatan = admin.idJabatan";
 					$show=mysql_query($query);
 					$nomor=1;
 					while ($result=mysql_fetch_array($show)) {
@@ -46,7 +46,7 @@ if (isset( $_SESSION['status'])) {
 							<td><?php 
 							$nip=$result['nip'];
 							?>
-							<a class="btn btn-danger text-light" href="profile_guru.php?nip=<?php echo $nip;?>">Lihat Profil</a>
+							<a class="btn btn-danger text-light" href="profile_admin.php?nip=<?php echo $nip;?>">Lihat Profil</a>
 							</td>
 						</tr>		
 						<?php
@@ -55,7 +55,6 @@ if (isset( $_SESSION['status'])) {
 					
 					?>
 				
-					
 					<!-- End of PHP Show Data -->
 				</tbody>
 			</table>	
@@ -76,7 +75,9 @@ if (isset( $_SESSION['status'])) {
 	<br>
 	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
 	<br>
-	<?php
+	<center><a href="login_admin.php"><button type="button" class="btn btn-primary text-light">LOGIN ADMIN</button></a></center>
+	<br>
+    <?php
 }
 include 'layout/footer.php';
 ?>

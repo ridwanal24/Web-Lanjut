@@ -6,23 +6,23 @@ if (isset( $_SESSION['status'])) {
 
 $nip=$_GET['nip'];
 
-$query="select g.nama, g.alamat, g.gender, DATE_FORMAT(g.tglLahir, '%d %M %Y') as lahir , g.tempatLahir, g.agama, g.pathImg as foto, j.nama as jabatan FROM guru g JOIN jabatan j ON j.idJabatan=g.idJabatan where g.nip=$nip";
+$query="select g.nama, g.alamat, g.gender, DATE_FORMAT(g.tglLahir, '%d %M %Y') as lahir , g.tempatLahir, g.agama, g.pathImg as foto, j.nama as jabatan FROM admin g JOIN jabatan j ON j.idJabatan=g.idJabatan where g.nip=$nip";
 $tampil=mysql_query($query);
 while ($result=mysql_fetch_array($tampil)) {
 	# File
-	$path = "assets/img/guru/".$nip.".png";
+	$path = "assets/img/admin/".$nip.".png";
 	if (file_exists($path)) {
-		$path="assets/img/guru/".$nip.".png";
+		$path="assets/img/admin/".$nip.".png";
 	}
 	else{
-		$path="assets/img/guru/default.png";
+		$path="assets/img/admin/default.png";
 	}
 
 ?>
 
 <br>
 <div class="container-fluid">
-	<p class="h1 text-center" >Profil Guru</p>
+	<p class="h1 text-center" >Profil Admin</p>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4"><img src="<?php echo $path; ?>" class="img-fluid img-thumbnail"></img>
@@ -75,7 +75,7 @@ while ($result=mysql_fetch_array($tampil)) {
 </DIV>		
 <br>
 <br>
-	<center><a class="btn btn-dark text-light" href="daftar_guru.php">Kembali</a></center>
+	<center><a class="btn btn-dark text-light" href="daftar_admin.php">Kembali</a></center>
 </div>
 
 <br>
@@ -92,7 +92,7 @@ while ($result=mysql_fetch_array($tampil)) {
 	<br>
 	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
 	<br>
-	<center><a href="login_admin.php"><button type="button" class="btn btn-primary text-light">LOGIN ADMIN</button></a></center>
+    <center><a href="login_admin.php"><button type="button" class="btn btn-primary text-light">LOGIN ADMIN</button></a></center>
 	<br>
 	<?php
 }

@@ -79,6 +79,8 @@ if (isset( $_SESSION['status'])) {
 	<br>
 	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
 	<br>
+	<center><a href="login_admin.php"><button type="button" class="btn btn-primary text-light">LOGIN ADMIN</button></a></center>
+	<br>
 	<?php
 }
 include 'layout/footer.php';
