@@ -123,12 +123,12 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
     <div class="col-md-2"></div>
     <div class="col-md-2 mb-4">
       <div class="card h-100">
-        <img class="card-img-top" src="img/artikel" alt="">
+        <img class="card-img-top" src="img/kritik_saran.png" alt="">
         <div class="card-body">
           <br>
           <br>
           <br>
-          <a class="btn btn-primary card-title" href="artikel/">Artikel</a>
+          <a class="btn btn-primary card-title" href="kritik_saran/">Kritik & Saran</a>
         </div>
       </div>
     </div>

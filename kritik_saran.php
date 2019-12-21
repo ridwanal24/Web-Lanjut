@@ -15,16 +15,16 @@ include 'koneksi.php';
 				<div class="form-group">
 					<label for="Nama">Nama</label>
 					<input type="text"<?php if (isset($_SESSION['status'])) {
-						echo "disabled";
-					} ?> class="form-control" id="inputNama" placeholder="Nama" value="<?php if (isset($_SESSION['status'])) {
+						echo "readonly";
+					} ?> class="form-control" name="nama" id="inputNama" placeholder="Nama" value="<?php if (isset($_SESSION['status'])){
 						echo $_SESSION['username'];
-					} ?> ">
+					}?>">
 				</div>
 
 				<div class="form-group">
 					<label for="inputKritik">Kritik & Saran</label>
 					<br>
-					<textarea form="kritik_saran_form" name="kritik_saran" class="form-control" placeholder="Tulis kritik dan saran anda disini"></textarea>
+					<textarea name="kritik_saran" class="form-control" placeholder="Tulis kritik dan saran anda disini"></textarea>
 				</div>
 				<input type="submit" class="btn btn-primary float-right" name="submit">				
 			</div>
