@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2019 at 02:27 PM
+-- Generation Time: Dec 21, 2019 at 04:39 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -98,11 +98,26 @@ CREATE TABLE `fasilitas` (
 
 INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`) VALUES
 (1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum\'at.'),
-(2, 'Aula', 1, NULL, 'Aula digunakan untuk agenda penting semisal musyawarah antara guru dengan orang tua wali, pembekalan UN, pentas seni, dan lain sebagainya'),
-(3, 'Kantin', 1, NULL, 'Kantin sangat dijaga kebersihannya. Makanan yang tersedia cukup bervariasi sehingga membuat siswa bisa tenang sejenak setelah belajar seharian'),
-(4, 'Perpustakaan', 1, NULL, 'Sudah menerapkan perpustakaan online, sehingga proses peminjaman buku serta pengembalian dan pengecekan buku lebih cepat'),
+(2, 'Aula', 1, NULL, 'Aula digunakan untuk agenda penting semisal musyawarah antara guru dengan orang tua wali, pembekalan UN, pentas seni, dan lain sebagainya.'),
+(3, 'Kantin', 1, NULL, 'Kantin sangat dijaga kebersihannya. Makanan yang tersedia cukup bervariasi sehingga membuat siswa bisa tenang sejenak setelah belajar seharian.'),
+(4, 'Perpustakaan', 1, NULL, 'Sudah menerapkan perpustakaan online, sehingga proses peminjaman buku serta pengembalian dan pengecekan buku lebih cepat.'),
 (5, 'Bengkel Listrik', 1, NULL, 'Memiliki peralatan yang memadai untuk melakukan pengukuran arus listrik, praktik instalasi, pemanfaatan listrik untuk kebutuhan idustri, dan lain-lain.'),
-(6, 'Labolatorium Komputer', 3, NULL, 'Lab ber AC dan memiliki komputer yang cukup agar para siswa bersemangat dalam belajar merakit pc, praktek jaringan, dan lain lain.');
+(6, 'Labolatorium Komputer', 3, NULL, 'Lab ber AC dan memiliki komputer yang cukup agar para siswa bersemangat dalam belajar merakit pc, praktek jaringan, dan lain lain.'),
+(7, 'Ruang Kelas', 6, NULL, 'Ruang kelas dilengkapi pendingin ruangan (AC) dan didesain agar anak merasa nyaman dan dapat berinteraksi dengan guru serta teman-temannya dengan leluasa. Selain meja-kursi, disediakan karpet untuk kegiatan circle time dan pembelajaran di dalam kelas.'),
+(8, 'Ruang Kesehatan', 1, NULL, 'Demi mengantisipasi adanya siswa yang kurang sehat saat di sekolah, ruang kesehatan dilengkapi dengan obat-obatan, P3K, ranjang dan ruangan ber-AC.'),
+(9, 'Lapangan Olahraga', 1, NULL, 'Lapangan olahraga telah didesain untuk beragam pelajaran olahraga seperti bola basket, footsal, volley dan atletik. Lapangan yang luas dan sarana olahraga yang beragam memberi peluang lebih besar untuk dapat mengembangkan motorik kasar dan bakat anak.'),
+(10, 'Taman', 1, NULL, 'Demi memastikan para siswa bermain dengan aman dan dapat mengeksplore kemampuan motorik secara baik. Sekolah menyediakan taman bermain khusus untuk para siswa.'),
+(11, 'Keamanan', 1, NULL, 'Sekolah ini dilengkapi oleh personil keamanan yang professional (Satpam). Dengan kelengkapan keamanan tersebut, mampu menciptakan keamanan dan kenyamanan kegiatan pembelajaran maupun kenyamanan lingkungan.'),
+(12, 'Koperasi Sekolah', 1, NULL, 'Koperasi sekolah tempat siswa manajemen pemasaran praktik, Koperasi sekolah menjual barang-barang kebutuhan siswa dan guru Dunia bisnis adalah dunia yang menjanjikan masa depan yang lebih baik.'),
+(13, 'Tempat Parkir Sekolah', 1, NULL, 'Penataan tempat parkir sekolah merupakan pekerjaan rumah bagi waka sarpras yang harus di evaluasi setiap tahun. Setiap hari anak-anak membawa sepeda motor bertambah kapasitasnya.'),
+(14, 'Toilet', 1, NULL, 'Toilet kegunaan utamanya sebagai tempat pembuangan kotoran, yaitu urin dan feses.'),
+(15, 'Ruang OSIS', 1, NULL, 'Tempat yang digunakan untuk pertemuan / berkumpulnya anggota OSIS.'),
+(16, 'Ruang Guru', 1, NULL, 'Tempat yang digunakan untuk ruang para guru beristirahat atau mengerjakan tugas mereka. Ruang guru juga bisa di pakai untuk menyimpan dokumen - dokumen penting tentang anak didik mereka.'),
+(17, 'Ruang BP/BK', 1, NULL, 'Tempat yang digunakan untuk proses pemberian bantuan yang dilakukan melalui wawancara konseling (face to face) oleh seorang ahli (disebut konselor) kepada individu yang sedang mengalami sesuatu masalah.'),
+(18, 'Ruang Tata Usaha', 1, NULL, 'Tempat yang digunakan untuk bagian dari unit pelaksana teknis penyelenggaraan sistem administrasi dan informasi pendidikan di sekolah.'),
+(19, 'Ruang Kepala Sekolah/KPKNA', 1, NULL, 'Tempat yang digunakan sebagai tempat kepala sekolah beristirahat, mengerjakan suatu tugas tentang sekolah, atau menyimpan arsip-arsip penting sekolah.'),
+(20, 'Ruang Gudang', 1, NULL, 'Ruangan yang digunakan untuk menyimpan berbagai macam barang.'),
+(21, 'Lapangan Upacara', 1, NULL, 'Tempat dimana semua kegiatan sekolah dilakukan disana, seperti upacara rutin hari Senin, latihan upacara, kegiatan pramuka rutin hari Jumat, kegiatan ekstra kurikuler,dll.');
 
 -- --------------------------------------------------------
 
@@ -124,7 +139,8 @@ INSERT INTO `galeri` (`idGaleri`, `pathVideo`, `pathImg`) VALUES
 (660100001, NULL, './assets/img/galeri/classroom.jpg'),
 (660100002, NULL, './assets/img/galeri/high_school.jpg'),
 (660100003, NULL, './assets/img/galeri/computer_eng.jpg'),
-(660100004, NULL, './assets/img/galeri/electrician.jpg');
+(660100004, NULL, './assets/img/galeri/electrician.jpg'),
+(660100005, '', '');
 
 -- --------------------------------------------------------
 
@@ -327,7 +343,6 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `idKelas`, `pass`, `agama`, `pathImg`) VALUES
-(614, 'Muhammad Alfian ', 'Banua Kepayang', 'L', '2003-02-05', 'Barabai Timur', 1, 1234, 'Islam', NULL),
 (615, 'Muhammad Arsyad', 'Banua Kepayang', 'L', '2003-04-25', 'Barabai', 1, 1234, 'Islam', NULL),
 (616, 'Dinda Nurwulan Agustin', 'Banua Kepayang', 'P', '2003-08-24', 'HST', 1, 1234, 'Islam', NULL),
 (617, 'Nursifa Salsabila', 'Banua Kepayang', 'P', '2003-06-23', 'HST', 1, 1234, 'Islam', NULL),
@@ -379,7 +394,7 @@ INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir
 (663, 'Raudatu Sifa', 'Banua Kepayang', 'P', '2001-05-12', 'Banjarmasin', 5, 1234, 'Islam', NULL),
 (664, 'M. Yusan Edo Ridani', 'Banua Kepayang', 'L', '2001-06-05', 'Gambut', 5, 1234, 'Islam', NULL),
 (665, 'Rudi Hermansyah', 'Banua Kepayang', 'L', '2001-11-21', 'HST', 5, 1234, 'Islam', NULL),
-(666, 'Nor Zulfa Adhia', 'Banua Kepayang', 'P', '2001-10-31', 'HST', 5, 1234, 'Islam', NULL),
+(666, 'Nor Zulfa Adhia a', 'Banua Kepayang', 'P', '2001-10-31', 'HST', 5, 1234, 'Islam', NULL),
 (667, 'Zahratun Nafisah', 'Banua Kepayang', 'P', '2001-10-29', 'HST', 5, 1234, 'Islam', NULL),
 (668, 'Akhmad Fahriannor', 'Banua Kepayang', 'L', '2001-04-21', 'HST', 5, 1234, 'Islam', NULL),
 (669, 'M. Nazrillah Arrazah', 'Banua Kepayang', 'L', '2001-06-25', 'Banua Kepayang', 6, 1234, 'Islam', NULL),
@@ -412,6 +427,9 @@ CREATE TABLE `tugasmapel` (
 --
 
 INSERT INTO `tugasmapel` (`nip`, `idMapel`) VALUES
+(100001, 1),
+(100001, 2),
+(100001, 3),
 (100001, 1),
 (100001, 2),
 (100001, 3);
@@ -559,13 +577,13 @@ ALTER TABLE `ekstra`
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=660100005;
+  MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=660100006;
 
 --
 -- AUTO_INCREMENT for table `jabatan`
