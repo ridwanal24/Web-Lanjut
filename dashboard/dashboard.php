@@ -104,12 +104,13 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
       </div>
     </div>
     <div class="col-md-1"></div>
+  </div>
 <!-- Baris Stop 2-->
 
 <br>
 <!-- Baris Mulai 3-->
-  	<div class="row text-center">
-  	<div class="col-md-1"></div>
+        <div class="row text-center">
+    <div class="col-md-1"></div>
     <div class="col-md-2 mb-4">
       <div class="card h-100">
         <img class="card-img-top" src="img/admin.png" alt="">
@@ -119,8 +120,32 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
       </div>
     </div>
 
-<!-- Baris Stop 3-->
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/artikel" alt="">
+        <div class="card-body">
+          <br>
+          <br>
+          <br>
+          <a class="btn btn-primary card-title" href="artikel/">Artikel</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/galeri" alt="">
+        <div class="card-body">
+          <a class="btn btn-primary" href="galeri/">Galeri</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
  	</div>
+<!-- Baris Stop 3-->
+ </div>
 	<?php
 }else{
 	echo "<center>Silahkan login sebagai admin </center>";

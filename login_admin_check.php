@@ -1,9 +1,9 @@
 <?php
 include 'koneksi.php';	 
-$nip = $_POST['nip'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 
-$login = mysql_query("select * from admin where nip='$nip' and pass='$password'");
+$login = mysql_query("select * from admin where username='$username' and pass='$password'");
 $cek = mysql_num_rows($login);
 $row=mysql_fetch_array($login);
 
@@ -11,11 +11,11 @@ if($cek > 0){
 	session_start();
 	
 	/*Ambil data nama admin*/
-	$_SESSION['username'] = $row['nama'];
+	$_SESSION['username'] = $row['username'];
 	/*Status Login*/
 	$_SESSION['status'] = "admin";
 	/*Redirect Home*/
-	header("location:home.php");
+	header("location:dashboard/");
 }else{
 	echo "<script>if(confirm('Username / Password Salah'))
 	{
