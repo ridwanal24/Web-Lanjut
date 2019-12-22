@@ -22,10 +22,9 @@ $data=mysql_fetch_array($action);
 				<?php if ($data['bintang']=="no") { ?>
 					<a class="btn btn-primary col-md-4" href="">Tandai</a><br><br>	
 				<?php
-				}else{ ?>
+				}else{?>
 					<a class="btn btn-primary col-md-4" href="">Hapus Tanda</a><br><br>	
-				<?php } ?>
-				
+				<?php }?>
 				<a class="btn btn-primary col-md-4" href="kritik_saran_data.php">Kembali</a>
 			</div>
 		</div>
