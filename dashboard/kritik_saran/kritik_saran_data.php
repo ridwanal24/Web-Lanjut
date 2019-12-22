@@ -28,14 +28,9 @@ else{
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
 									<td><div align="center"><strong>Nama</strong></div></td>
-									<td><div align="center"><strong>Nama Guru</strong></div></td>
-									<td><div align="center"><strong>Tempat Lahir</strong></div></td>
-									<td><div align="center"><strong>Tanggal Lahir</strong></div></td>
-									<td><div align="center"><strong>Jenis Kelamin</strong></div></td>
-									<td><div align="center"><strong>Agama</strong></div></td>
-									<td><div align="center"><strong>Alamat</strong></div></td>
-									<td><div align="center"><strong>Jabatan</strong></div></td>
-									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
+									<td><div align="center"><strong>Status</strong></div></td>
+									<td><div align="center"><strong>Tanggal</strong></div></td>
+									<td><div align="center"><strong>Isi Pesan</strong></div></td>
 								</tr>
 								<?php
 								include "koneksi.php";
@@ -61,16 +56,9 @@ else{
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['nama']; ?></td>
-										<td align="center"><?php echo $dataTampil['isi']; ?></td>
+										<td align="center"><?php echo $dataTampil['status']; ?></td>
 										<td align="center"><?php echo $dataTampil['date']; ?></td>
-										<td>
-											<div align="center">
-												<a href="guru_hapus.php?nip=<?php echo $dataTampil['nip'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
-											</td>
-											<td>
-												<a href="guru_edit.php?nip=<?php echo $dataTampil['nip']; ?>"><img src="gambar/edit.png" width="20"></a>
-											</div>
-										</td>
+										<td align="center"><a class="btn btn-primary" href="kritik_saran_show.php?idKritik=<?php echo $dataTampil['idkritik'] ; ?>">Tampilkan</a></td>
 									</tr>
 								<?php } ?>
 

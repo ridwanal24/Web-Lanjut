@@ -10,29 +10,6 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
 }else if ((isset($_SESSION['status'])) AND ($_SESSION['status']=="Admin")){
 	?>
 
-<!-- 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="text-center col-md-10">
-				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-action disabled active">
-						Dashboard Admin
-					</a>
-					<a href="guru/" class="list-group-item list-group-item-action">Kelola Data Guru</a>
-					<a href="siswa/" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
-					<a href="#" class="list-group-item list-group-item-action">Kelola Data Admin</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-					<a href="#" class="list-group-item list-group-item-action disabled">Kelola Gallery</a>
-				</div>
-			</div>
-			<div class="col-md-1"></div>
-		</div>
-	</div> -->
  	<div class="container-fluid">
  		<div class="row text-center">
 <!-- Baris Mulai -->
