@@ -52,7 +52,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="kritik_saran.php">Kritik & Saran</a>
+            <a class="nav-link" href="kritik_saran.php">Ekstrakurikuler</a>
           </li>
 
           <li class="nav-item">
