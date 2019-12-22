@@ -39,9 +39,9 @@ $aksi=mysql_query($query);
 							<th scope="row"><?php echo $nomor;?></th>
 							<td><?php echo $result['nama'];?></td>
 							<td><?php 
-							$id=$result['idEkstra'];
+							$idEkstra=$result['idEkstra'];
 							?>
-							<a class="btn btn-danger text-light" href="detEkstra.php?nip=<?php echo $id;?>">Lihat Profil</a>
+							<a class="btn btn-danger text-light" href="detEkstra.php?idEkstra=<?php echo $idEkstra;?>">Read More</a>
 							</td>
 						</tr>		
 						<?php
