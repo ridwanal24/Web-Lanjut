@@ -61,7 +61,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
       <div class="card h-100">
         <img class="card-img-top" src="img/fasilitas.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary" href="">Fasilitas</a>
+          <a class="btn btn-primary" href="fasilitas/">Fasilitas</a>
         </div>
       </div>
     </div>
@@ -115,7 +115,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
       <div class="card h-100">
         <img class="card-img-top" src="img/admin.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary card-title" href="">Admin</a>
+          <a class="btn btn-primary card-title" href="admin/">Admin</a>
         </div>
       </div>
     </div>
