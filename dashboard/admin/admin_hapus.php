@@ -1,10 +1,10 @@
  <?php ob_start();
  include "koneksi.php";
- mysql_query("delete from guru where nip='$_GET[nip]'");
+ mysql_query("delete from admin where nip='$_GET[nip]'");
  {
  	echo '<script language="javascript">
- 	alert ("Data Guru Berhasil Dihapus");
- 	window.location="guru_data.php";
+ 	alert ("Data Admin Berhasil Dihapus");
+ 	window.location="admin_data.php";
  	</script>';
  	exit();
  }

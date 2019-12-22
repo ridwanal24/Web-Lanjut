@@ -11,13 +11,13 @@ else{
 <head>
  <meta charset="UTF-8">
  <title>Data Siswa Sekolahku</title>
- <link rel="stylesheet" href="css/guru.css">
+ <link rel="stylesheet" href="css/admin.css">
 
 </head>
 <body> -->
 	<br>
-	<form action="guru_aksi_input.php" method="post">
-		<h1 align="center">Input Data Guru</h1>
+	<form action="admin_aksi_input.php" method="post">
+		<h1 align="center">Input Data Admin</h1>
 		<br>
 		<table border="0">
 			<tr>
@@ -26,9 +26,9 @@ else{
 				<td><input type="text" name="nip" id="nip" class="input1" placeholder="nip" required /></td>
 			</tr>
 			<tr>
-				<td><label for="nama_siswa">Nama Guru</label></td>
+				<td><label for="nama_siswa">Nama Admin</label></td>
 				<td>:</td>
-				<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" required /></td>
+				<td><input type="text" name="nama" id="nama_admin" class="input1" placeholder="nama admin" required /></td>
 			</tr>
 			<tr>
 				<td><label for="tempat_lahir">Tempat Lahir</label></td>
@@ -63,18 +63,6 @@ else{
 					<td><textarea name="alamat" id="alamat" class="input2" rows="5" cols="30" placeholder="alamat" required></textarea></td>
 				</tr>
 				<tr>
-					<td><label for="jabatan">Jabatan</label></td>
-					<td>:</td>
-					<td><select name="jabatan" class="input5" required>
-						<option value="" selected="selected">--Pilih Jabatan
-							<option value="1">Kepala Sekolah</option>
-							<option value="2">Guru Bahasa</option>
-							<option value="3">Guru Olahraga</option>
-							<option value="4">Guru Seni</option>
-							<option value="5">Guru Musik</option>
-							<option value="6">Guru Agama</option>
-						</select></td>
-					</tr>
 					<tr>
 						<td></td>
 						<td></td>

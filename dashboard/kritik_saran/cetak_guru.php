@@ -1,6 +1,6 @@
 <?php
 header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Data_Admin.xls");
+header("Content-Disposition: attachment; filename=Data_Guru.xls");
 ?>
 <form action="" class="">
 	<h3 style="text-align: center;">
@@ -11,7 +11,7 @@ header("Content-Disposition: attachment; filename=Data_Admin.xls");
 		<tr bgcolor="#ffffff">
 			<td><div align="center"><strong>No</strong></div></td>
 			<td><div align="center"><strong>Nip</strong></div></td>
-			<td><div align="center"><strong>Nama admin</strong></div></td>
+			<td><div align="center"><strong>Nama guru</strong></div></td>
 			<td><div align="center"><strong>Tempat Lahir</strong></div></td>
 			<td><div align="center"><strong>Tanggal Lahir</strong></div></td>
 			<td><div align="center"><strong>Jenis Kelamin</strong></div></td>
@@ -22,7 +22,7 @@ header("Content-Disposition: attachment; filename=Data_Admin.xls");
 		<?php
 		include "koneksi.php";
 		$no=0;
-		$tampil= "SELECT admin.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM admin join jabatan on jabatan.idJabatan = admin.idJabatan";
+		$tampil= "SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan";
 		$qryTampil=mysql_query($tampil);
 		if ($qryTampil === FALSE) {
 			die(mysql_error());

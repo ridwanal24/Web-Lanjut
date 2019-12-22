@@ -21,12 +21,12 @@ else{
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<br>
-				<form action="guru_tambah.php">
-					<!-- <form action="guru_tambah.php" class="content"> -->
+				<form action="admin_tambah.php">
+					<!-- <form action="admin_tambah.php" class="content"> -->
 						<div class="row">
 							<div class="col-md-8"></div>
-							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Guru" /></center></div>
-							<div class="col-md-2"><center><a href="cetak_guru.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
+							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Admin" /></center></div>
+							<div class="col-md-2"><center><a href="cetak_admin.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 						</div>
 						
 						<br>
@@ -35,7 +35,7 @@ else{
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
 									<td><div align="center"><strong>NIP</strong></div></td>
-									<td><div align="center"><strong>Nama Guru</strong></div></td>
+									<td><div align="center"><strong>Nama Admin</strong></div></td>
 									<td><div align="center"><strong>Tempat Lahir</strong></div></td>
 									<td><div align="center"><strong>Tanggal Lahir</strong></div></td>
 									<td><div align="center"><strong>Jenis Kelamin</strong></div></td>
@@ -56,7 +56,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
+								$tampil="SELECT admin.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM admin join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -77,10 +77,10 @@ else{
 										<td align="center"><?php echo $dataTampil['jabatan']; ?></td>
 										<td>
 											<div align="center">
-												<a href="guru_hapus.php?nip=<?php echo $dataTampil['nip'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
+												<a href="admin_hapus.php?nip=<?php echo $dataTampil['nip'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
 											</td>
 											<td>
-												<a href="guru_edit.php?nip=<?php echo $dataTampil['nip']; ?>"><img src="gambar/edit.png" width="20"></a>
+												<a href="admin_edit.php?nip=<?php echo $dataTampil['nip']; ?>"><img src="gambar/edit.png" width="20"></a>
 											</div>
 										</td>
 									</tr>
