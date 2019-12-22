@@ -61,7 +61,7 @@ while ($result=mysql_fetch_array($tampil)) {
 				<div class="font-weight-bold col-md-4">Mata Pelajaran</div>
 				<div class="col-md-6"><?php
 				
-				$query2="select mp.nama as mapel FROM guru g JOIN jabatan j ON j.idJabatan=g.idJabatan join tugasmapel tm on tm.nip=g.nip join matapelajaran mp on mp.idMapel=tm.idMapel where g.nip=$nip";
+				$query2="select mp.nama as mapel FROM admin g JOIN jabatan j ON j.idJabatan=g.idJabatan join tugasmapel tm on tm.nip=g.nip join matapelajaran mp on mp.idMapel=tm.idMapel where g.nip=$nip";
 
 				$aksi=mysql_query($query2);
 				while ($result2=mysql_fetch_array($aksi)) {
