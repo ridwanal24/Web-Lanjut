@@ -13,7 +13,7 @@ if($cek > 0){
 	/*Ambil data nama guru*/
 	$_SESSION['username'] = $row['nama'];
 	/*Status Login*/
-	$_SESSION['status'] = "guru";
+	$_SESSION['status'] = "Guru";
 	/*Redirect Home*/
 	header("location:home.php");
 }else{

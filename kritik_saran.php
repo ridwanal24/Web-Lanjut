@@ -26,7 +26,7 @@ include 'koneksi.php';
 					<br>
 					<textarea name="kritik_saran" class="form-control" placeholder="Tulis kritik dan saran anda disini"></textarea>
 				</div>
-				<input type="submit" class="btn btn-primary float-right" name="submit">				
+				<input value="Submit" type="submit" class="btn btn-primary float-right" name="submit">				
 			</div>
 			<div class="col-md-3"></div>
 		</div>

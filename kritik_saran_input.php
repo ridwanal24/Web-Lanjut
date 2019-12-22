@@ -1,7 +1,7 @@
 <?php
 include 'koneksi.php';
 if (isset($_GET['submit'])) {
-	 $query="insert into kritiksaran(nama,isi) values ('".$_GET['nama']."','".$_GET['kritik_saran']."')";
+	 $query="insert into kritiksaran(nama,isi,date) values ('".$_GET['nama']."','".$_GET['kritik_saran']."','".date("Y-m-d H:i:sq")."')";
 	 $action=mysql_query($query);
 
 	 if ($action) {

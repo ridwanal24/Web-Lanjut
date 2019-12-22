@@ -32,9 +32,6 @@ if (isset( $_SESSION['status'])) {
 					<!-- PHP Show Data -->
 					<?php
 					
-						
-					
-
 					$query = "select nip, guru.nama, jabatan.nama as jabatan, agama from guru join jabatan on jabatan.idJabatan = guru.idJabatan";
 					$show=mysql_query($query);
 					$nomor=1;

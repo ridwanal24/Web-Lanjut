@@ -2,12 +2,12 @@
 session_start();
 include 'layout/header.php';
 echo "<br>";
-if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="admin")) {
+if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
 	echo "<center>Silahkan login sebagai admin </center>";
 	?>
 	<center><a href="../index.php"><button type="button" class="btn btn-primary text-light">LOGIN</button></a></center>
 	<?php
-}else if ((isset($_SESSION['status'])) AND ($_SESSION['status']=="admin")){
+}else if ((isset($_SESSION['status'])) AND ($_SESSION['status']=="Admin")){
 	?>
 
 <!-- 	<div class="container-fluid">
