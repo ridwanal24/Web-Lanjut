@@ -21,6 +21,7 @@ $aksi=mysql_query($query);
 					<tr>
 						<th scope="col">No</th>
 						<th scope="col">Ekstrakurikuler</th>
+                        <th scope="col">Pilihan</th>
 					</tr>
 				</thead>
 				<tbody>
