@@ -119,6 +119,33 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
         </div>
       </div>
     </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/ekstra.png" alt="">
+        <div class="card-body">
+          <br>
+          <br>
+          <br>
+          <a class="btn btn-primary card-title" href="ekstra/">Ekstrakurikuler</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/schprof.png" alt="">
+        <div class="card-body">
+          <br>
+          <br>
+          <br>
+          <a class="btn btn-primary card-title" href="profil_sekolah/">Profil Sekolah</a>
+        </div>
+      </div>
+    </div>
+
     <div class="col-md-1"></div>
  	</div>
 <!-- Baris Stop 3-->
