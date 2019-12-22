@@ -11,17 +11,17 @@ else{
 <head>
  <meta charset="UTF-8">
  <title>Data Siswa MI Wahid Hasyim</title>
- <link rel="stylesheet" href="css/guru.css">
+ <link rel="stylesheet" href="css/admin.css">
 
 </head>
 <body> -->
 	<br>
-	<form action="guru_aksi_edit.php" method="post" enctype="multipart/form-data">
-		<!-- 	<form action="guru_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
+	<form action="admin_aksi_edit.php" method="post" enctype="multipart/form-data">
+		<!-- 	<form action="admin_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
 			<?php 
 			include "koneksi.php";
 			$nip=$_GET['nip'];
-			$query=mysql_query("SELECT guru.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM guru join jabatan on jabatan.idJabatan = guru.idJabatan where nip='$nip'");
+			$query=mysql_query("SELECT admin.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM admin join jabatan on jabatan.idJabatan = admin.idJabatan where nip='$nip'");
 			?>
 			<h1 align="center">Edit Data Siswa</h1>
 			<br>
@@ -41,9 +41,9 @@ else{
 						<td><input type="text" name="nip" id="nip" class="input1" placeholder="nip"  disabled="disabled" value="<?php echo $row['nip'];?>" required /></td>
 					</tr>
 					<tr>
-						<td><label for="nama_siswa">Nama Guru</label></td>
+						<td><label for="nama_siswa">Nama Admin</label></td>
 						<td> : </td>
-						<td><input type="text" name="nama" id="nama_guru" class="input1" placeholder="nama guru" value="<?php echo $row['nama'];?>" required /></td>
+						<td><input type="text" name="nama" id="nama_admin" class="input1" placeholder="nama admin" value="<?php echo $row['nama'];?>" required /></td>
 					</tr>
 					<tr>
 						<td><label for="tempat_lahir">Tempat Lahir</label></td>
@@ -82,23 +82,6 @@ else{
 						<td><textarea name="alamat" id="alamat" class="input2" rows="5" cols="30" placeholder="alamat" required><?php echo $row['alamat'];?></textarea></td>
 					</tr>
 					<tr>
-						<td><label for="jabatan">Jabatan</label></td>
-						<td> : </td>
-						<td>
-							<select name="jabatan" class="input5" required>
-								<option value="" selected="selected">--Pilih Jabatan
-									<option value="1"<?php if ($jabatan=="Kepala Sekolah") { echo "selected=\"selected\""; } ?>>Kepala Sekolah</option>
-									<option value="2"<?php if ($jabatan=="Guru Bahasa") { echo "selected=\"selected\""; } ?>>Guru Bahasa</option>
-									<option value="3"<?php if ($jabatan=="Guru Olahraga") { echo "selected=\"selected\""; } ?>>Guru Olahraga</option>
-									<option value="4"<?php if ($jabatan=="Guru Seni") { echo "selected=\"selected\""; } ?>>Guru Seni</option>
-									<option value="5"<?php if ($jabatan=="Guru Musik") { echo "selected=\"selected\""; } ?>>Guru Musik</option>
-									<option value="6"<?php if ($jabatan=="Guru Agama") { echo "selected=\"selected\""; } ?>>Guru Agama</option>
-								</select>
-							</td>
-						</tr>
-						<td></td>
-						<td></td>
-
 						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
 					</tr>
 				<?php } ?>
