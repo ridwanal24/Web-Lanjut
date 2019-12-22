@@ -18,8 +18,6 @@ else{
 					<!-- <form action="guru_tambah.php" class="content"> -->
 						<div class="row">
 							<div class="col-md-8"></div>
-							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Guru" /></center></div>
-							<div class="col-md-2"><center><a href="cetak_guru.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 						</div>
 						
 						<br>
@@ -30,6 +28,7 @@ else{
 									<td><div align="center"><strong>Nama</strong></div></td>
 									<td><div align="center"><strong>Status</strong></div></td>
 									<td><div align="center"><strong>Tanggal</strong></div></td>
+									<td><div align="center"><strong>Tandai</strong></div></td>
 									<td><div align="center"><strong>Isi Pesan</strong></div></td>
 								</tr>
 								<?php
@@ -58,6 +57,10 @@ else{
 										<td align="center"><?php echo $dataTampil['nama']; ?></td>
 										<td align="center"><?php echo $dataTampil['status']; ?></td>
 										<td align="center"><?php echo $dataTampil['date']; ?></td>
+										<td align="center"><?php if ($dataTampil['bintang']=="yes") {
+											?>
+											<img width="32px" src="gambar/star.png">
+										 <?php } ?></td>
 										<td align="center"><a class="btn btn-primary" href="kritik_saran_show.php?idKritik=<?php echo $dataTampil['idkritik'] ; ?>">Tampilkan</a></td>
 									</tr>
 								<?php } ?>

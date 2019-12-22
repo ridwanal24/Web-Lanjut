@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set("Asia/Jakarta");
 include 'koneksi.php';
 if (isset($_GET['submit'])) {
 	if (isset($_SESSION['status'])) {
@@ -7,7 +8,7 @@ if (isset($_GET['submit'])) {
 	}else{
 		$status="Pengunjung";
 	}
-	 $query="insert into kritiksaran(nama,isi,date,status) values ('".$_GET['nama']."','".$_GET['kritik_saran']."','".date("Y-m-d H:i:sq")."','".$status."')";
+	 $query="insert into kritiksaran(nama,isi,date,status,bintang) values ('".$_GET['nama']."','".$_GET['kritik_saran']."','".date("Y-m-d H:i:sq")."','".$status."','no')";
 	 $action=mysql_query($query);
 
 	 if ($action) {
