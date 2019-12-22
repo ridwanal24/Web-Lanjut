@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 21, 2019 at 04:39 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Host: 127.0.0.1
+-- Generation Time: Dec 22, 2019 at 08:53 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -256,8 +254,22 @@ INSERT INTO `kelas` (`idKelas`, `nama`, `idJurusan`) VALUES
 CREATE TABLE `kritiksaran` (
   `idkritik` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
-  `isi` varchar(255) DEFAULT NULL
+  `isi` varchar(255) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `status` varchar(100) DEFAULT NULL,
+  `bintang` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kritiksaran`
+--
+
+INSERT INTO `kritiksaran` (`idkritik`, `nama`, `isi`, `date`, `status`, `bintang`) VALUES
+(8, 'Andika Pratama Suryajana', 'Ketertiban yang sangat dijunjung tinggi disekolah ini membuat kegiatan belajar mengajar menjadi optimal.', '2019-12-22 12:23:58', 'Pengunjung', 'no'),
+(9, 'Zahratun Nafisah', 'Saya mau pinjam buku di perpustakaan menggunakan sistem online. Tapi terkendala masalah koneksi wifi yang tidak stabil di jam-jam istirahat. tolong di benahi pak/bu', '2019-12-22 12:25:38', 'Siswa', 'no'),
+(10, 'Meta Adilla', 'Walaupun hidup seribu tahun kalau tak sembahyang apa gunanya', '2019-12-22 12:26:27', 'Siswa', 'no'),
+(11, 'Meta Adilla', 'Ketika ke kantin sekolah, kumerasa ada yang memperhatikan dari pojokan gelap di sebelah utara penjual lotek. Mohon berikan penjelasan yang pasti soalnya waktu ku cek tidak ada siapapun disana. Dan ini terjadi hampir setiap kali ke kantin sekolah.', '2019-12-22 12:28:31', 'Siswa', 'yes'),
+(12, 'Budi Setiawan Sang Trader Profesional', 'Saya menggunakan fasilitas wifi disekolah ini untuk mengerjakan tugas, nyari informasi, pinjam buku, main saham, upload foto, update status, update blog, dan lain-lain. Tapi terkendala dengan kelas saya yang tidak terjangkau wifi sama sekali.', '2019-12-22 12:31:34', 'Pengunjung', 'no');
 
 -- --------------------------------------------------------
 
@@ -560,79 +572,66 @@ ALTER TABLE `tugasmapel`
 --
 ALTER TABLE `agenda`
   MODIFY `idAgenda` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
   MODIFY `idArtikel` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `ekstra`
 --
 ALTER TABLE `ekstra`
   MODIFY `idEkstra` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
   MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
   MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=660100006;
-
 --
 -- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
   MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
   MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
   MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
   MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `kritiksaran`
 --
 ALTER TABLE `kritiksaran`
-  MODIFY `idkritik` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `idkritik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `matapelajaran`
 --
 ALTER TABLE `matapelajaran`
   MODIFY `idMapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
   MODIFY `idPengumuman` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
   MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
-
 --
 -- Constraints for dumped tables
 --
@@ -667,7 +666,6 @@ ALTER TABLE `siswa`
 ALTER TABLE `tugasmapel`
   ADD CONSTRAINT `tugasmapel_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`),
   ADD CONSTRAINT `tugasmapel_ibfk_2` FOREIGN KEY (`idMapel`) REFERENCES `matapelajaran` (`idMapel`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
