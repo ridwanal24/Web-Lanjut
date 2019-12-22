@@ -61,7 +61,7 @@ else{
 											?>
 											<img width="32px" src="gambar/star.png">
 										 <?php } ?></td>
-										<td align="center"><a class="btn btn-primary" href="kritik_saran_show.php?idKritik=<?php echo $dataTampil['idkritik'] ; ?>">Tampilkan</a></td>
+										<td align="center"><a class="btn btn-primary" href="kritik_saran_show.php?idKritik=<?php echo $dataTampil['idkritik']; ?>">Tampilkan</a></td>
 									</tr>
 								<?php } ?>
 
