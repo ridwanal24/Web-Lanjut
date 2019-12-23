@@ -26,7 +26,6 @@ else{
 						<div class="row">
 							<div class="col-md-8"></div>
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Admin" /></center></div>
-							<div class="col-md-2"><center><a href="cetak_admin.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 						</div>
 						
 						<br>
@@ -34,14 +33,8 @@ else{
 							<tr class="bg-light">
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
-									<td><div align="center"><strong>NIP</strong></div></td>
-									<td><div align="center"><strong>Nama Admin</strong></div></td>
-									<td><div align="center"><strong>Tempat Lahir</strong></div></td>
-									<td><div align="center"><strong>Tanggal Lahir</strong></div></td>
-									<td><div align="center"><strong>Jenis Kelamin</strong></div></td>
-									<td><div align="center"><strong>Agama</strong></div></td>
-									<td><div align="center"><strong>Alamat</strong></div></td>
-									<td><div align="center"><strong>Jabatan</strong></div></td>
+									<td><div align="center"><strong>Username</strong></div></td>
+									<td><div align="center"><strong>Password</strong></div></td>
 									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 								</tr>
 								<?php
@@ -56,7 +49,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT admin.nama,nip,alamat,gender,tglLahir,tempatLahir,agama, jabatan.nama as jabatan FROM admin join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
+								$tampil="SELECT username,password from admin limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -67,20 +60,14 @@ else{
 
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
-										<td align="center"><?php echo $dataTampil['nip']; ?></td>
-										<td align="center"><?php echo $dataTampil['nama']; ?></td>
-										<td align="center"><?php echo $dataTampil['tempatLahir']; ?></td>
-										<td align="center"><?php echo $dataTampil['tglLahir']; ?></td>
-										<td align="center"><?php echo $dataTampil['gender']; ?></td>
-										<td align="center"><?php echo $dataTampil['agama']; ?></td>
-										<td align="center"><?php echo $dataTampil['alamat']; ?></td>
-										<td align="center"><?php echo $dataTampil['jabatan']; ?></td>
+										<td align="center"><?php echo $dataTampil['username']; ?></td>
+										<td align="center"><?php echo $dataTampil['password']; ?></td>
 										<td>
 											<div align="center">
-												<a href="admin_hapus.php?nip=<?php echo $dataTampil['nip'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
+												<a href="admin_hapus.php?username=<?php echo $dataTampil['username'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
 											</td>
 											<td>
-												<a href="admin_edit.php?nip=<?php echo $dataTampil['nip']; ?>"><img src="gambar/edit.png" width="20"></a>
+												<a href="admin_edit.php?username=<?php echo $dataTampil['username']; ?>"><img src="gambar/edit.png" width="20"></a>
 											</div>
 										</td>
 									</tr>
@@ -90,7 +77,7 @@ else{
 									<td colspan="11">
 										<?php
 			//hitung jumlah data
-										$jml_data = mysql_num_rows(mysql_query("SELECT * FROM guru"));
+										$jml_data = mysql_num_rows(mysql_query("SELECT * FROM admin"));
 			//Jumlah halaman
 			$JmlHalaman = ceil($jml_data/$batas); //ceil digunakan untuk pembulatan keatas
 			if ( $pg > 1 ) {
