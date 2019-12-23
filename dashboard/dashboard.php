@@ -38,7 +38,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
       <div class="card h-100">
         <img class="card-img-top" src="img/fasilitas.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary" href="">Fasilitas</a>
+          <a class="btn btn-primary" href="fasilitas/">Fasilitas</a>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
       <div class="card h-100">
         <img class="card-img-top" src="img/admin.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary card-title" href="">Admin</a>
+          <a class="btn btn-primary card-title" href="admin/">Admin</a>
         </div>
       </div>
     </div>
@@ -122,6 +122,32 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
     <div class="col-md-1"></div>
  	</div>
 <!-- Baris Stop 3-->
+
+<br>
+<!-- Baris Mulai 4-->
+        <div class="row text-center">
+    <div class="col-md-1"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/ekstra.png" alt="">
+        <div class="card-body">
+          <a class="btn btn-primary card-title" href="ekstra/">Ekstrakurikuler</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/schprof.png" alt="">
+        <div class="card-body">
+          <a class="btn btn-primary card-title" href="profil_sch/">Profil Sekolah</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+ 	</div>
+<!-- Baris Stop 4-->
  </div>
 	<?php
 }else{

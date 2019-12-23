@@ -52,6 +52,10 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" href="ekstra.php">Ekstrakurikuler</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="daftar_guru.php">
               Daftar Guru
             </a>
