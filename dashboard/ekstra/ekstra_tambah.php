@@ -15,12 +15,12 @@ else{
             <tr>
 				<td><label for="nama">Ekstrakurikuler</label></td>
 				<td> : </td>
-				<td><input type="text" name="nama" id="nama" class="input1" placeholder="nama ekstrakurikuler" value="<?php echo $row['nama'];?>"/></td>
+				<td><input type="text" name="nama" id="nama" class="input1" placeholder="nama ekstrakurikuler" value=""/></td>
 			</tr>
 			<tr>
 				<td><label for="deskripsi">Deskripsi</label></td>
 				<td> : </td>
-				<td><textarea name="deskripsi" id="deskripsi" class="input2" rows="5" cols="30" placeholder="deskripsi" required><?php echo $row['deskripsi'];?></textarea></td>
+				<td><textarea name="deskripsi" id="deskripsi" class="input2" rows="5" cols="30" placeholder="deskripsi" required></textarea></td>
 			</tr>
 			<tr>
 				<td></td>

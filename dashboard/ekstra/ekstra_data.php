@@ -67,11 +67,12 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT nama, deskripsi FROM ekstra limit $posisi, $batas";
+								$tampil="SELECT * FROM ekstra limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
 								}
+
 								while ($dataTampil=mysql_fetch_array($qryTampil)) {
 									$no++;
 									?>

@@ -21,7 +21,7 @@ else{
 			<?php 
 			include "koneksi.php";
 			$id=$_GET['idEkstra'];
-			$query=mysql_query("SELECT nama,deskripsi from ekstra where idEkstra='$id'");
+			$query=mysql_query("SELECT * from ekstra where idEkstra=$id");
 			?>
 			<h1 align="center">Edit Data Galeri</h1>
 			<br>
@@ -31,6 +31,9 @@ else{
 					$pathVideo=$row['nama'];
 					$pathImg=$row['deskripsi'];
 					?>
+					<tr>
+						<input type="hidden" name="idEkstra" id="nama" class="input1" value="<?php echo $row['idEkstra'];?>"/></td>
+					</tr>
 					<tr>
 						<td><label for="nama">Ekstrakurikuler</label></td>
 						<td> : </td>
