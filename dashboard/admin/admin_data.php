@@ -16,7 +16,7 @@ else{
 <body> -->
 	<br>
 	<div class="container-fluid">
-		<center><h1>DATA GURU</h1></center>
+		<center><h1>DATA ADMIN</h1></center>
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
@@ -49,7 +49,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT username,password from admin limit $posisi, $batas";
+								$tampil="SELECT * FROM admin limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -61,7 +61,7 @@ else{
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['username']; ?></td>
-										<td align="center"><?php echo $dataTampil['password']; ?></td>
+										<td align="center"><?php echo $dataTampil['pass']; ?></td>
 										<td>
 											<div align="center">
 												<a href="admin_hapus.php?username=<?php echo $dataTampil['username'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>

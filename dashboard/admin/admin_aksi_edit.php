@@ -1,16 +1,9 @@
  <?php ob_start();
 include "koneksi.php";
-$nip          	= $_POST['nip'];
-$nama_admin      = $_POST['nama'];
-$tempat_lahir  = $_POST['tempatLahir'];
-$tanggal_lahir  = $_POST['tglLahir'];
-$jenis_kelamin  = $_POST['gender'];
-$agama         = $_POST['agama'];
-$alamat         = $_POST['alamat'];
-$jabatan  = $_POST['jabatan'];
+$username          	= $_POST['username'];
+$pass 			    = $_POST['pass'];
 
-$query=mysql_query("UPDATE admin SET nip=$nip, nama='$nama_admin', tempatLahir='$tempat_lahir', tglLahir='$tanggal_lahir', 
-gender='$jenis_kelamin', agama='$agama', alamat='$alamat', idJabatan=$jabatan WHERE nip=$nip");
+$query=mysql_query("UPDATE admin SET username='$username', pass='$pass' WHERE username='$username'");
 {
 			echo '<script language="javascript">
 				  alert ("Data Admin Berhasil Diupdate");

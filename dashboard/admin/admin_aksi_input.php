@@ -2,19 +2,12 @@
     // Koneksi ke database
     $konek = mysqli_connect("localhost","root","","db_sekolahmu");
     // Ambil variabel yang dikirim dari form
-    $nip = $_POST['nip'];
-    $nama_guru = $_POST['nama'];
-    $tempat_lahir = $_POST['tempatLahir'];
-    $tanggal_lahir = $_POST['tglLahir'];
-    $jenis_kelamin = $_POST['gender'];
-    $agama = $_POST['agama'];
-    $alamat = $_POST['alamat'];
-    $jabatan = $_POST['jabatan'];
-    
+    $username = $_POST['username'];
+    $pass = $_POST['pass'];    
 
     // Query Input Data
-    $input = "INSERT INTO admin(nip, nama, tempatLahir, tglLahir, gender, agama, alamat, idJabatan) 
-    VALUES ($nip,'$nama_admin','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$agama','$alamat',$jabatan)";
+    $input = "INSERT INTO admin(username, pass) 
+    VALUES ('$username','$pass')";
     $hasil = mysqli_query($konek,$input);
     // Apabila query untuk menginput data benar
     if($hasil){

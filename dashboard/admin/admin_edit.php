@@ -20,8 +20,8 @@ else{
 		<!-- 	<form action="admin_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
 			<?php 
 			include "koneksi.php";
-			$nip=$_GET['username'];
-			$query=mysql_query("SELECT username, password where username='$username'");
+			$username=$_GET['username'];
+			$query=mysql_query("SELECT * FROM admin where username='$username'");
 			?>
 			<h1 align="center">Edit Data Admin</h1>
 			<br>
@@ -29,7 +29,7 @@ else{
 				<?php
 				while($row=mysql_fetch_array($query)){
 					$username=$row['username'];
-					$password=$row['password'];
+					$pass=$row['pass'];
 					?>
 					<tr>
 						<td><input type="hidden" name="username" value="<?php echo $row['username'];?>" /></td>
@@ -37,12 +37,12 @@ else{
 					<tr>
 						<td><label for="username">Username</label></td>
 						<td width="20px"> : </td>
-						<td><input type="text" name="username" id="username" class="input1" placeholder="username"  disabled="disabled" value="<?php echo $row['username'];?>" required /></td>
+						<td><input type="text" name="username" id="username" class="input1" placeholder="username" value="<?php echo $row['username'];?>" required /></td>
 					</tr>
 					<tr>
-						<td><label for="password">Password</label></td>
+						<td><label for="pass">Password</label></td>
 						<td> : </td>
-						<td><input type="text" name="password" id="password" class="input1" placeholder="password" value="<?php echo $row['password'];?>" required /></td>
+						<td><input type="text" name="pass" id="pass" class="input1" placeholder="pass" value="<?php echo $row['pass'];?>" required /></td>
 					</tr>
 					<tr>
 						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
