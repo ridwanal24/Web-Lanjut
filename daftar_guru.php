@@ -2,7 +2,7 @@
 session_start();
 include 'koneksi.php';
 include 'layout/header.php';
-if (isset( $_SESSION['status'])) {
+if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 	# code...
 
 ?>

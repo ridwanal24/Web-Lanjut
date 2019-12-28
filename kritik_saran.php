@@ -11,7 +11,7 @@ include 'koneksi.php';
 		
 		<div class="row">
 			<div class="col-md-3"></div>
-			<div class="p-md-4 col-md-6 bg-light">
+			<div class="p-md-4 col-md-6 bg-white">
 				<div class="form-group">
 					<label for="Nama">Nama</label>
 					<input type="text"<?php if (isset($_SESSION['status'])) {
