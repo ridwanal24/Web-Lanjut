@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <footer class="navbar fixed-bottom bg-dark">
+  <footer class="navbar fixed-bottom bg-white">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Start Bootstrap 2019</p>
     </div>

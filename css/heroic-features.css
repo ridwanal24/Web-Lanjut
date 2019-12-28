@@ -6,3 +6,9 @@
 body {
   padding-top: 56px;
 }
+
+.bayangan {
+	-webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.47);
+	-moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.47);
+	box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.47);
+}
