@@ -1,7 +1,8 @@
  <?php ob_start();
 include "koneksi.php";
-$username          	= $_POST['username'];
+$fasilitas          	= $_POST['fasilitas'];
 $pass 			    = $_POST['pass'];
+
 
 $query=mysql_query("UPDATE admin SET username='$username', pass='$pass' WHERE username='$username'");
 {

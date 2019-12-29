@@ -79,28 +79,10 @@ else{
 
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
-										<td align="center"><?php echo $dataTampil['masjid']; ?></td>
-										<td align="center"><?php echo $dataTampil['aula']; ?></td>
-										<td align="center"><?php echo $dataTampil['kantin']; ?></td>
-										<td align="center"><?php echo $dataTampil['perpustakaan']; ?></td>
-										<td align="center"><?php echo $dataTampil['bengkel listrik']; ?></td>
-										<td align="center"><?php echo $dataTampil['labolatorium komputer']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang kelas']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang kesehatan']; ?></td>
-										<td align="center"><?php echo $dataTampil['lapangan olahraga']; ?></td>
-										<td align="center"><?php echo $dataTampil['taman']; ?></td>
-										<td align="center"><?php echo $dataTampil['keamanan']; ?></td>
-										<td align="center"><?php echo $dataTampil['koperasi sekolah']; ?></td>
-										<td align="center"><?php echo $dataTampil['tempat parkir sekolah']; ?></td>
-										<td align="center"><?php echo $dataTampil['toilet']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang osis']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang guru']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang bp/bk']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang tata usaha']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang kepala sekolah/kpkna']; ?></td>
-										<td align="center"><?php echo $dataTampil['ruang gudang']; ?></td>
-										<td align="center"><?php echo $dataTampil['lapangan upacara']; ?></td>
-										
+										<td align="center"><?php echo $dataTampil['nama']; ?></td>
+										<td align="center"><?php echo $dataTampil['jumlah']; ?></td>
+										<td align="center"><?php echo $dataTampil['pathImg']; ?></td>
+										<td align="center"><?php echo $dataTampil['deskripsi']; ?></td>
 										<td>
 											<div align="center">
 												<a href="fasilitas_hapus.php?username=<?php echo $dataTampil['username'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
