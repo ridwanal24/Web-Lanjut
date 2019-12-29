@@ -11,7 +11,7 @@ else{
 <head>
  <meta charset="UTF-8">
  <title>Data Siswa Sekolahku</title>
- <link rel="stylesheet" href="css/guru.css">
+ <link rel="stylesheet" href="css/admin.css">
 </head>
 <body> -->
 	<br>
