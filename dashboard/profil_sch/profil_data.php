@@ -68,7 +68,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT profilsekolah.nip, guru.nama, jabatan.nama as jabatan FROM profilsekolah join guru on guru.nip = profilsekolah.nip join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
+								$tampil="SELECT profilsekolah.idProfil, profilsekolah.nip, guru.nama, jabatan.nama as jabatan FROM profilsekolah join guru on guru.nip = profilsekolah.nip join jabatan on jabatan.idJabatan = guru.idJabatan limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
