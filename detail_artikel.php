@@ -2,42 +2,35 @@
 session_start();
 include 'koneksi.php';
 include 'layout/header.php';
+
+$idArtikel=$_GET['idArtikel'];
+
+$query="select judul,text from artikel where idArtikel=$idArtikel";
+$tampil=mysql_query($query);
+$result=mysql_fetch_array($tampil)
 ?>
 
+<br>
 <div class="container-fluid">
+	<p class="h1 text-center" ><?php echo $result['judul'];?></p>
 	<br>
-	<center><p class="h1">ARTIKEL</p></center>
-	<br>
-
-    <br>
-    <div class="row">
-      <div class="col-md-2"></div>
-      <?php
-      $db = new mysqli("localhost","root","","db_sekolahmu");
-      $sql = "SELECT pathImg, pathVideo FROM galeri ";
-      $sth = $db->query($sql);
-
-      $file_path = './assets/img/galeri/';
-      ?>
-      <div class="container">
-        <div class="row">
-          
-            <?php
-            while($rows = mysqli_fetch_array($sth)) {
-                $img_src = $rows['pathImg'];
-                ?>
-                <div class="col-md-4">
-                <img src="<?php echo $img_src;?>" class="rounded m-1 img-fluid"/>
-                </div>
-                <?php
-            }
-            ?>
-        
-    </div>
-</div>
-</div>
+<div class="row">
+	<div class="col-md-12"></div>
+		<div class="row py-1">
+				<div class="col-md-11"><?php echo $result['text']; ?></div>
+		</div>
+	<div class="col-md-3"></div>
+					
+</DIV>		
+<br>
+<br>
+	<center><a class="btn btn-dark text-light" href="artikel.php">Kembali</a></center>
 </div>
 
+<br>
+<br>
+<br>
 <?php
+
 include 'layout/footer.php';
 ?>
