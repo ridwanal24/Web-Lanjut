@@ -1,10 +1,10 @@
 <?php ob_start();
 include "koneksi.php";
 $judul          = $_POST['judul'];
-$pathText     	= $_POST['pathText'];
+$text     	= $_POST['text'];
 $pathImage      = $_POST['pathImage'];
 
-$query=mysql_query("UPDATE artikel SET judul='$judul', video='$pathVideo', gbr='$pathImage' WHERE id=$id");
+$query=mysql_query("UPDATE artikel SET judul='$judul', text='$text', gbr='$pathImage' WHERE id=$id");
 {
 			echo '<script language="javascript">
 				  alert ("Artikel Berhasil Diupdate");

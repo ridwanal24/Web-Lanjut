@@ -51,8 +51,8 @@ else{
 							<tr class="bg-light">
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
-									<td><div align="center"><strong>Video</strong></div></td>
-									<td><div align="center"><strong>Gambar</strong></div></td>
+									<td><div align="center"><strong>Ekstrakurikuler</strong></div></td>
+									<td><div align="center"><strong>Deskripsi</strong></div></td>
 									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 								</tr>
 								<?php

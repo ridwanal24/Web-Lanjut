@@ -3,12 +3,12 @@
     $konek = mysqli_connect("localhost","root","","db_sekolahmu");
     // Ambil variabel yang dikirim dari form
     $judul = $_POST['judul'];
-    $pathText = $_POST['pathText'];
+    $text = $_POST['text'];
     $pathImage = $_POST['pathImage'];
   
     // Query Input Data
-    $input = "INSERT INTO artikel(judul, pathText, pathImage) 
-    VALUES ('$judul', '$pathText','$pathImage')";
+    $input = "INSERT INTO artikel(judul, text, pathImage) 
+    VALUES ('$judul', '$text','$pathImage')";
     $hasil = mysqli_query($konek,$input);
     // Apabila query untuk menginput data benar
     if($hasil){

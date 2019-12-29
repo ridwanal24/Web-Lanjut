@@ -18,9 +18,9 @@ else{
 				<td><input type="text" name="judul" id="judul" class="input1" placeholder="judul"/></td>
 			</tr>
             <tr>
-				<td><label for="pathText">Isi</label></td>
+				<td><label for="text">Isi</label></td>
 				<td>:</td>
-				<td><input type="file" accept="application/pdf,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="isi" id="isi" class="input1" placeholder="Masukkan Dokumen"/></td>
+				<td><textarea name="text" id="text" class="input1" placeholder="isi" value="<?php echo $row['text'];?>"></textarea></td>
 			</tr>
 			<tr>
 				<td><label for="pathImage">Gambar</label></td>
