@@ -51,7 +51,7 @@ if (file_exists($path)) {
       </div>
     </div> -->
 
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4" id="<?php echo $result['idFasilitas']; ?>">
       <div class="card h-100">
         <img class="card-img-top" src="<?php echo $path; ?>" alt="">
         <div class="card-body">
