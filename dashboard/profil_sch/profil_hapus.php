@@ -4,7 +4,7 @@
  {
  	echo '<script language="javascript">
  	alert ("Data Berhasil Dihapus");
- 	window.location="prrofil_data.php";
+ 	window.location="profil_data.php";
  	</script>';
  	exit();
  }
