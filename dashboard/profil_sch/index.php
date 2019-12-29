@@ -1,3 +1,3 @@
 <?php
-	header("Location: ekstra_data.php");
+	header("Location: profil_data.php");
 ?>
