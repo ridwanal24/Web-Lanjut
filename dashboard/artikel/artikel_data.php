@@ -68,7 +68,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT idArtikel, judul, pathText, pathImage FROM artikel limit $posisi, $batas";
+								$tampil="SELECT idArtikel, judul, text, pathImage FROM artikel limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -80,7 +80,7 @@ else{
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['judul']; ?></td>
-                                        <td align="center"><?php echo $dataTampil['pathText']; ?></td>
+                                        <td align="center"><?php echo $dataTampil['text']; ?></td>
 										<td align="center"><?php echo $dataTampil['pathImage']; ?></td>
 										<td>
 											<div align="center">

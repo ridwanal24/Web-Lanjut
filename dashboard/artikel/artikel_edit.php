@@ -21,7 +21,7 @@ else{
 			<?php 
 			include "koneksi.php";
 			$id=$_GET['idArtikel'];
-			$query=mysql_query("SELECT judul, pathText, pathImage from artikel where idArtikel='$id'");
+			$query=mysql_query("SELECT judul, text, pathImage from artikel where idArtikel='$id'");
 			?>
 			<h1 align="center">Edit Data Artikel</h1>
 			<br>
@@ -29,7 +29,7 @@ else{
 				<?php
 				while($row=mysql_fetch_array($query)){
                     $judul=$row['judul'];
-					$pathText=$row['pathText'];
+					$text=$row['text'];
 					$pathImage=$row['pathImage'];
 					?>
                     <tr>
@@ -40,7 +40,7 @@ else{
 					<tr>
 						<td><label for="pathText">Isi</label></td>
 						<td> : </td>
-						<td><input type="file" accept="application/pdf,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="isi" id="isi" class="input1" placeholder="isi" value="<?php echo $row['pathText'];?>"/></td>
+						<td><textarea name="text" id="text" class="input1" placeholder="isi" value="<?php echo $row['text'];?>"></textarea></td>
 					</tr>
 					<tr>
 						<td><label for="pathImage">Gambar</label></td>
