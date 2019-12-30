@@ -21,7 +21,7 @@ else{
 			<?php 
 			include "koneksi.php";
 			$id=$_GET['idFasilitas'];
-			$query=mysql_query("SELECT * FROM idFasilitas where idFasilitas='$id'");
+			$query=mysql_query("SELECT * FROM fasilitas where idFasilitas=$id");
 			?>
 			<h1 align="center">Edit Data Fasilitas</h1>
 			<br>
@@ -31,22 +31,27 @@ else{
 					$nama=$row['nama'];
 					$jumlah=$row['jumlah'];
 					$deskripsi=$row['deskripsi'];
-					
+
 					?>
+					<tr>
+					<td>
+					<input type="text" name="idFasilitas" hidden value="<?php echo $id; ?>" />
+					</td>
+					</tr>
 					<tr>
 						<td><label for="nama">Nama</label></td>
 						<td>:</td>
-						<td><input type="text" accept="nama" name="nama" id="nama" class="input1" placeholder="nama"/></td>
+						<td><input type="text" name="nama" id="nama" class="input1" value="<?php echo $nama; ?>" placeholder="nama"/></td>
 					</tr>
 					<tr>
 						<td><label for="jumlah">Jumlah</label></td>
 						<td>:</td>
-						<td><input type="text" accept="jumlah" name="jumlah" id="jumlah" class="input1" placeholder="jumlah"/></td>
+						<td><input type="text" name="jumlah" id="jumlah" class="input1" value="<?php echo $jumlah; ?>" placeholder="jumlah"/></td>
 					</tr>
 					<tr>
 						<td><label for="deskripsi">Deskripsi</label></td>
 						<td>:</td>
-						<td><input type="text" accept="deskripsi" name="deskripsi" id="deskripsi" class="input1" placeholder="deskripsi"/></td>
+						<td><input type="text" name="deskripsi" id="deskripsi" class="input1" value="<?php echo $deskripsi; ?>" placeholder="deskripsi"/></td>
 					</tr>
 					<tr>
 						<td><input type="submit" class="btn btn-primary" value="Update" /></td>

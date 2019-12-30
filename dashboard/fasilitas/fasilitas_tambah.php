@@ -36,7 +36,6 @@ else{
 						<td><input type="text" accept="deskripsi" name="deskripsi" id="deskripsi" class="input1" placeholder="deskripsi"/></td>
 					</tr>
 					<tr>
-						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
 					</tr>
 					<tr>
 					<tr>

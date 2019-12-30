@@ -24,7 +24,7 @@ else{
 				<form action="fasilitas_tambah.php">
 					<!-- <form action="fasilitas_tambah.php" class="content"> -->
 						<div class="row">
-							<div class="col-md-8"></div>
+							<div class="col-md-10"></div>
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Fasilitas" /></center></div>
 						</div>
 						
@@ -63,14 +63,13 @@ else{
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['nama']; ?></td>
 										<td align="center"><?php echo $dataTampil['jumlah']; ?></td>
-										<td align="center"><?php echo $dataTampil['pathImg']; ?></td>
 										<td align="center"><?php echo $dataTampil['deskripsi']; ?></td>
 										<td>
 											<div align="center">
-												<a href="fasilitas_hapus.php?username=<?php echo $dataTampil['username'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
+												<a href="fasilitas_hapus.php?idFasilitas=<?php echo $dataTampil['idFasilitas'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
 											</td>
 											<td>
-												<a href="fasilitas_edit.php?username=<?php echo $dataTampil['username']; ?>"><img src="gambar/edit.png" width="20"></a>
+												<a href="fasilitas_edit.php?idFasilitas=<?php echo $dataTampil['idFasilitas']; ?>"><img src="gambar/edit.png" width="20"></a>
 											</div>
 										</td>
 									</tr>
