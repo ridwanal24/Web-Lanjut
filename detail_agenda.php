@@ -38,7 +38,7 @@ include 'layout/header.php';
                     </div>
                   <hr>
                   <p>
-                  <img src="images/<?php echo $row['image'];?>" width="300px" alt="..." style="float:left;padding:5px 10px 5px 10px;"><?php echo $row['descp']; ?></p>
+                  <img src="dashboard/agenda/images/<?php echo $row['image'];?>" width="300px" alt="..." style="float:left;padding:5px 10px 5px 10px;"><?php echo $row['descp']; ?></p>
                   </p>
 	<br>	
 </div>

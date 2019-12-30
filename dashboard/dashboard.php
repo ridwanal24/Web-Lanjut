@@ -145,6 +145,17 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
         </div>
       </div>
     </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/schprof.png" alt="">
+        <div class="card-body">
+          <a class="btn btn-primary card-title" href="agenda/agenda_data.php">Agenda</a>
+        </div>
+      </div>
+    </div>
+
     <div class="col-md-1"></div>
  	</div>
 <!-- Baris Stop 4-->

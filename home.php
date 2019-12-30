@@ -14,9 +14,9 @@ include 'layout/header.php';
     <div class="col-1"></div>
     <div class="col-3 rounded">
       <div class="card">
-        <h5 class="card-header">Fasilitas</h5>
+        <h5 class="card-header">AGENDA</h5>
         <div class="card-body">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a class="btn btn-primary" href="daftar_agenda.php">Lihat</a>
         </div>
       </div>
     </div>
