@@ -11,26 +11,34 @@ else{
 <head>
  <meta charset="UTF-8">
  <title>Data Siswa Sekolahku</title>
- <link rel="stylesheet" href="css/admin.css">
+ <link rel="stylesheet" href="css/fasilitas.css">
 
 </head>
 <body> -->
 	<br>
-	<form action="admin_aksi_input.php" method="post">
-		<h1 align="center">Input Data Admin</h1>
+	<form action="fasilitas_aksi_input.php" method="post">
+		<h1 align="center">Input Data Fasilitas</h1>
 		<br>
 		<table border="0">
-			<tr>
-				<td><label for="username">Username</label></td>
-				<td>:</td>
-				<td><input type="username" name="username" id="username" class="input1" placeholder="username" required /></td>
-			</tr>
-			<tr>
-				<td><label for="pass">Password</label></td>
-				<td>:</td>
-				<td><input type="password" name="pass" id="pass" class="input1" placeholder="pass" required /></td>
-			</tr>
-			<tr>
+					<tr>
+						<td><label for="nama">Nama</label></td>
+						<td>:</td>
+						<td><input type="text" accept="nama" name="nama" id="nama" class="input1" placeholder="nama"/></td>
+					</tr>
+					<tr>
+						<td><label for="jumlah">Jumlah</label></td>
+						<td>:</td>
+						<td><input type="text" accept="jumlah" name="jumlah" id="jumlah" class="input1" placeholder="jumlah"/></td>
+					</tr>
+					<tr>
+						<td><label for="deskripsi">Deskripsi</label></td>
+						<td>:</td>
+						<td><input type="text" accept="deskripsi" name="deskripsi" id="deskripsi" class="input1" placeholder="deskripsi"/></td>
+					</tr>
+					<tr>
+						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
+					</tr>
+					<tr>
 					<tr>
 						<td></td>
 						<td></td>

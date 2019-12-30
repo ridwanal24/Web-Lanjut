@@ -33,27 +33,9 @@ else{
 							<tr class="bg-light">
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
-									<td><div align="center"><strong>Masjid</strong></div></td>
-									<td><div align="center"><strong>Aula</strong></div></td>
-									<td><div align="center"><strong>Kantin</strong></div></td>
-									<td><div align="center"><strong>Perpustakaan</strong></div></td>
-									<td><div align="center"><strong>Bengkel Listrik</strong></div></td>
-									<td><div align="center"><strong>Labolatorium Komputer</strong></div></td>
-									<td><div align="center"><strong>Ruang Kelas</strong></div></td>
-									<td><div align="center"><strong>Ruang Kesehatan</strong></div></td>
-									<td><div align="center"><strong>Lapangan Olahraga</strong></div></td>
-									<td><div align="center"><strong>Taman</strong></div></td>
-									<td><div align="center"><strong>Keamanan</strong></div></td>
-									<td><div align="center"><strong>Koperasi Sekolah</strong></div></td>
-									<td><div align="center"><strong>Tempat Parkir Sekolah</strong></div></td>
-									<td><div align="center"><strong>Toilet</strong></div></td>
-									<td><div align="center"><strong>Ruang OSIS</strong></div></td>
-									<td><div align="center"><strong>Ruang Guru</strong></div></td>
-									<td><div align="center"><strong>Ruang BP/BK</strong></div></td>
-									<td><div align="center"><strong>Ruang Tata Usaha</strong></div></td>
-									<td><div align="center"><strong>Ruang Kepala Sekolah/KPKNA</strong></div></td>
-									<td><div align="center"><strong>Ruang Gudang</strong></div></td>
-									<td><div align="center"><strong>Lapangan Upacara</strong></div></td>
+									<td><div align="center"><strong>Nama</strong></div></td>
+									<td><div align="center"><strong>Jumlah</strong></div></td>
+									<td><div align="center"><strong>Deskripsi</strong></div></td>
 									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 								</tr>
 								<?php
