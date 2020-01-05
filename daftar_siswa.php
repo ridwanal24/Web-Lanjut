@@ -13,7 +13,7 @@ if (isset( $_SESSION['status'])) {
 		<br>
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10 bg-white shadow rounded">
+			<div class="col-md-10 bg-light shadow rounded">
 
 				<!-- Form Pilihan Kelas -->
 				<form method="get">
