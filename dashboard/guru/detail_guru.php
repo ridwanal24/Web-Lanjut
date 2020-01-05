@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'koneksi.php';
-include 'layout/header.php';
+include '../layout/header.php';
 if (isset( $_SESSION['status'])) {
 $nip=$_GET['nip'];
 $query="select g.nama_guru, g.alamat, g.jenis_kelamin, DATE_FORMAT(g.tanggal_lahir, '%d %M %Y') as lahir , g.tempat_lahir, g.agama, g.image as foto, g.alamat, j.jabatan as jabatan FROM guru g JOIN jabatan j ON j.kode_jabatan=g.kode_jabatan where g.nip=$nip";
@@ -75,7 +75,7 @@ while ($result=mysql_fetch_array($tampil)) {
 </DIV>		
 <br>
 <br>
-	<center><a class="btn btn-dark text-light" href="daftar_guru.php">Kembali</a></center>
+	<center><a class="btn btn-dark text-light" href="guru_data.php">Kembali</a></center>
 </div>
 
 <br>

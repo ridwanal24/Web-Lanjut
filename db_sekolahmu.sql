@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
+-- version 4.0.9
+-- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 05, 2020 at 05:35 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Host: 127.0.0.1
+-- Generation Time: Jan 05, 2020 at 02:48 PM
+-- Server version: 5.6.14
+-- PHP Version: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `db_sekolahmu`
@@ -28,9 +26,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `username` varchar(100) NOT NULL,
-  `pass` varchar(100) DEFAULT NULL
+  `pass` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -46,14 +45,15 @@ INSERT INTO `admin` (`username`, `pass`) VALUES
 -- Table structure for table `agenda`
 --
 
-CREATE TABLE `agenda` (
-  `id_agenda` int(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS `agenda` (
+  `id_agenda` int(255) NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL,
   `descp` varchar(10000) DEFAULT NULL,
   `tanggal` date NOT NULL,
   `kategori` varchar(20) NOT NULL,
-  `image` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `image` varchar(300) NOT NULL,
+  PRIMARY KEY (`id_agenda`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `agenda`
@@ -68,12 +68,13 @@ INSERT INTO `agenda` (`id_agenda`, `title`, `descp`, `tanggal`, `kategori`, `ima
 -- Table structure for table `artikel`
 --
 
-CREATE TABLE `artikel` (
-  `idArtikel` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `artikel` (
+  `idArtikel` int(11) NOT NULL AUTO_INCREMENT,
   `judul` varchar(100) DEFAULT NULL,
   `text` varchar(2000) DEFAULT NULL,
-  `pathImage` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pathImage` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idArtikel`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `artikel`
@@ -88,11 +89,12 @@ INSERT INTO `artikel` (`idArtikel`, `judul`, `text`, `pathImage`) VALUES
 -- Table structure for table `ekstra`
 --
 
-CREATE TABLE `ekstra` (
-  `idEkstra` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `ekstra` (
+  `idEkstra` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) DEFAULT NULL,
-  `deskripsi` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `deskripsi` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idEkstra`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `ekstra`
@@ -107,20 +109,21 @@ INSERT INTO `ekstra` (`idEkstra`, `nama`, `deskripsi`) VALUES
 -- Table structure for table `fasilitas`
 --
 
-CREATE TABLE `fasilitas` (
-  `idFasilitas` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `fasilitas` (
+  `idFasilitas` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) DEFAULT NULL,
   `jumlah` int(11) DEFAULT NULL,
   `pathImg` varchar(100) DEFAULT NULL,
-  `deskripsi` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `deskripsi` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idFasilitas`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`) VALUES
-(1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum\'at.'),
+(1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum''at.'),
 (2, 'Aula', 1, NULL, 'Aula digunakan untuk agenda penting semisal musyawarah antara guru dengan orang tua wali, pembekalan UN, pentas seni, dan lain sebagainya.'),
 (3, 'Kantin', 1, NULL, 'Kantin sangat dijaga kebersihannya. Makanan yang tersedia cukup bervariasi sehingga membuat siswa bisa tenang sejenak setelah belajar seharian.'),
 (4, 'Perpustakaan', 1, NULL, 'Sudah menerapkan perpustakaan online, sehingga proses peminjaman buku serta pengembalian dan pengecekan buku lebih cepat.'),
@@ -148,11 +151,12 @@ INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`
 -- Table structure for table `galeri`
 --
 
-CREATE TABLE `galeri` (
-  `idGaleri` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `galeri` (
+  `idGaleri` int(11) NOT NULL AUTO_INCREMENT,
   `pathVideo` varchar(100) DEFAULT NULL,
-  `pathImg` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pathImg` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idGaleri`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=660100006 ;
 
 --
 -- Dumping data for table `galeri`
@@ -171,24 +175,26 @@ INSERT INTO `galeri` (`idGaleri`, `pathVideo`, `pathImg`) VALUES
 -- Table structure for table `guru`
 --
 
-CREATE TABLE `guru` (
+CREATE TABLE IF NOT EXISTS `guru` (
   `nip` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
+  `nama_guru` varchar(100) NOT NULL,
   `alamat` varchar(100) DEFAULT NULL,
-  `gender` char(1) NOT NULL,
-  `tglLahir` date DEFAULT NULL,
-  `tempatLahir` varchar(100) DEFAULT NULL,
+  `jenis_kelamin` varchar(100) NOT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `tempat_lahir` varchar(100) DEFAULT NULL,
   `pass` int(11) DEFAULT NULL,
-  `idJabatan` int(11) DEFAULT NULL,
+  `kode_jabatan` int(11) DEFAULT NULL,
   `agama` varchar(100) NOT NULL,
-  `pathImg` varchar(100) DEFAULT NULL
+  `image` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`nip`),
+  KEY `idJabatan` (`kode_jabatan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guru`
 --
 
-INSERT INTO `guru` (`nip`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `pass`, `idJabatan`, `agama`, `pathImg`) VALUES
+INSERT INTO `guru` (`nip`, `nama_guru`, `alamat`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `pass`, `kode_jabatan`, `agama`, `image`) VALUES
 (100001, 'Muhammad Ruslan', 'Jalan Kuningan No. 2 Depok Sleman', 'L', '2019-12-25', 'Bantul', 1234, 5, 'Kristen Protestan', ''),
 (100002, 'Justin Beiber', 'Karang Tengah, Tulungagung, Jawa', 'L', '1912-11-11', 'Semarang', NULL, 1, 'Islam', NULL);
 
@@ -198,16 +204,17 @@ INSERT INTO `guru` (`nip`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`
 -- Table structure for table `jabatan`
 --
 
-CREATE TABLE `jabatan` (
-  `idJabatan` int(11) NOT NULL,
-  `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `jabatan` (
+  `kode_jabatan` int(11) NOT NULL AUTO_INCREMENT,
+  `jabatan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kode_jabatan`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `jabatan`
 --
 
-INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
+INSERT INTO `jabatan` (`kode_jabatan`, `jabatan`) VALUES
 (1, 'Kepala Sekolah'),
 (2, 'Guru Bahasa'),
 (3, 'Guru Olahraga'),
@@ -221,10 +228,11 @@ INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
 -- Table structure for table `jurusan`
 --
 
-CREATE TABLE `jurusan` (
-  `idJurusan` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `jurusan` (
+  `idJurusan` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
+  PRIMARY KEY (`idJurusan`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `jurusan`
@@ -240,12 +248,13 @@ INSERT INTO `jurusan` (`idJurusan`, `nama`) VALUES
 -- Table structure for table `kegiatan`
 --
 
-CREATE TABLE `kegiatan` (
-  `idEvent` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `kegiatan` (
+  `idEvent` int(11) NOT NULL AUTO_INCREMENT,
   `judul` varchar(100) DEFAULT NULL,
   `isi` varchar(255) DEFAULT NULL,
-  `tanggal` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `tanggal` datetime DEFAULT NULL,
+  PRIMARY KEY (`idEvent`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -253,11 +262,13 @@ CREATE TABLE `kegiatan` (
 -- Table structure for table `kelas`
 --
 
-CREATE TABLE `kelas` (
-  `idKelas` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `kelas` (
+  `idKelas` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) NOT NULL,
-  `idJurusan` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idJurusan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idKelas`),
+  KEY `idJurusan` (`idJurusan`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `kelas`
@@ -277,7 +288,7 @@ INSERT INTO `kelas` (`idKelas`, `nama`, `idJurusan`) VALUES
 -- Table structure for table `kritiksaran`
 --
 
-CREATE TABLE `kritiksaran` (
+CREATE TABLE IF NOT EXISTS `kritiksaran` (
   `idkritik` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
   `isi` varchar(255) DEFAULT NULL,
@@ -307,10 +318,11 @@ INSERT INTO `kritiksaran` (`idkritik`, `nama`, `isi`, `date`, `status`, `bintang
 -- Table structure for table `matapelajaran`
 --
 
-CREATE TABLE `matapelajaran` (
-  `idMapel` int(11) NOT NULL,
-  `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `matapelajaran` (
+  `idMapel` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idMapel`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `matapelajaran`
@@ -330,14 +342,15 @@ INSERT INTO `matapelajaran` (`idMapel`, `nama`) VALUES
 -- Table structure for table `pengumuman`
 --
 
-CREATE TABLE `pengumuman` (
-  `id_pengumuman` int(20) NOT NULL,
+CREATE TABLE IF NOT EXISTS `pengumuman` (
+  `id_pengumuman` int(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL,
   `descp` varchar(10000) DEFAULT NULL,
   `tanggal` datetime NOT NULL,
   `posting` varchar(20) NOT NULL,
-  `kategori` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `kategori` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_pengumuman`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `pengumuman`
@@ -353,9 +366,11 @@ INSERT INTO `pengumuman` (`id_pengumuman`, `title`, `descp`, `tanggal`, `posting
 -- Table structure for table `profilsekolah`
 --
 
-CREATE TABLE `profilsekolah` (
+CREATE TABLE IF NOT EXISTS `profilsekolah` (
   `idProfil` int(11) NOT NULL,
-  `nip` int(11) DEFAULT NULL
+  `nip` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idProfil`),
+  KEY `nip` (`nip`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -371,11 +386,12 @@ INSERT INTO `profilsekolah` (`idProfil`, `nip`) VALUES
 -- Table structure for table `sambutan`
 --
 
-CREATE TABLE `sambutan` (
+CREATE TABLE IF NOT EXISTS `sambutan` (
   `idSambutan` int(11) NOT NULL,
   `nip` int(11) DEFAULT NULL,
   `isi` varchar(255) DEFAULT NULL,
-  `tanggal` datetime DEFAULT NULL
+  `tanggal` datetime DEFAULT NULL,
+  PRIMARY KEY (`idSambutan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -384,8 +400,8 @@ CREATE TABLE `sambutan` (
 -- Table structure for table `siswa`
 --
 
-CREATE TABLE `siswa` (
-  `nis` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `siswa` (
+  `nis` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `gender` char(1) NOT NULL,
@@ -394,8 +410,10 @@ CREATE TABLE `siswa` (
   `idKelas` int(11) DEFAULT NULL,
   `pass` int(11) DEFAULT NULL,
   `agama` varchar(100) DEFAULT NULL,
-  `pathImg` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `pathImg` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`nis`),
+  KEY `idKelas` (`idKelas`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=901 ;
 
 --
 -- Dumping data for table `siswa`
@@ -476,9 +494,11 @@ INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir
 -- Table structure for table `tugasmapel`
 --
 
-CREATE TABLE `tugasmapel` (
+CREATE TABLE IF NOT EXISTS `tugasmapel` (
   `nip` int(11) DEFAULT NULL,
-  `idMapel` int(11) DEFAULT NULL
+  `idMapel` int(11) DEFAULT NULL,
+  KEY `nip` (`nip`),
+  KEY `idMapel` (`idMapel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -494,193 +514,6 @@ INSERT INTO `tugasmapel` (`nip`, `idMapel`) VALUES
 (100001, 3);
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `agenda`
---
-ALTER TABLE `agenda`
-  ADD PRIMARY KEY (`id_agenda`);
-
---
--- Indexes for table `artikel`
---
-ALTER TABLE `artikel`
-  ADD PRIMARY KEY (`idArtikel`);
-
---
--- Indexes for table `ekstra`
---
-ALTER TABLE `ekstra`
-  ADD PRIMARY KEY (`idEkstra`);
-
---
--- Indexes for table `fasilitas`
---
-ALTER TABLE `fasilitas`
-  ADD PRIMARY KEY (`idFasilitas`);
-
---
--- Indexes for table `galeri`
---
-ALTER TABLE `galeri`
-  ADD PRIMARY KEY (`idGaleri`);
-
---
--- Indexes for table `guru`
---
-ALTER TABLE `guru`
-  ADD PRIMARY KEY (`nip`),
-  ADD KEY `idJabatan` (`idJabatan`);
-
---
--- Indexes for table `jabatan`
---
-ALTER TABLE `jabatan`
-  ADD PRIMARY KEY (`idJabatan`);
-
---
--- Indexes for table `jurusan`
---
-ALTER TABLE `jurusan`
-  ADD PRIMARY KEY (`idJurusan`);
-
---
--- Indexes for table `kegiatan`
---
-ALTER TABLE `kegiatan`
-  ADD PRIMARY KEY (`idEvent`);
-
---
--- Indexes for table `kelas`
---
-ALTER TABLE `kelas`
-  ADD PRIMARY KEY (`idKelas`),
-  ADD KEY `idJurusan` (`idJurusan`);
-
---
--- Indexes for table `matapelajaran`
---
-ALTER TABLE `matapelajaran`
-  ADD PRIMARY KEY (`idMapel`);
-
---
--- Indexes for table `pengumuman`
---
-ALTER TABLE `pengumuman`
-  ADD PRIMARY KEY (`id_pengumuman`);
-
---
--- Indexes for table `profilsekolah`
---
-ALTER TABLE `profilsekolah`
-  ADD PRIMARY KEY (`idProfil`),
-  ADD KEY `nip` (`nip`);
-
---
--- Indexes for table `sambutan`
---
-ALTER TABLE `sambutan`
-  ADD PRIMARY KEY (`idSambutan`);
-
---
--- Indexes for table `siswa`
---
-ALTER TABLE `siswa`
-  ADD PRIMARY KEY (`nis`),
-  ADD KEY `idKelas` (`idKelas`);
-
---
--- Indexes for table `tugasmapel`
---
-ALTER TABLE `tugasmapel`
-  ADD KEY `nip` (`nip`),
-  ADD KEY `idMapel` (`idMapel`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `agenda`
---
-ALTER TABLE `agenda`
-  MODIFY `id_agenda` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `artikel`
---
-ALTER TABLE `artikel`
-  MODIFY `idArtikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `ekstra`
---
-ALTER TABLE `ekstra`
-  MODIFY `idEkstra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `fasilitas`
---
-ALTER TABLE `fasilitas`
-  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `galeri`
---
-ALTER TABLE `galeri`
-  MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=660100006;
-
---
--- AUTO_INCREMENT for table `jabatan`
---
-ALTER TABLE `jabatan`
-  MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `jurusan`
---
-ALTER TABLE `jurusan`
-  MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `kegiatan`
---
-ALTER TABLE `kegiatan`
-  MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `kelas`
---
-ALTER TABLE `kelas`
-  MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `matapelajaran`
---
-ALTER TABLE `matapelajaran`
-  MODIFY `idMapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `pengumuman`
---
-ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `siswa`
---
-ALTER TABLE `siswa`
-  MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
-
---
 -- Constraints for dumped tables
 --
 
@@ -688,7 +521,7 @@ ALTER TABLE `siswa`
 -- Constraints for table `guru`
 --
 ALTER TABLE `guru`
-  ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`idJabatan`) REFERENCES `jabatan` (`idJabatan`);
+  ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`kode_jabatan`) REFERENCES `jabatan` (`kode_jabatan`);
 
 --
 -- Constraints for table `kelas`
@@ -714,7 +547,6 @@ ALTER TABLE `siswa`
 ALTER TABLE `tugasmapel`
   ADD CONSTRAINT `tugasmapel_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`),
   ADD CONSTRAINT `tugasmapel_ibfk_2` FOREIGN KEY (`idMapel`) REFERENCES `matapelajaran` (`idMapel`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

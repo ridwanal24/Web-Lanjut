@@ -1,10 +1,9 @@
 <?php
 session_start();
 include 'koneksi.php';
-include 'layout/header.php';
+include '../layout/header.php';
 if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 	# code...
-
 ?>
 
 <div class="container-fluid">
@@ -32,15 +31,14 @@ if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 					<!-- PHP Show Data -->
 					<?php
 					
-					$query = "select nip, guru.nama, jabatan.nama as jabatan, agama from guru join jabatan on jabatan.idJabatan = guru.idJabatan";
+					$query = "select nip, guru.nama_guru, jabatan.jabatan as jabatan, agama from guru join jabatan on jabatan.kode_jabatan = guru.kode_jabatan";
 					$show=mysql_query($query);
 					$nomor=1;
 					while ($result=mysql_fetch_array($show)) {
-
 						?>
 						<tr>
 							<th scope="row"><?php echo $nomor;?></th>
-							<td><?php echo $result['nama'];?></td>
+							<td><?php echo $result['nama_guru'];?></td>
 							<td><?php echo $result['jabatan'];?></td>
 							<td><?php echo $result['agama'];?></td>
 							<td><?php 
