@@ -22,7 +22,7 @@ header("Content-Disposition: attachment; filename=Data_Guru.xls");
 		<?php
 			include "koneksi.php";
 			$no=0;
-			  $tampil="SELECT * FROM guru";
+			  $tampil="SELECT * FROM guru, jabatan WHERE guru.kode_jabatan=jabatan.kode_jabatan";
 			  $qryTampil=mysql_query($tampil);
 			  if ($qryTampil === FALSE) {
 					die(mysql_error());
