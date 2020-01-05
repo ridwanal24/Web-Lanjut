@@ -16,8 +16,8 @@ if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 	<div class="row">
 		<div class="col-md-1"></div>
 		<div class="col-md-10">
-			<table class="table table-striped">
-				<thead class="thead-dark">
+			<table class="table ">
+				<thead class="thead-light">
 					<tr>
 						<th scope="col">No</th>
 						<th scope="col">Nama</th>
@@ -46,7 +46,7 @@ if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 							<td><?php 
 							$nip=$result['nip'];
 							?>
-							<a class="btn btn-danger text-light" href="profile_guru.php?nip=<?php echo $nip;?>">Lihat Profil</a>
+							<a class="btn btn-primary text-light" href="profile_guru.php?nip=<?php echo $nip;?>">Lihat Profil</a>
 							</td>
 						</tr>		
 						<?php
