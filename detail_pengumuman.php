@@ -1,7 +1,7 @@
 <?php
 
 include "koneksi.php";
-					$id_pengumuman=$_GET['id_pengumuman'];
+					$id_pengumuman=$_GET['id'];
 					$query=mysql_query("select * from pengumuman where id_pengumuman='$id_pengumuman'");
 
 ?>
