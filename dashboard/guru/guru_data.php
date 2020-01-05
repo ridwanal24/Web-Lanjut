@@ -6,6 +6,7 @@ if (isset( $_SESSION['status'])) {
 	# code...
 
 ?>
+<br><br>
 <div class="container-fluid">
 	<br>
 	<center><p class="h1">DATA GURU</p></center>
@@ -24,16 +25,16 @@ if (isset( $_SESSION['status'])) {
 											<div class="col-md-2"><center><a href="guru_data.php"><input type="button" class="btn btn-primary" value="Show All" /></a></center></div>
 										  </div>
 									</div>
-							</div>		
-									
+							</div>				
 						</div>
+						</form>
 
 
 				
 				<form action="guru_tambah.php">
-			<div class="row">
+				<div class="row">
 							<div class="col-md-6"></div>
-							<div class="col-md-2"><center><a href="jabatan_data.php"><input type="button" class="btn btn-primary" value="Daftar Jabatan" /></a></center></div>
+							<div class="col-md-2"><center><a href="jabatan_data.php"><input type="button" class="btn btn-primary" value="Data Jabatan" /></a></center></div>
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary align-right" value="Tambah Guru" /></center></div>
 							<div class="col-md-2"><center><a href="cetak_guru.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div>
 							</div>

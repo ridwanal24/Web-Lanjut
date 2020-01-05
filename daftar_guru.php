@@ -5,7 +5,7 @@ include 'layout/header.php';
 if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 	# code...
 ?>
-
+<br><br>
 <div class="container-fluid">
 	<br>
 	<center><p class="h1">DAFTAR GURU</p></center>

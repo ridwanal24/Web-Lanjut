@@ -6,6 +6,7 @@ if (isset( $_SESSION['status'])) {
 	# code...
 
 ?>
+<br><br>
 <div class="container-fluid">
 	<br>
 	<center><p class="h1">DATA JABATAN</p></center>

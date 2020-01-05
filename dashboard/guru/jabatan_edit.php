@@ -10,6 +10,7 @@ if (isset( $_SESSION['status'])) {
  <link rel="stylesheet" href="css/guru.css">
 </head>
 <body>
+<br><br><br>
 	<form action="jabatan_aksi_edit.php" class="" method="post">
 		<?php 
 		include "koneksi.php";
@@ -18,6 +19,7 @@ if (isset( $_SESSION['status'])) {
 		?>
 		<h1 align="center">Edit Data Jabatan</h1>
 		<table border="0">
+		<br>
 		<?php
 		while($row=mysql_fetch_array($query)){
 		?>

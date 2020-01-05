@@ -9,9 +9,11 @@ if (isset( $_SESSION['status'])) {
 <head>
 <link rel="stylesheet" href="css/guru.css">
 </head>
+<br><br><br>
 	<form action="jabatan_aksi_input.php" class="posting" method="post">
 		<h1 align="center">Input Data Jabatan</h1>
 		<table border="0">
+		<br>
 		<tr>
 		<td><label for="kode_jabatan">Kode Jabatan</label></td>
 		<td>:</td>

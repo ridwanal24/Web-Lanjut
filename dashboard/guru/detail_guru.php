@@ -8,16 +8,16 @@ $query="select g.nama_guru, g.alamat, g.jenis_kelamin, DATE_FORMAT(g.tanggal_lah
 $tampil=mysql_query($query);
 while ($result=mysql_fetch_array($tampil)) {
 	# File
-	$path = "assets/img/guru/".$nip.".png";
+	$path = "../../assets/img/guru/".$nip.".png";
 	if (file_exists($path)) {
-		$path="assets/img/guru/".$nip.".png";
+		$path="../../assets/img/guru/".$nip.".png";
 	}
 	else{
-		$path="assets/img/guru/default.png";
+		$path="../../assets/img/guru/default.png";
 	}
 ?>
 
-<br>
+<br><br>
 <div class="container-fluid">
 	<p class="h1 text-center" >Profil Guru</p>
 		<div class="row">

@@ -10,6 +10,7 @@ if (isset( $_SESSION['status'])) {
 <link rel="stylesheet" href="css/guru.css">
 </head>
 <body>
+<br><br>
 <form action="guru_aksi_input.php" class="" method="post" enctype="multipart/form-data">
 		<h1 align="center">Input Data Guru</h1>
 		<table border="0">
