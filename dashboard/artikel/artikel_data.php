@@ -7,13 +7,6 @@ if (empty($_SESSION['username']) AND empty($_SESSION['status'])) {
 }
 else{
 	?>
-<!-- <html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Data Siswa Sekolahku</title>
- <link rel="stylesheet" href="css/guru.css">
-</head>
-<body> -->
 	<br>
 	<div class="container-fluid">
 		<center><h1>DATA ARTIKEL</h1></center>
@@ -22,7 +15,7 @@ else{
 			<div class="col-md-10">
 				<br>
 				<form action="#" method="get">
-					<!-- <form action="guru_tambah.php" class="content"> -->
+
 						<div class="row">
 									
 							<!-- <div class="col-md-12">
