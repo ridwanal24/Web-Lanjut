@@ -7,14 +7,7 @@ if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
 }
 else{
 	?>
-<!-- <html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Data Siswa MI Wahid Hasyim</title>
- <link rel="stylesheet" href="css/guru.css">
 
-</head>
-<body> -->
 	<br>
 	<form action="siswa_aksi_edit.php" method="post" enctype="multipart/form-data">
 		<!-- 	<form action="guru_aksi_edit.php" class="content" method="post" enctype="multipart/form-data"> -->
@@ -22,87 +15,105 @@ else{
 			include "koneksi.php";
 			$nis=$_GET['nis'];
 			$query=mysql_query("SELECT siswa.nama,nis,alamat,gender,tglLahir,tempatLahir,agama, idKelas as kelas FROM siswa where nis='$nis'");
-			?>
-			<h1 align="center">Edit Data Siswa</h1>
-			<br>
-			<table border="0">
-				<?php
 				while($row=mysql_fetch_array($query)){
 					$jenis_kelamin=$row['gender'];
 					$agama=$row['agama'];
 					$kelas=$row['kelas'];
-					?>
-					<tr>
-						<td><input type="hidden" name="nis" value="<?php echo $row['nis'];?>" /></td>
-					</tr>
-					<tr>
-						<td><label for="nip">NIP</label></td>
-						<td width="20px"> : </td>
-						<td><input type="text" name="nis" id="nis" class="input1" placeholder="nis"  disabled="disabled" value="<?php echo $row['nis'];?>" required /></td>
-					</tr>
-					<tr>
-						<td><label for="nama_siswa">Nama Siswa</label></td>
-						<td> : </td>
-						<td><input type="text" name="nama" id="nama_siswa" class="input1" placeholder="nama siswa" value="<?php echo $row['nama'];?>" required /></td>
-					</tr>
-					<tr>
-						<td><label for="tempat_lahir">Tempat Lahir</label></td>
-						<td> : </td>
-						<td><input type="text" name="tempatLahir" id="tempat_lahir" class="input1" placeholder="tempat lahir" value="<?php echo $row['tempatLahir'];?>" required /></td>
-					</tr>
-					<td><label for="tanggal_lahir">Tanggal Lahir</label></td>
-					<td> : </td>
-					<td><input type="date" name="tglLahir" id="tanggal_lahir" class="input1" placeholder="tanggal lahir" value="<?php echo $row['tglLahir'];?>" required /></td>
-				</tr>
-				<tr>
-					<td><label for="gender">Jenis Kelamin</label></td>
-					<td> : </td>
-					<td>
-						<input type="radio" name="gender" value="L" id="jenis_kelamin" <?php if($jenis_kelamin=="L"){echo "checked=\"checked\"";}?><label class="" for="">Laki-laki </label>
-						<input type="radio" name="gender" value="P" id="jenis_kelamin" <?php if($jenis_kelamin=="P"){echo "checked=\"checked\"";}?><label class="" for="">Perempuan </label>
-					</td>
-				</tr>
-				<tr>
-					<td><label for="agama">Agama</label></td>
-					<td> : </td>
-					<td>
-						<select name="agama" class="input5" required>
-							<option value="" selected="selected">--Pilih Agama
-								<option value="Islam"<?php if ($agama=="Islam") { echo "selected=\"selected\""; } ?>>Islam</option>
-								<option value="Kristen Katholik"<?php if ($agama=="Kristen Katholik") { echo "selected=\"selected\""; } ?>>Kristen Katholik</option>
-								<option value="Kristen Protestan"<?php if ($agama=="Kristen Protestan") { echo "selected=\"selected\""; } ?>>Kristen Protestan</option>
-								<option value="Hindu"<?php if ($agama=="Hindu") { echo "selected=\"selected\""; } ?>>Hindu</option>
-								<option value="Budha"<?php if ($agama=="Budha") { echo "selected=\"selected\""; } ?>>Budha</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td><label for="alamat">Alamat</label></td>
-						<td>:</td>
-						<td><textarea name="alamat" id="alamat" class="input2" rows="5" cols="30" placeholder="alamat" required><?php echo $row['alamat'];?></textarea></td>
-					</tr>
-					<tr>
-						<td><label for="kelas">Kelas</label></td>
-						<td> : </td>
-						<td>
-							<select name="kelas" class="input5" required>
-								<option value="" selected="selected">--Pilih Kelas
-									<option value="1"<?php if ($kelas=="1") { echo "selected=\"selected\""; } ?>>10 TKJ</option>
-									<option value="2"<?php if ($kelas=="2") { echo "selected=\"selected\""; } ?>>11 TKJ</option>
-									<option value="3"<?php if ($kelas=="3") { echo "selected=\"selected\""; } ?>>12 TKJ</option>
-									<option value="4"<?php if ($kelas=="4") { echo "selected=\"selected\""; } ?>>10 TIPTL</option>
-									<option value="5"<?php if ($kelas=="5") { echo "selected=\"selected\""; } ?>>11 TIPTL</option>
-									<option value="6"<?php if ($kelas=="6") { echo "selected=\"selected\""; } ?>>12 TIPTL</option>
-								</select>
-							</td>
-						</tr>
-						<td></td>
-						<td></td>
+					$nis=$row['nis'];
+					$nama=$row['nama'];
+					$tempatLahir=$row['tempatLahir'];
+					$tglLahir=$row['tglLahir'];
+					$alamat=$row['alamat'];
+				}
+			?>
+			<!-- ==================================== -->
+			
+			<div class="container-fluid">
+			<div class="row">
+				<div class="col-2"><input type="hidden" name="nis" value="<?php echo $nis;?>" /></div>
+				<div class="col-8 bg-white shadow rounded p-3">
+					<h1 align="center" class="text-muted">Input Data Siswa</h1>
+					<div class="form-group">
+						<label>NIS</label>
+						<input class="form-control col-4" type="text" placeholder="Nomor Induk Siswa" name="nis" value="<?php echo $nis; ?>" disabled>
+					</div>
+					<div class="form-group">
+						<label>Nama Siswa</label>
+						<input class="form-control" type="text" placeholder="Nama Siswa" name="nama" value="<?php echo $nama;?>" required>
+					</div>
+					<div class="row">
+						<div class="form-group col-6">
+							<label>Tempat Lahir</label>
+							<input class="form-control" type="text" placeholder="Tempat Lahir" name="tempatLahir" value="<?php echo $tempatLahir;?>" required>
+						</div>
+						<div class="form-group col-6">
+							<label>Tanggal Lahir</label>
+							<input class="form-control" type="date" placeholder="Tanggal Lahir" name="tglLahir" value="<?php echo $tglLahir;?>" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-6">
+							<label>Foto</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" name="file" required>
+								<label class="custom-file-label">Pilih File</label>
+							</div>
+						</div>
+					</div>
 
-						<td><input type="submit" class="btn btn-primary" value="Update" /></td>
-					</tr>
-				<?php } ?>
-			</table>
+					<div class="form-group">
+						<label class="">Jenis Kelamin</label><br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" value="Laki-laki" required <?php if($jenis_kelamin=="L"){echo "checked=\"checked\"";}?> >
+							<label class="form-check-label">Laki-Laki</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" value="Perempuan" required <?php if($jenis_kelamin=="P"){echo "checked=\"checked\"";}?>  >
+							<label class="form-check-label">Perempuan</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Agama</label>
+						<select name="agama" class="form-control" required>
+							<option value="" selected="selected">--Pilih Agama
+								<option value="Islam" <?php if ($agama=="Islam") { echo "selected=\"selected\""; } ?> >Islam</option>
+								<option value="Kristen Katholik" <?php if ($agama=="Kristen Katholik") { echo "selected=\"selected\""; } ?> >Kristen Katholik</option>
+								<option value="Kristen Protestan" <?php if ($agama=="Kristen Protestan") { echo "selected=\"selected\""; } ?> >Kristen Protestan</option>
+								<option value="Hindu" <?php if ($agama=="Hindu") { echo "selected=\"selected\""; } ?> >Hindu</option>
+								<option value="Budha" <?php if ($agama=="Budha") { echo "selected=\"selected\""; } ?> >Budha</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Alamat</label>
+							<textarea class="form-control" name="alamat" placeholder="Alamat Lengkap"><?php echo $alamat; ?></textarea>
+						</div>
+						<div class="form-group">
+							<label>Kelas</label>
+							<select name="kelas" class="form-control" required>
+								<option value="" selected="selected">--Pilih Kelas
+									<option value="1" <?php if ($kelas=="1") { echo "selected=\"selected\""; } ?> >10 TKJ</option>
+									<option value="2" <?php if ($kelas=="2") { echo "selected=\"selected\""; } ?> >11 TKJ</option>
+									<option value="3" <?php if ($kelas=="3") { echo "selected=\"selected\""; } ?> >12 TKJ</option>
+									<option value="4" <?php if ($kelas=="4") { echo "selected=\"selected\""; } ?> >10 TIPTL</option>
+									<option value="5" <?php if ($kelas=="5") { echo "selected=\"selected\""; } ?> >11 TIPTL</option>
+									<option value="6" <?php if ($kelas=="6") { echo "selected=\"selected\""; } ?> >12 TIPTL</option>
+								</select>
+								<div class="row my-3">
+									<div class="col-9"></div>
+									<div class="col-3">
+										<input type="submit" class="btn btn-primary mx-1" value="Simpan" />
+										<input type="reset" class="btn btn-danger mx-1" value="Batal" />	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-2"></div>
+					</div>		
+				</div>
+
+			<!-- ==================================== -->
+
+			
 		</form>
 		<br>
 
