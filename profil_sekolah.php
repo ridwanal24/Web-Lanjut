@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'layout/header.php';
 include 'koneksi.php';
 $query ="select nama from guru where idJabatan = 1";
