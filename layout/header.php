@@ -17,6 +17,8 @@
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
 
+<!--   <link rel="stylesheet" href="css/pengumuman.css">
+ -->  <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
 </head>
 
 <body class="bg-light">
