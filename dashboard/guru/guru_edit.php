@@ -111,9 +111,9 @@ if (isset( $_SESSION['status'])) {
 	<br>
 	<center>Silahkan Login Terlebih Dahulu</center>
 	<br>
-	<center><a href="login_siswa.php"><button type="button" class="btn btn-primary text-light">LOGIN SISWA</button></a></center>
+	<center><a href="../login_siswa.php"><button type="button" class="btn btn-primary text-light">LOGIN SISWA</button></a></center>
 	<br>
-	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
+	<center><a href="../login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
 	<br>
 	<?php
 }

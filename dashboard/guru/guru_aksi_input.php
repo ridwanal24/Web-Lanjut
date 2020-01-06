@@ -15,7 +15,7 @@
     // Query Input Data
     $input = "INSERT INTO guru(nip, nama_guru, image, tempat_lahir, tanggal_lahir, jenis_kelamin, agama, alamat, kode_jabatan) 
 	VALUES ('$nip','$nama_guru', '$image','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$agama','$alamat','$kode_jabatan')";
-	move_uploaded_file($_FILES['image']['tmp_name'],'assets/img/guru/'.$image);
+	move_uploaded_file($_FILES['image']['tmp_name'],'images/'.$image);
     $hasil = mysqli_query($konek,$input);
     // Apabila query untuk menginput data benar
     if($hasil){
