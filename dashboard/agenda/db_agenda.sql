@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2019 at 02:41 PM
+-- Generation Time: Dec 16, 2019 at 05:31 AM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -17,31 +17,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `db_agenda`
+-- Database: `db_pengumuman`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `agenda`
+-- Table structure for table `pengumuman`
 --
 
-CREATE TABLE IF NOT EXISTS `agenda` (
-  `id_agenda` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `pengumuman` (
+  `id_pengumuman` int(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(500) NOT NULL,
   `descp` varchar(10000) DEFAULT NULL,
-  `tanggal` date NOT NULL,
+  `tanggal` datetime NOT NULL,
+  `posting` varchar(20) NOT NULL,
   `kategori` varchar(20) NOT NULL,
-  `image` varchar(300) NOT NULL,
-  PRIMARY KEY (`id_agenda`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+  PRIMARY KEY (`id_pengumuman`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data for table `agenda`
+-- Dumping data for table `pengumuman`
 --
 
-INSERT INTO `agenda` (`id_agenda`, `title`, `descp`, `tanggal`, `kategori`, `image`) VALUES
-(17, 'PRAKTEK KERJA LAPANGAN GEL.1', '<p>Peserta Magang:<br />\r\n1. Wajib Membawa Laptop.<br />\r\n2. Membawa Surat Rekomendasi Dari Sekolah<br />\r\n3. Tidak Mendapat Gajiâ€Š&mdash;â€ŠUang Transortasiâ€Š&mdash;â€ŠUang Makan.<br />\r\n4. Tidak Mendapat Penginapan, bagi yang tinggal di luar kota.<br />\r\n5. Durasi Magang selama 3 Bulan, Mulai Senin hingga Jumat dan libur di Hari Besar / Tanggal Merah<br />\r\n6. Mulai Pukul 08:00 sampai Pukul 16:00</p>\r\n\r\n<p>Materi Magang/Prakerin<br />\r\n&ndash; Pondasi Internet Marketing<br />\r\n&ndash; Riset Online<br />\r\n&ndash; Video Marketing<br />\r\n&ndash; Social Media Marketing<br />\r\n&ndash; Fb Marketing<br />\r\n&ndash; Blog Marketing</p>\r\n\r\n<p>Siswa Program Magang harus mentaati Tata Tertib:<br />\r\n1. Pakaian<br />\r\nBagi Siswa SMK diwajibkan memakai baju seragam sekolah atau baju seragam praktek (menurut sekolah masing-masing) dan harus memasukkan bajunya ke dalam bagi putra.<br />\r\n2. Perilaku<br />\r\nPerilaku selama di lingkungan magang, mahasiswa magang harus jujur, bertanggung jawab, berlaku sopan, disiplin, dan mematuhi semua tata tertib program magang.<br />\r\n3. Kehadiran<br />\r\n3.1 Siswa magang harus hadir tepat waktu sebagaimana yang dijadwalkan<br />\r\nmulai Pukul 08:00 sampai Pukul 16:00<br />\r\n3.2 Siswa Sakit Wajib membawa surat Dokter<br />\r\nApabila Siswa Alpa (Tanpa Keterangan), Mengganti Hari atau Mengerjakan Tugas tambahan</p>\r\n\r\n<p>Bagi Siswa kerja praktek/magang yang melanggar tata tertib dan ketentuan yang berlaku tersebut di atas akan dikenakan sanksi sebagai berikut&nbsp;:<br />\r\n&bull; Peringatan lisan atau tidak diperbolehkan masuk praktek dan magang.<br />\r\n&bull; Pemutusan kerja praktek/magang dengan surat peringatan ke Sekolah yang bersangkutan dan tanpa diberikan sertifikat.</p>\r\n\r\n<p>Hubungi&nbsp;:</p>\r\n\r\n<p>Ibu Nita Hayuta</p>\r\n\r\n<p>WA : 082-220-228-118</p>\r\n', '2020-01-07', 'Praktek Kerja Lapang', 'pkl.jpg');
+INSERT INTO `pengumuman` (`id_pengumuman`, `title`, `descp`, `tanggal`, `posting`, `kategori`) VALUES
+(9, 'KEGIATAN PRA MASA PENGENALAN LINGKUNGAN SEKOLAH TAHUN 2019', 'Dalam rangka mengikuti kegiatan Pra Masa Pengenalan Lingkungan Sekolah / Pra-MPLS, dihimbau kepada seluruh Peserta Didik yang diterima di SMA Negeri 2 Balige Tahun Pembelajaran 2019/2020 supaya hadir pada:  Hari/Tanggal : Sabtu, 06 Juli 2019 Pukul : 07.30 WIB Tempat : Lapangan Upacara SMAN 2 Balige Pakaian :  Baju kaos warna putih lengan panjang atau pendek berkerah Celana training sport Sepatu olahraga Potongan rambut sesuai dengan petunjuk di Papan Pengumuman Sekolah Membawa Angket yang sudah diisi, format hasil wawancara, air minum secukupnya, serta peralatan dengan ketentuan terlampir.     Demikian kami sampaikan pengumuman ini. Atas perhatian dan kehadirannya kami sampaikan terimakasih.', '2019-12-15 18:27:43', 'Akademik', 'Informasi'),
+(10, 'PERUBAHAN JADWAL DAN SESI UJIAN PPDB 2019 SMAN 2 BALIGE JALUR TESTING', 'Informasi kepada semua Calon Peserta Didik yang yang mendaftar melalui Jalur Testing PPDB SMAN 2 Balige tahun 2019. Saat ini pembagian jadwal ujian dan sesi yang tadinya dilakukan oleh Kantor Cabang Dinas Pendidikan Balige diambil alih oleh Dinas Pendidikan Provinsi Sumatera Utara.  Calon Peserta Didik dapat melihat perubahan jadwal dan sesi ujian melalui web ppdb.disdik.sumutprov.go.id dengan login menggunakan akun masing-masing.  Mohon maaf atas ketidaknyamanan ini.  Demikian disampaikan. Terimakasih.', '2019-12-15 21:07:51', 'Humas', 'Informasi');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
