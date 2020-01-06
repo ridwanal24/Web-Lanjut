@@ -25,8 +25,8 @@
 	}
     else {
 			echo '<script language="javascript">
-				  alert ("Data Agenda Gagal Diinput");
-
+                  alert ("Data Agenda Gagal Diinput");
+                  window.location="agenda_data.php";
 				  </script>';
 				  exit();
     }
