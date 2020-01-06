@@ -10,7 +10,9 @@
     $agama = $_POST['agama'];
     $alamat = $_POST['alamat'];
     $kelas = $_POST['kelas'];
-    
+    $img = "no";
+    $password = "1234";
+
     /*Upload Gambar*/
     $ekstensi_diperbolehkan = array('png','jpg');
     $nama = $_FILES['file']['name'];
@@ -20,8 +22,9 @@
     $file_tmp = $_FILES['file']['tmp_name'];
 
     if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-        if($ukuran < 1044070){          
+        if($ukuran < 5044070){          
             move_uploaded_file($file_tmp, '../../assets/img/siswa/'.$nip.'.png');
+            $img = "yes";
         }else{
             echo 'UKURAN FILE TERLALU BESAR';
         }
@@ -31,8 +34,8 @@
     /*End of Upload Gambar*/
 
     // Query Input Data
-    $input = "INSERT INTO siswa(nis, nama, tempatLahir, tglLahir, gender, agama, alamat, idKelas) 
-    VALUES ($nip,'$nama_siswa','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$agama','$alamat',$kelas)";
+    $input = "INSERT INTO siswa(nis, nama, tempatLahir, tglLahir, gender, agama, alamat, idKelas, pathImg, pass) 
+    VALUES ($nip,'$nama_siswa','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$agama','$alamat',$kelas,'$img', $password)";
     $hasil = mysqli_query($konek,$input);
     // Apabila query untuk menginput data benar
     if($hasil){
@@ -42,7 +45,6 @@
     	</script>';
     	exit();
     }
-    
     else {
     	echo '<script language="javascript">
     	alert ("Data Guru Gagal Diinput");

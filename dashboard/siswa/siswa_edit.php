@@ -14,7 +14,7 @@ else{
 			<?php 
 			include "koneksi.php";
 			$nis=$_GET['nis'];
-			$query=mysql_query("SELECT siswa.nama,nis,alamat,gender,tglLahir,tempatLahir,agama, idKelas as kelas FROM siswa where nis='$nis'");
+			$query=mysql_query("SELECT siswa.nama,nis,alamat,gender,tglLahir,tempatLahir,agama, idKelas as kelas ,pathImg FROM siswa where nis='$nis'");
 				while($row=mysql_fetch_array($query)){
 					$jenis_kelamin=$row['gender'];
 					$agama=$row['agama'];
@@ -24,6 +24,7 @@ else{
 					$tempatLahir=$row['tempatLahir'];
 					$tglLahir=$row['tglLahir'];
 					$alamat=$row['alamat'];
+					$img = $row['pathImg'];
 				}
 			?>
 			<!-- ==================================== -->
@@ -55,8 +56,14 @@ else{
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="file" required>
-								<label class="custom-file-label">Pilih File</label>
+								<input type="file" class="custom-file-input" name="file">
+								<label class="custom-file-label"><?php
+									if (empty($img)) {
+										echo 'Pilih File';
+									} else {
+										echo 'Foto Sudah Ada';
+									}
+								?></label>
 							</div>
 						</div>
 					</div>
