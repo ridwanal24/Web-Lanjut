@@ -6,7 +6,7 @@ if (isset( $_SESSION['status'])) {
 	# code...
 
 ?>
-<br>
+<br><br><br>
 	<form action="guru_aksi_input.php" method="post" enctype="multipart/form-data">
 		<div class="container-fluid">
 			<div class="row">
