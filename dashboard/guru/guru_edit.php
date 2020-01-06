@@ -92,7 +92,7 @@ if (isset( $_SESSION['status'])) {
 								$hasil_query=mysql_query("SELECT kode_jabatan FROM jabatan");
 								while($baris=mysql_fetch_array($hasil_query))
 								{
-								echo"<option value='{$baris['kode_jabatan']}'".($row['kode_jabatan'] == $baris['kode_jabatan']?" selected":"").">{$baris['kode_jabatan']}</option>";
+								echo"<option value='{$baris['kode_jabatan']}'".($kode_jabatan == $baris['kode_jabatan']?" selected":"").">{$baris['kode_jabatan']}</option>";
 								}
 								?>
 								</select>
