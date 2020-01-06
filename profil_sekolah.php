@@ -2,10 +2,10 @@
 session_start();
 include 'layout/header.php';
 include 'koneksi.php';
-$query ="select nama from guru where idJabatan = 1";
+$query ="select nama_guru from guru where kode_jabatan = 1";
 $show = mysql_query($query);
 while ($result=mysql_fetch_array($show)) {
-    $kepala_sekolah = $result['nama'];
+    $kepala_sekolah = $result['nama_guru'];
 }
 ?>
 <div class="container-fluid">
