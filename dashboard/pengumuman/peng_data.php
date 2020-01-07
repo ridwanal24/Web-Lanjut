@@ -1,30 +1,25 @@
 <?php
 session_start();
-//include '../layout/header.php';
-if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
-  echo "<center>Untuk mengakses halaman ini, Anda harus login <br>";
-  echo "<a href=index.php><b>LOGIN</b></a></center>";
-}
-else{
+include 'koneksi.php';
+include '../layout/header.php';
+if (isset( $_SESSION['status'])) {
+	# code...
+
 ?>
-<head>
- <title>Data Pengumuman</title>
- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-	<div class="container-fluid">
+<br><br>
+<div class="container-fluid">
 	<br>
 	<center><p class="h1">DATA PENGUMUMAN</p></center>
 	<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
 				<br>
-		<form action="peng_tambah.php">
-			<div class="row">
-							<div class="col-md-10"></div>
+				<form action="peng_tambah.php">
+				<div class="row">
+							<div class="col-md-6"></div>
 							<div class="col-md-2"><center><input type="submit" class="btn btn-primary align-right" value="Tambah Pengumuman" /></center></div>
 							</div>
+							<br>
 
 			<table class="table table-striped">
 				<thead class="thead-dark">
@@ -118,6 +113,17 @@ else{
 	</form>
 
 	</div>
-<?php } 
-//include '../layout/footer.php';
+	<?php
+}else{
+	?>
+	<br>
+	<center>Silahkan Login Terlebih Dahulu</center>
+	<br>
+	<center><a href="../../login_siswa.php"><button type="button" class="btn btn-primary text-light">LOGIN SISWA</button></a></center>
+	<br>
+	<center><a href="../../login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
+	<br>
+	<?php
+}
+include '../layout/footer.php';
 ?>

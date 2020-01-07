@@ -1,6 +1,6 @@
     <?php
     // Koneksi ke database
-    $konek = mysqli_connect("localhost","root","","db_pengumuman");
+    $konek = mysqli_connect("localhost","root","","db_sekolahmu");
     ini_set('date.timezone', 'Asia/Jakarta');
     // Ambil variabel yang dikirim dari form
     $id_pengumuman = $_POST['id_pengumuman'];

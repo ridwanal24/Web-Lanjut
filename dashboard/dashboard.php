@@ -53,7 +53,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
       <div class="card shadow h-100">
         <img class="card-img-top" src="img/pengumuman.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary card-title" href="">Pengumuman</a>
+          <a class="btn btn-primary card-title" href="pengumuman/">Pengumuman</a>
         </div>
       </div>
     </div>
