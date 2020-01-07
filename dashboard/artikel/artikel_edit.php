@@ -25,7 +25,7 @@ else{
 			<div class="row">
 				<div class="col-md-8 my-3 p-3 mx-auto bg-white shadow rounded">
 					<h2 class="text-center">Edit Artikel</h2>
-					<form action="artikel_aksi_input.php" method="post" enctype="multipart/form-data">
+					<form action="artikel_aksi_edit.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						<div class="form-group">
 							<label>Judul</label>

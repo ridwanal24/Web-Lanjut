@@ -1,22 +1,11 @@
 <?php
 include 'koneksi.php';
-    /*// Koneksi ke database
-    $konek = mysqli_connect("localhost","root","","db_sekolahmu");
-    // Ambil variabel yang dikirim dari form
-    $judul = $_POST['judul'];
-    $text = $_POST['text'];
-    $pathImage = $_POST['pathImage'];
-  
-    // Query Input Data
-    $input = "INSERT INTO artikel(judul, text, pathImage) 
-    VALUES ('$judul', '$text','$pathImage')";
-    $hasil = mysqli_query($konek,$input);*/
 
     $id = $_POST['id']; 
     $title = $_POST['title'];
     $isi = $_POST['isi'];
     $img = "no";
-    
+
     /*Create File Article*/
     $path="artikel/text/";
     $artikel = fopen($path.$id.".txt", "w");

@@ -4,7 +4,7 @@ include 'koneksi.php';
 $query = "select max(idArtikel) as id from artikel";
 $action = mysql_query($query);
 while ($data = mysql_fetch_array($action)) {
-    $id = $data['id']+1;
+	$id = $data['id']+1;
 }
 include '../layout/header.php';
 if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
@@ -36,36 +36,6 @@ else{
 			</div>
 		</div>
 	</div>
-<!-- <br>
-	<form action="artikel_aksi_input.php" method="post">
-		<h1 align="center">Input Data Artikel</h1>
-		<br>
-		<table border="0">
-			<tr>
-				<td><label for="judul">Judul</label></td>
-				<td>:</td>
-				<td><input type="text" name="judul" id="judul" class="input1" placeholder="judul"/></td>
-			</tr>
-            <tr>
-				<td><label for="text">Isi</label></td>
-				<td>:</td>
-				<td><textarea name="text" id="text" class="input1" placeholder="isi" value="<?php echo $row['text'];?>"></textarea></td>
-			</tr>
-			<tr>
-				<td><label for="pathImage">Gambar</label></td>
-				<td>:</td>
-				<td><input type="file" accept="image/*" name="gbr" id="gbr" class="input1" placeholder="gambar"/></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td ><input type="submit" class="btn btn-primary" value="Simpan" />
-					<input type="reset" class="btn btn-danger" value="Batal" />
-				</td>
-			</tr>
-		</table>
-	</form>
-	<br> -->
 	<script src="../../assets/ckeditor/ckeditor.js"></script>
 <?php }
 include '../layout/footer.php';
