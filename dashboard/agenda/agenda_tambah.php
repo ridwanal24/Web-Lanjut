@@ -40,7 +40,7 @@ if (isset( $_SESSION['status'])) {
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="image" required>
+								<input type="file" class="custom-file-input" name="file" required>
 								<label class="custom-file-label">Pilih File</label>
 							</div>
 						</div>

@@ -6,6 +6,7 @@ if (isset( $_SESSION['status'])) {
 	# code...
 
 ?>
+<br><br><br>
 <div class="container-fluid">
 	<br>
 	<center><p class="h1">DATA AGENDA</p></center>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'koneksi.php';
-include 'layout/header.php';
+include '../layout/header.php';
 if (isset( $_SESSION['status'])) {
 	# code...
 
@@ -44,7 +44,7 @@ if (isset( $_SESSION['status'])) {
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="image" value="<?php echo $image;?>" >
+								<input type="file" class="custom-file-input" name="file" value="<?php echo $image;?>" >
 								<label class="custom-file-label">Pilih File</label>
 							</div>
 						</div>
@@ -65,7 +65,7 @@ if (isset( $_SESSION['status'])) {
 						</div>
 						<div class="form-group">
 							<label>Isi Agenda</label>
-							<textarea class="ckeditor" placeholder="Isi Agenda" name="descp" required <?php echo $descp;?> </textarea>
+							<textarea class="ckeditor" placeholder="Isi Agenda" name="descp" required <?php echo $descp;?>> </textarea>
 						</div>
 								<div class="row my-3">
 									<div class="col-9"></div>
@@ -98,5 +98,5 @@ if (isset( $_SESSION['status'])) {
 	<br>
 	<?php
 }
-include 'layout/footer.php';
+include '../layout/footer.php';
 ?>
