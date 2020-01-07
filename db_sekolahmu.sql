@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2020 at 09:12 AM
+-- Generation Time: Jan 07, 2020 at 03:16 PM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `agenda` (
   `kategori` varchar(20) NOT NULL,
   `image` varchar(300) NOT NULL,
   PRIMARY KEY (`id_agenda`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `agenda`
@@ -249,12 +249,22 @@ INSERT INTO `jurusan` (`idJurusan`, `nama`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `kegiatan` (
-  `idEvent` int(11) NOT NULL AUTO_INCREMENT,
-  `judul` varchar(100) DEFAULT NULL,
-  `isi` varchar(255) DEFAULT NULL,
+  `id_event` int(200) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `descp` varchar(10000) DEFAULT NULL,
   `tanggal` datetime DEFAULT NULL,
-  PRIMARY KEY (`idEvent`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `posting` varchar(20) NOT NULL,
+  `kategori` varchar(20) NOT NULL,
+  `image` varchar(300) NOT NULL,
+  PRIMARY KEY (`id_event`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `kegiatan`
+--
+
+INSERT INTO `kegiatan` (`id_event`, `title`, `descp`, `tanggal`, `posting`, `kategori`, `image`) VALUES
+(2, 'aa', '<p><em><strong>bb</strong></em></p>\r\n', '2020-01-07 21:08:20', 'Akademik', 'Lomba', 'yes');
 
 -- --------------------------------------------------------
 
@@ -357,6 +367,8 @@ CREATE TABLE IF NOT EXISTS `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `title`, `descp`, `tanggal`, `posting`, `kategori`) VALUES
+(1, 'aa', '<p>aab</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;</p>\r\n', '2020-01-07 16:52:43', 'Akademik', 'Informasi'),
+(2, 'aa', '<p style="text-align: right;">bb</p>\r\n', '2020-01-07 17:04:38', 'Akademik', 'Informasi'),
 (9, 'KEGIATAN PRA MASA PENGENALAN LINGKUNGAN SEKOLAH TAHUN 2019', 'Dalam rangka mengikuti kegiatan Pra Masa Pengenalan Lingkungan Sekolah / Pra-MPLS, dihimbau kepada seluruh Peserta Didik yang diterima di SMA Negeri 2 Balige Tahun Pembelajaran 2019/2020 supaya hadir pada:  Hari/Tanggal : Sabtu, 06 Juli 2019 Pukul : 07.30 WIB Tempat : Lapangan Upacara SMAN 2 Balige Pakaian :  Baju kaos warna putih lengan panjang atau pendek berkerah Celana training sport Sepatu olahraga Potongan rambut sesuai dengan petunjuk di Papan Pengumuman Sekolah Membawa Angket yang sudah diisi, format hasil wawancara, air minum secukupnya, serta peralatan dengan ketentuan terlampir.     Demikian kami sampaikan pengumuman ini. Atas perhatian dan kehadirannya kami sampaikan terimakasih.', '2019-12-15 18:27:43', 'Akademik', 'Informasi'),
 (10, 'PERUBAHAN JADWAL DAN SESI UJIAN PPDB 2019 SMAN 2 BALIGE JALUR TESTING', 'Informasi kepada semua Calon Peserta Didik yang yang mendaftar melalui Jalur Testing PPDB SMAN 2 Balige tahun 2019. Saat ini pembagian jadwal ujian dan sesi yang tadinya dilakukan oleh Kantor Cabang Dinas Pendidikan Balige diambil alih oleh Dinas Pendidikan Provinsi Sumatera Utara.  Calon Peserta Didik dapat melihat perubahan jadwal dan sesi ujian melalui web ppdb.disdik.sumutprov.go.id dengan login menggunakan akun masing-masing.  Mohon maaf atas ketidaknyamanan ini.  Demikian disampaikan. Terimakasih.', '2019-12-15 21:07:51', 'Humas', 'Informasi');
 
