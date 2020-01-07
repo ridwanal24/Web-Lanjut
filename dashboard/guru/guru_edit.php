@@ -96,10 +96,10 @@ if (isset( $_SESSION['status'])) {
 							<select name="kode_jabatan" class="form-control" required>
 								<option value="" selected="selected">--Pilih Jabatan
 								<?php
-								$hasil_query=mysql_query("SELECT kode_jabatan FROM jabatan");
+								$hasil_query=mysql_query("SELECT * FROM jabatan");
 								while($baris=mysql_fetch_array($hasil_query))
 								{
-								echo"<option value='{$baris['kode_jabatan']}'".($kode_jabatan == $baris['kode_jabatan']?" selected":"").">{$baris['kode_jabatan']}</option>";
+								echo"<option value='{$baris['kode_jabatan']}'".($kode_jabatan == $baris['kode_jabatan']?" selected":"").">{$baris['jabatan']}</option>";
 								}
 								?>
 								</select>

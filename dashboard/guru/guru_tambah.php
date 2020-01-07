@@ -77,7 +77,7 @@ if (isset( $_SESSION['status'])) {
 									$hasil_query=mysql_query($sql);
 								while($baris=mysql_fetch_object($hasil_query))
 									{
-									echo"<option value=$baris->kode_jabatan>$baris->kode_jabatan</option>";
+									echo"<option value=$baris->kode_jabatan>$baris->jabatan</option>";
 									}
 									?>
 								</select>
