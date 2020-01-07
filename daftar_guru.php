@@ -2,9 +2,9 @@
 session_start();
 include 'koneksi.php';
 include 'layout/header.php';
-if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
+if (isset( $_SESSION['status'])) {
 	# code...
-?>
+	?>
 <br><br>
 <div class="container-fluid">
 	<br>
@@ -73,8 +73,6 @@ if (isset( $_SESSION['status']) OR !isset($_SESSION['status'])) {
 	<center><a href="login_siswa.php"><button type="button" class="btn btn-primary text-light">LOGIN SISWA</button></a></center>
 	<br>
 	<center><a href="login_guru.php"><button type="button" class="btn btn-primary text-light">LOGIN GURU</button></a></center>
-	<br>
-	<center><a href="login_admin.php"><button type="button" class="btn btn-primary text-light">LOGIN ADMIN</button></a></center>
 	<br>
 	<?php
 }

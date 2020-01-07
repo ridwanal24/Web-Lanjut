@@ -20,6 +20,7 @@ if (isset( $_SESSION['status'])) {
 					$alamat=$row['alamat'];
 					$jenis_kelamin=$row['jenis_kelamin'];
 					$agama=$row['agama'];
+					$img = $row['image'];
 					$kode_jabatan=$row['kode_jabatan'];
 				}
 			?>
@@ -41,7 +42,7 @@ if (isset( $_SESSION['status'])) {
 					<div class="row">
 						<div class="form-group col-6">
 							<label>Tempat Lahir</label>
-							<input class="form-control" type="text" placeholder="Tempat Lahir" name="tempattempat_lahir" value="<?php echo $tempat_lahir;?>" required>
+							<input class="form-control" type="text" placeholder="Tempat Lahir" name="tempat_lahir" value="<?php echo $tempat_lahir;?>" required>
 						</div>
 						<div class="form-group col-6">
 							<label>Tanggal Lahir</label>
@@ -52,8 +53,14 @@ if (isset( $_SESSION['status'])) {
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="image" value="<?php echo $image;?>" >
-								<label class="custom-file-label">Pilih File</label>
+								<input type="file" class="custom-file-input" name="file">
+								<label class="custom-file-label"><?php
+									if (empty($img)) {
+										echo 'Pilih File';
+									} else {
+										echo 'Foto Sudah Ada';
+									}
+								?></label>
 							</div>
 						</div>
 					</div>
@@ -61,11 +68,11 @@ if (isset( $_SESSION['status'])) {
 					<div class="form-group">
 						<label class="">Jenis Kelamin</label><br>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="jenis_kelamin" value="Laki-laki" required <?php if($jenis_kelamin=="L"){echo "checked=\"checked\"";}?> >
+							<input class="form-check-input" type="radio" name="jenis_kelamin" value="L" required <?php if($jenis_kelamin=="L"){echo "checked=\"checked\"";}?> >
 							<label class="form-check-label">Laki-Laki</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="jenis_kelamin" value="Perempuan" required <?php if($jenis_kelamin=="P"){echo "checked=\"checked\"";}?>  >
+							<input class="form-check-input" type="radio" name="jenis_kelamin" value="P" required <?php if($jenis_kelamin=="P"){echo "checked=\"checked\"";}?>  >
 							<label class="form-check-label">Perempuan</label>
 						</div>
 					</div>

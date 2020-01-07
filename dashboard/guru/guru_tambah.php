@@ -35,7 +35,7 @@ if (isset( $_SESSION['status'])) {
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="image" required>
+								<input type="file" class="custom-file-input" name="file" required>
 								<label class="custom-file-label">Pilih File</label>
 							</div>
 						</div>
@@ -44,11 +44,11 @@ if (isset( $_SESSION['status'])) {
 					<div class="form-group">
 						<label class="">Jenis Kelamin</label><br>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="jenis_kelamin" value="Laki-laki" required>
+							<input class="form-check-input" type="radio" name="jenis_kelamin" value="L" required>
 							<label class="form-check-label">Laki-Laki</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="jenis_kelamin" value="Perempuan" required>
+							<input class="form-check-input" type="radio" name="jenis_kelamin" value="P" required>
 							<label class="form-check-label">Perempuan</label>
 						</div>
 					</div>
