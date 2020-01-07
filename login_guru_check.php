@@ -11,7 +11,7 @@ if($cek > 0){
 	session_start();
 	
 	/*Ambil data nama guru*/
-	$_SESSION['username'] = $row['nama'];
+	$_SESSION['username'] = $row['nama_guru'];
 	/*Status Login*/
 	$_SESSION['status'] = "Guru";
 	/*Redirect Home*/
