@@ -8,15 +8,10 @@ if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
 else{
 	?>
 <br>
-	<form action="galeri_aksi_input.php" method="post">
+	<form action="galeri_aksi_input.php" method="post" enctype="multipart/form-data>
 		<h1 align="center">Input Data Galeri</h1>
 		<br>
 		<table border="0">
-			<tr>
-				<td><label for="pathVideo">Video</label></td>
-				<td>:</td>
-				<td><input type="file" accept="video/*" name="video" id="video" class="input1" placeholder="video"/></td>
-			</tr>
 			<tr>
 				<td><label for="pathImg">Gambar</label></td>
 				<td>:</td>
