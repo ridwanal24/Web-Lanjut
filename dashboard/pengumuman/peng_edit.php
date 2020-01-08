@@ -9,6 +9,7 @@ if (isset( $_SESSION['status'])) {
 <head>
  <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
+<br><br><br>
 	<form action="peng_aksi_edit.php" method="post" enctype="multipart/form-data">
 		<?php 
 		include "koneksi.php";
@@ -22,6 +23,8 @@ if (isset( $_SESSION['status'])) {
 			$descp=$row['descp'];
 		}
 	?>
+		<!-- ==================================== -->
+			
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-2"><input type="hidden" name="id_pengumuman" value="<?php echo $id_pengumuman;?>" /></div>
@@ -34,22 +37,21 @@ if (isset( $_SESSION['status'])) {
 					</div>
 						<div class="form-group col-6">
 							<label>Tanggal</label>
-							<input type="text" name="tanggal" placeholder="tanggal"  disabled="disabled" value="<?php echo $tanggal;?>" required />
+							<input class="form-control" type="date" placeholder="Tanggal" name="tanggal" value="<?php echo $tanggal;?>" required>
 						</div>
-					</div>
 					</div>
 					<div class="form-group">
 						<label>Posting</label>
-						<select name="posting" class="input5" required>
+						<select name="posting" class="form-control" required>
 							<option value="" selected="selected">--Pilih Posting
 							<option value="Akademik"<?php if ($posting=="Akademik") { echo "selected=\"selected\""; } ?>>Akademik</option>
 							<option value="Bendahara"<?php if ($posting=="Bendahara") { echo "selected=\"selected\""; } ?>>Bendahara</option>
 							<option value="Humas"<?php if ($posting=="Humas") { echo "selected=\"selected\""; } ?>>Humas</option>
 						</select>
 						</div>
-						<div class="form-group">
+					<div class="form-group">
 						<label>Kategori</label>
-						<select name="kategori" class="input5" required>
+						<select name="kategori" class="form-control" required>
 							<option value="" selected="selected">--Pilih Kategori
 							<option value="Informasi"<?php if ($kategori=="Informasi") { echo "selected=\"selected\""; } ?>>Informasi</option>
 							<option value="Himbauan"<?php if ($kategori=="Himbauan") { echo "selected=\"selected\""; } ?>>Himbauan</option>
@@ -62,7 +64,7 @@ if (isset( $_SESSION['status'])) {
 						</div>
 						<div class="form-group">
 							<label>Isi Pengumuman</label>
-							<textarea class="ckeditor" placeholder="Isi Pengumuman" name="descp" required <?php echo $descp;?>></textarea>
+							<textarea class="ckeditor" placeholder="Isi Pengumuman" name="descp" required <?php echo $descp;?> </textarea>
 						</div>
 								<div class="row my-3">
 									<div class="col-9"></div>

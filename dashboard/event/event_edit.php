@@ -81,7 +81,7 @@ if (isset( $_SESSION['status'])) {
 						</div>
 						<div class="form-group">
 							<label>Isi Kegiatan</label>
-							<textarea class="ckeditor" placeholder="Isi Kegiatan" name="descp" required <?php echo $descp;?>> </textarea>
+							<textarea class="ckeditor" placeholder="Isi Kegiatan" name="descp" required <?php echo $descp;?> </textarea>
 						</div>
 								<div class="row my-3">
 									<div class="col-9"></div>
