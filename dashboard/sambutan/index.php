@@ -1,3 +1,3 @@
 <?php
-	header("Location: artikel_data.php");
+	header("Location: sambutan_data.php");
 ?>

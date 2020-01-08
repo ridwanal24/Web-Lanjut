@@ -12,7 +12,7 @@ include 'koneksi.php';
     $artikel = fopen($path.$id.".txt", "w");
     fwrite($artikel, $isi);
     fclose($artikel);
-    /*End of Create File Article*/
+    /*End of Create File Article*c/
 
     /*Upload Gambar*/
     if ($_FILES['file']['size']>0) {
@@ -38,7 +38,7 @@ include 'koneksi.php';
     /*End of Upload Gambar*/
 
     /*Add To Database*/
-    $query = "insert into artikel(idArtikel, judul, text, pathImage, date) values ($id,'$title','artikel/text/$id.txt','$img','$date')";
+    $query = "insert into artikel(idArtikel, judul, text, pathImage, date) values ($id,'$title','artikel/text/$id.txt')";
     $hasil = mysql_query($query);
     /*End of Add To Database*/
     

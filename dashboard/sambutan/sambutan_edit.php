@@ -17,7 +17,7 @@ else{
 	$action = mysql_query($query);
 	while ($data = mysql_fetch_array($action)) {
 		$title = $data['judul'];
-		$img = $data['pathImage'];
+		$deskripsi = $data['deskripsi'];
 		$sambutan = fopen($data['text'], "r");
 		$text = fread($sambutan, filesize($data['text']));
 		?>

@@ -161,6 +161,24 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
 <!-- Baris Stop 4-->
 <br>
 
+<!-- Baris Mulai 5-->
+<div class="row text-center">
+    <div class="col-md-1"></div>
+    <div class="col-md-2 p-1 mb-4">
+      <div class="card shadow h-100">
+        <img class="card-img-top" src="img/schprof.png" alt="">
+        <div class="card-body">
+        	<br>
+        	<br>
+        	<br>
+          <a class="btn btn-primary card-title" href="sambutan/">Sambutan</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+ 	</div>
+<!-- Baris Stop 5-->
  </div>
 	<?php
 }else{

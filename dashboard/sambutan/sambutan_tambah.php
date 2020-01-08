@@ -24,8 +24,8 @@ else{
 						<input type="text" name="title" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Text</label>
-						<textarea class="text" id="text" name="text" required><?php echo $text;?></textarea>
+						<label>Deskripsi</label>
+						<textarea class="ckeditor" id="ckeditor" name="isi" required></textarea>
 					</div>
 					<input class="btn btn-primary float-right" type="submit" value="Post" name="submit">		
 				</form>
