@@ -5,6 +5,7 @@ include 'koneksi.php';
     $title = $_POST['title'];
     $isi = $_POST['isi'];
     $img = "no";
+    $date = date("Y-m-d H:i:s");
 
     /*Create File Article*/
     $path="artikel/text/";
@@ -37,7 +38,7 @@ include 'koneksi.php';
     /*End of Upload Gambar*/
 
     /*Add To Database*/
-    $query = "insert into artikel(idArtikel, judul, text, pathImage) values ($id,'$title','artikel/text/$id.txt','$img')";
+    $query = "insert into artikel(idArtikel, judul, text, pathImage, date) values ($id,'$title','artikel/text/$id.txt','$img','$date')";
     $hasil = mysql_query($query);
     /*End of Add To Database*/
     
@@ -45,15 +46,15 @@ include 'koneksi.php';
     if($hasil){
     	echo '<script language="javascript">
     	alert ("Artikel Berhasil Diinput");
-    	
+        window.location="artikel_data.php";	
     	</script>';
     	exit();
     }
-    /*window.location="artikel_data.php";*/
+    
     else {
     	echo '<script language="javascript">
     	alert ("Artikel Gagal Diinput");
-
+        window.location="artikel_data.php";
     	</script>';
     	exit();
     }

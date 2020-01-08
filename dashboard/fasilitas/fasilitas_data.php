@@ -16,10 +16,10 @@ else{
 <body> -->
 	<br>
 	<div class="container-fluid">
-		<center><h1>DATA FASILITAS</h1></center>
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10">
+			<div class="col-md-10 shadow rounded p-3 bg-white">
+		<center><h1 class="text-muted">DATA FASILITAS</h1></center>
 				<br>
 				<form action="fasilitas_tambah.php">
 					<!-- <form action="fasilitas_tambah.php" class="content"> -->
