@@ -1,6 +1,6 @@
     <?php
     // Koneksi ke database
-    $konek = mysqli_connect("localhost","root","","db_agenda");
+    $konek = mysqli_connect("localhost","root","","db_sekolahmu");
     // Ambil variabel yang dikirim dari form
     $id_agenda = $_POST['id_agenda'];
     $tanggal = $_POST['tanggal'];
