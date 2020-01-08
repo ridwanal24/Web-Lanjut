@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 07, 2020 at 05:41 PM
+-- Generation Time: Jan 08, 2020 at 04:07 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -72,17 +72,17 @@ CREATE TABLE `artikel` (
   `idArtikel` int(11) NOT NULL,
   `judul` varchar(100) DEFAULT NULL,
   `text` varchar(2000) DEFAULT NULL,
-  `pathImage` varchar(100) DEFAULT NULL
+  `pathImage` varchar(100) DEFAULT NULL,
+  `date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `artikel`
 --
 
-INSERT INTO `artikel` (`idArtikel`, `judul`, `text`, `pathImage`) VALUES
-(1, 'IQ Tinggi Tak Selalu Berarti Cerdas Luar Biasa. Ini 6 Fakta Tentang Tes IQ yang Harus Kamu Tahu', '1. Fungsi asli tes IQ bukanlah mengukur kecerdasan. Melainkan untuk melihat kesesuaian antara umur dengan kepribadian\r\n2. Sekarang tes IQ digunakan untuk mengukur kecerdasan. Padahal dulu IQ digunakan untuk mengukur keterbelakangan mental\r\n3. Ada yang jago matematika, ada yang jago menggambar. Otak manusia tak bisa ditentukan kecerdasannya dalam kerangka hitam-putih saja\r\n4. Katanya kalau IQ-nya tinggi, soal apapun bisa dikerjakan dengan cepat. Padahal Einstein yang secerdas itu pun terkenal lamban menjawab pertanyaan\r\n5. Hasil IQ tak selalu tepat dan menggambarkan “apa adanya” dirimu. Bahkan score IQ bisa berubah-ubah setiap waktu\r\n7. IQ bisa menentukan kesuksesan seseorang di masa depan itu mitos semata. Butuh lebih dari sekadar IQ tinggi untuk bisa berjaya', NULL),
-(2, 'Cara Buat Pastel Bakar Horeng', 'artikel/text/2.txt', 'no'),
-(3, 'Cara', 'artikel/text/3.txt', 'yes');
+INSERT INTO `artikel` (`idArtikel`, `judul`, `text`, `pathImage`, `date`) VALUES
+(1, 'Delayota Gelar PLATINUM 45 di GOR UNY', 'artikel/text/1.txt', 'yes', '2020-01-15 00:00:00'),
+(2, 'Kompetisi Anak Bangsa Media Laga Para Juara', 'artikel/text/2.txt', 'yes', '2020-01-08 14:10:58');
 
 -- --------------------------------------------------------
 
@@ -356,8 +356,6 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `title`, `descp`, `tanggal`, `posting`, `kategori`) VALUES
-(1, 'aa', '<p>aab</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;</p>\r\n', '2020-01-07 16:52:43', 'Akademik', 'Informasi'),
-(2, 'aa', '<p style=\"text-align: right;\">bb</p>\r\n', '2020-01-07 17:04:38', 'Akademik', 'Informasi'),
 (9, 'KEGIATAN PRA MASA PENGENALAN LINGKUNGAN SEKOLAH TAHUN 2019', 'Dalam rangka mengikuti kegiatan Pra Masa Pengenalan Lingkungan Sekolah / Pra-MPLS, dihimbau kepada seluruh Peserta Didik yang diterima di SMA Negeri 2 Balige Tahun Pembelajaran 2019/2020 supaya hadir pada:  Hari/Tanggal : Sabtu, 06 Juli 2019 Pukul : 07.30 WIB Tempat : Lapangan Upacara SMAN 2 Balige Pakaian :  Baju kaos warna putih lengan panjang atau pendek berkerah Celana training sport Sepatu olahraga Potongan rambut sesuai dengan petunjuk di Papan Pengumuman Sekolah Membawa Angket yang sudah diisi, format hasil wawancara, air minum secukupnya, serta peralatan dengan ketentuan terlampir.     Demikian kami sampaikan pengumuman ini. Atas perhatian dan kehadirannya kami sampaikan terimakasih.', '2019-12-15 18:27:43', 'Akademik', 'Informasi'),
 (10, 'PERUBAHAN JADWAL DAN SESI UJIAN PPDB 2019 SMAN 2 BALIGE JALUR TESTING', 'Informasi kepada semua Calon Peserta Didik yang yang mendaftar melalui Jalur Testing PPDB SMAN 2 Balige tahun 2019. Saat ini pembagian jadwal ujian dan sesi yang tadinya dilakukan oleh Kantor Cabang Dinas Pendidikan Balige diambil alih oleh Dinas Pendidikan Provinsi Sumatera Utara.  Calon Peserta Didik dapat melihat perubahan jadwal dan sesi ujian melalui web ppdb.disdik.sumutprov.go.id dengan login menggunakan akun masing-masing.  Mohon maaf atas ketidaknyamanan ini.  Demikian disampaikan. Terimakasih.', '2019-12-15 21:07:51', 'Humas', 'Informasi');
 
