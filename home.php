@@ -7,6 +7,8 @@ include 'koneksi.php';
 <!-- Page Article -->
 <div class="row m-0 mt-5 text-center">
   <div id="artikel" class="col-6 rounded mx-auto bg-white shadow">
+    <h5 class="text-muted text-left my-3">ARTIKEL</h5>
+    <hr>
     <?php
     $query = "SELECT * from artikel limit 2";
     $action = mysql_query($query);
@@ -44,8 +46,9 @@ include 'koneksi.php';
   <!-- End of Page Article -->
   
   <div class="col-4 bg-white shadow rounded">
-    <div class="bg-white rounded">
-      <h5 class="p-0 pt-3 px-3">Pengumuman</h5>
+    <div class="">
+      
+      <h5 class="p-0 pt-3 px-3 text-muted">PENGUMUMAN</h5>
       <div class="text-left card-body p-0 pl-3">
         <hr>
         <?php
@@ -75,11 +78,19 @@ include 'koneksi.php';
         <?php }
         ?>
       </div>
-    </div>
+      </div>
+  
   </div>
 </div>
 <!-- /.row -->
 
+<div class="row mt-5">
+  <div class="col-6 bg-white shadow mx-auto rounded p-3">
+    <h5 class="text-muted">FASILITAS</h5>
+    <hr>
+  </div>
+  <div class="col-4"></div>
+</div>
 <br>
 <br>
 <br>
