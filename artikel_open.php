@@ -26,7 +26,7 @@ while ($data = mysql_fetch_array($action)) {
 		<p class="h4"><?php echo $title; ?></p>
 		<p class="font-italic text-muted">Posted on : <?php echo $date; ?></p>
 		<div class="row">
-			<div class="col-12 p-3">
+			<div class="col-12 p-5">
 				<img width="75%" class="img-fluid mx-auto d-block" src="<?php echo $img;?>">
 				<p class="text-left"><?php echo $artikel ;?></p>
 			</div>
