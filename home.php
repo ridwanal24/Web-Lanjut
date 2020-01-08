@@ -2,23 +2,49 @@
 session_start();
 include 'layout/header.php';
 include 'koneksi.php';
-$query = "SELECT * FROM pengumuman";
-$action = mysql_query($query);
 ?>
 
-<!-- Page Content -->
-
-<!-- Jumbotron Header -->
-
-<!-- Page Features -->
+<!-- Page Article -->
 <div class="row m-0 mt-5 text-center">
-  <div id="artikel" class="col-7 rounded mr-5 bg-white">Artikel</div>
+  <div id="artikel" class="col-6 rounded mx-auto bg-white shadow">
+    <?php
+    $query = "SELECT * from artikel limit 2";
+    $action = mysql_query($query);
+    while ($data = mysql_fetch_array($action)) {
+      $artikel = fopen("dashboard/artikel/".$data['text'], "r");
+      $artikel = fread($artikel, 250);
+      ?>
+
+      <div class="row mt-3 text-left">
+        <div class="col-12">
+          <p class="font-weight-bold h4"><?php echo $data['judul']; ?></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <img src="dashboard/artikel/artikel/img/<?php echo $data['idArtikel'];?>.png" class="img-fluid mx-auto">
+        </div>
+        <div class="col-6 text-left">
+          <p><small><?php echo $artikel; ?>...</small></p>
+        </div>
+      </div>
+      <div class="text-left font-italic text-muted">Posted on :</div>
+      <hr>
+      <?php
+    }
+    ?>
+  </div>
+  <!-- End of Page Article -->
+  
   <div class="col-4 bg-white shadow rounded">
     <div class="bg-white rounded">
       <h5 class="p-0 pt-3 px-3">Pengumuman</h5>
       <div class="text-left card-body p-0 pl-3">
         <hr>
         <?php
+        $query = "SELECT * FROM pengumuman";
+        $action = mysql_query($query);
+
         while ($data=mysql_fetch_array($action)) { ?>
           <small>
             <?php
