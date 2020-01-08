@@ -9,7 +9,7 @@ else{
 	?>
 	<br>
 	<div class="container-fluid">
-		<center><h1>DATA ARTIKEL</h1></center>
+		<center><h1>DATA SAMBUTAN</h1></center>
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
@@ -29,13 +29,13 @@ else{
 									
 						</div>
 </form>
-					<form action="artikel_tambah.php">
+					<form action="sambutan_tambah.php">
 
 						<div class="row">
 							<div class="col-md-10">
 							</div>
 							
-							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Artikel" /></center></div>
+							<div class="col-md-2"><center><input type="submit" class="btn btn-primary" value="Tambah Sambutan" /></center></div>
 							<!-- <div class="col-md-2"><center><a href="cetak_siswa.php"><input type="button" class="btn btn-primary" value="Download Excel" /></a></center></div> -->
 						</div>
 						
@@ -59,7 +59,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT idArtikel, judul, text, pathImage FROM artikel limit $posisi, $batas";
+								$tampil="SELECT idSambutan, judul, text, pathImage FROM sambutan limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -73,10 +73,10 @@ else{
 										<td align="center"><?php echo $dataTampil['judul']; ?></td>
 										<td>
 											<div align="center">
-												<a href="artikel_hapus.php?idArtikel=<?php echo $dataTampil['idArtikel'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
+												<a href="sambutan_hapus.php?idSambutan=<?php echo $dataTampil['idSambutan'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
 											</td>
 											<td>
-												<a href="artikel_edit.php?idArtikel=<?php echo $dataTampil['idArtikel']; ?>"><img src="gambar/edit.png" width="20"></a>
+												<a href="sambutan_edit.php?idSambutan=<?php echo $dataTampil['idSambutan']; ?>"><img src="gambar/edit.png" width="20"></a>
 											</div>
 										</td>
 									</tr>

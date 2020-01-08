@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'koneksi.php';
-$query = "select max(idArtikel) as id from artikel";
+$query = "select max(idSambutan) as id from sambutan";
 $action = mysql_query($query);
 while ($data = mysql_fetch_array($action)) {
 	$id = $data['id']+1;
@@ -17,7 +17,7 @@ else{
 		<div class="row">
 			<div class="col-md-8 my-3 p-3 mx-auto bg-white shadow rounded">
 				<h2 class="text-center">Buat Artikel</h2>
-				<form action="artikel_aksi_input.php" method="post" enctype="multipart/form-data">
+				<form action="sambutan_aksi_input.php" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="id" value="<?php echo $id; ?>">
 					<div class="form-group">
 						<label>Judul</label>

@@ -3,7 +3,7 @@ session_start();
 include '../layout/header.php';
 include 'koneksi.php';
 /*Get Data from Database*/
-$id = $_GET['idArtikel'];
+$id = $_GET['idSambutan'];
 
 /*End of Get Data from Database*/
 
@@ -13,19 +13,19 @@ if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
 }
 else{
 
-	$query = "select * from artikel where idArtikel=$id";
+	$query = "select * from sambutan where idSambutan=$id";
 	$action = mysql_query($query);
 	while ($data = mysql_fetch_array($action)) {
 		$title = $data['judul'];
 		$img = $data['pathImage'];
-		$artikel = fopen($data['text'], "r");
-		$text = fread($artikel, filesize($data['text']));
+		$sambutan = fopen($data['text'], "r");
+		$text = fread($sambutan, filesize($data['text']));
 		?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-8 my-3 p-3 mx-auto bg-white shadow rounded">
-					<h2 class="text-center">Edit Artikel</h2>
-					<form action="artikel_aksi_edit.php" method="post" enctype="multipart/form-data">
+					<h2 class="text-center">Edit Sambutan</h2>
+					<form action="sambutan_aksi_edit.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="id" value="<?php echo $id; ?>">
 						<div class="form-group">
 							<label>Judul</label>

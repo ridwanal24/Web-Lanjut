@@ -5,15 +5,15 @@ $id = $_POST['id'];
     $isi = $_POST['isi'];
     $img = "no";
 
-    /*Create File Article*/
-    $path="artikel/text/";
+    /*Create File Sambutan*/
+    $path="sambutan/text/";
     if (file_exists($path.$id.".txt")) {
     	unlink($path.$id.".txt");
     }
-    $artikel = fopen($path.$id.".txt", "w");
-    fwrite($artikel, $isi);
-    fclose($artikel);
-    /*End of Create File Article*/
+    $sambutan = fopen($path.$id.".txt", "w");
+    fwrite($sambutan, $isi);
+    fclose($sambutan);
+    /*End of Create File Sambutan*/
 
     /*Upload Gambar*/
     if ($_FILES['file']['size']>0) {
@@ -27,7 +27,7 @@ $id = $_POST['id'];
 
         if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
             if($ukuran < 5044070){          
-                move_uploaded_file($file_tmp, 'artikel/img/'.$id.'.png');
+                move_uploaded_file($file_tmp, 'sambutan/img/'.$id.'.png');
                 $img = "yes";
             }else{
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -39,15 +39,15 @@ $id = $_POST['id'];
     /*End of Upload Gambar*/
 
     /*Add To Database*/
-    $query = "update artikel set judul='$title', text='artikel/text/$id.txt', pathImage='$img' where idArtikel=$id";
+    $query = "update sambutan set judul='$title', text='sambutan/text/$id.txt', pathImage='$img' where idArtikel=$id";
     $hasil = mysql_query($query);
     /*End of Add To Database*/
 if($hasil){
 			echo '<script language="javascript">
-				  alert ("Artikel Berhasil Diupdate");
+				  alert ("Sambutan Berhasil Diupdate");
 				  
 				  </script>';
 				  //exit();
-	}/*window.location="artikel_data.php";*/
+	}/*window.location="sambutan_data.php";*/
 ?>
 
