@@ -23,8 +23,8 @@ Copyright © Start Bootstrap 2019 -->
 			<br>
 			<form action="peng_tambah.php">
 				<div class="row">
-					<div class="col-md-6"></div>
-					<div class="col-md-2"><center><input type="submit" class="btn btn-primary align-right" value="Tambah Pengumuman" /></center></div>
+					<div class="col-md-9"></div>
+					<div class="col-md-3"><center><input type="submit" class="btn btn-primary align-right" value="Tambah Pengumuman" /></center></div>
 				</div>
 				<br>
 

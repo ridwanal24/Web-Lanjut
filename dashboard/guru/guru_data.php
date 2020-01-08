@@ -9,10 +9,10 @@ if (isset( $_SESSION['status'])) {
 <br><br>
 <div class="container-fluid">
 	<br>
-	<center><p class="h1">DATA GURU</p></center>
 	<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10">
+			<div class="col-md-10 shadow bg-white p-3 rounded">
+	<center><p class="h1 text-muted">DATA GURU</p></center>
 				<br>
 				<form action="#" method="get">
 						<div class="row">
