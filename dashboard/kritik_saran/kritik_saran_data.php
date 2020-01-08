@@ -9,10 +9,10 @@ else{
 	?>
 	<br>
 	<div class="container-fluid">
-		<center><h1>KRITIK & SARAN</h1></center>
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10">
+			<div class="col-md-10 bg-white rounded shadow p-3">
+		<center><h1 class="text-muted">KRITIK & SARAN</h1></center>
 				<br>
 				<form action="guru_tambah.php">
 					<!-- <form action="guru_tambah.php" class="content"> -->
