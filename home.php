@@ -11,13 +11,20 @@ include 'koneksi.php';
     $query = "SELECT * from artikel limit 2";
     $action = mysql_query($query);
     while ($data = mysql_fetch_array($action)) {
+      /*File Artikel*/
       $artikel = fopen("dashboard/artikel/".$data['text'], "r");
       $artikel = fread($artikel, 250);
+      /*End of File Artikel*/
+      
+      /*Set Tanggal*/
+      $date = date_create($data['date']);
+      $date = date_format($date,"d/m/Y");
+      /*End of Set Tanggal*/
       ?>
 
       <div class="row mt-3 text-left">
         <div class="col-12">
-          <p class="font-weight-bold h4"><?php echo $data['judul']; ?></p>
+          <p class="font-weight-bold h4"><a href="artikel_open.php?id=<?php echo $data['idArtikel'];?>"><?php echo $data['judul']; ?></a></p>
         </div>
       </div>
       <div class="row">
@@ -25,10 +32,10 @@ include 'koneksi.php';
           <img src="dashboard/artikel/artikel/img/<?php echo $data['idArtikel'];?>.png" class="img-fluid mx-auto">
         </div>
         <div class="col-6 text-left">
-          <p><small><?php echo $artikel; ?>...</small></p>
+          <p><small><?php echo $artikel; ?>... <a href="artikel_open.php?id=<?php echo $data['idArtikel'];?>">Read more>></a> </small></p>
         </div>
       </div>
-      <div class="text-left font-italic text-muted">Posted on :</div>
+      <div class="text-left font-italic text-muted">Posted on : <?php echo $date; ?></div>
       <hr>
       <?php
     }
