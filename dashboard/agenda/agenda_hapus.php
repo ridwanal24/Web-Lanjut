@@ -1,6 +1,11 @@
  <?php ob_start();
  include "koneksi.php";
- mysql_query("delete from agenda where id_agenda='$_GET[id_agenda]'");
+ $id_agenda = $_GET['id_agenda'];
+ mysql_query("delete from agenda where id_agenda=$id_agenda");
+ $file = "../../assets/img/agenda/".$id_agenda.".png";
+ if (file_exists($file)) {
+ 	unlink($file);
+ }
 {
 			echo '<script language="javascript">
 				  alert ("Data Agenda Berhasil Dihapus");

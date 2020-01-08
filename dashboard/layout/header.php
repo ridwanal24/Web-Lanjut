@@ -19,15 +19,17 @@
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/pengumuman.css">
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-light">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.php">Dashboard Admin</a>
+      <a class="navbar-brand" href="../index.php">Dashboard Admin</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,7 +47,6 @@
               ?>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  
                   
                   <?php echo $_SESSION['username'];
                 }
@@ -65,19 +66,4 @@
       </div>
     </nav>
  <!-- Batas -->
- <!-- 
-    <div class="container-fluid">
-    <br>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action active">
-            <center><h5>Dashboard Admin</h5></center>
-          </a>
-          <a href="index.php" class="list-group-item list-group-item-action">Kelola Data Guru</a>
-          <a href="#" class="list-group-item list-group-item-action">Kelola Data Siswa</a>
-          <a href="#" class="list-group-item list-group-item-action">Kelola Daftar Fasilitas</a>
-          <a href="#" class="list-group-item list-group-item-action">Kelola Apapun Itu</a>
-        </div>
-      </div>
-      <div class="col-md-9"> -->
+ 

@@ -21,21 +21,15 @@ else{
 			<?php 
 			include "koneksi.php";
 			$id=$_GET['idGaleri'];
-			$query=mysql_query("SELECT pathVideo, pathImg from galeri where idGaleri='$id'");
+			$query=mysql_query("SELECT pathImg from galeri where idGaleri='$id'");
 			?>
 			<h1 align="center">Edit Data Galeri</h1>
 			<br>
 			<table border="0">
 				<?php
 				while($row=mysql_fetch_array($query)){
-					$pathVideo=$row['pathVideo'];
 					$pathImg=$row['pathImg'];
 					?>
-					<tr>
-						<td><label for="pathVideo">Video</label></td>
-						<td> : </td>
-						<td><input type="text" accept="video/*" name="video" id="video" class="input1" placeholder="video" value="<?php echo $row['pathVideo'];?>"/></td>
-					</tr>
 					<tr>
 						<td><label for="pathImg">Gambar</label></td>
 						<td> : </td>

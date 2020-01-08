@@ -51,7 +51,6 @@ else{
 							<tr class="bg-light">
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
-									<td><div align="center"><strong>Video</strong></div></td>
 									<td><div align="center"><strong>Gambar</strong></div></td>
 									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 								</tr>
@@ -67,7 +66,7 @@ else{
 									$posisi = ( $pg - 1 ) * $batas;
 								}	
 								$no=0+$posisi;
-								$tampil="SELECT pathVideo, pathImg FROM galeri limit $posisi, $batas";
+								$tampil="SELECT * FROM galeri limit $posisi, $batas";
 								$qryTampil=mysql_query($tampil);
 								if ($qryTampil === FALSE) {
 									die(mysql_error());
@@ -78,7 +77,6 @@ else{
 
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
-										<td align="center"><?php echo $dataTampil['pathVideo']; ?></td>
 										<td align="center"><?php echo $dataTampil['pathImg']; ?></td>
 										<td>
 											<div align="center">

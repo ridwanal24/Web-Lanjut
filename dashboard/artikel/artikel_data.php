@@ -7,13 +7,6 @@ if (empty($_SESSION['username']) AND empty($_SESSION['status'])) {
 }
 else{
 	?>
-<!-- <html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Data Siswa Sekolahku</title>
- <link rel="stylesheet" href="css/guru.css">
-</head>
-<body> -->
 	<br>
 	<div class="container-fluid">
 		<center><h1>DATA ARTIKEL</h1></center>
@@ -22,7 +15,7 @@ else{
 			<div class="col-md-10">
 				<br>
 				<form action="#" method="get">
-					<!-- <form action="guru_tambah.php" class="content"> -->
+
 						<div class="row">
 									
 							<!-- <div class="col-md-12">
@@ -52,8 +45,6 @@ else{
 								<!-- <tr bgcolor="#38FE03"> -->
 									<td><div align="center"><strong>No</strong></div></td>
 									<td><div align="center"><strong>Judul</strong></div></td>
-									<td><div align="center"><strong>Isi</strong></div></td>
-                                    <td><div align="center"><strong>Gambar</strong></div></td>
 									<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 								</tr>
 								<?php
@@ -80,8 +71,6 @@ else{
 									<tr bgcolor="#FFFFFF">
 										<td align="center"><?php echo $no ; ?></td>
 										<td align="center"><?php echo $dataTampil['judul']; ?></td>
-                                        <td align="center"><?php echo $dataTampil['text']; ?></td>
-										<td align="center"><?php echo $dataTampil['pathImage']; ?></td>
 										<td>
 											<div align="center">
 												<a href="artikel_hapus.php?idArtikel=<?php echo $dataTampil['idArtikel'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>

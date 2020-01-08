@@ -3,10 +3,8 @@ session_start();
 include 'koneksi.php';
 include 'layout/header.php';
 if (isset( $_SESSION['status'])) {
-
 $nip=$_GET['nip'];
-
-$query="select g.nama, g.alamat, g.gender, DATE_FORMAT(g.tglLahir, '%d %M %Y') as lahir , g.tempatLahir, g.agama, g.pathImg as foto, j.nama as jabatan FROM guru g JOIN jabatan j ON j.idJabatan=g.idJabatan where g.nip=$nip";
+$query="select g.nama_guru, g.alamat, g.jenis_kelamin, DATE_FORMAT(g.tanggal_lahir, '%d %M %Y') as lahir , g.tempat_lahir, g.agama, g.image as foto, g.alamat, j.jabatan as jabatan FROM guru g JOIN jabatan j ON j.kode_jabatan=g.kode_jabatan where g.nip=$nip";
 $tampil=mysql_query($query);
 while ($result=mysql_fetch_array($tampil)) {
 	# File
@@ -17,7 +15,6 @@ while ($result=mysql_fetch_array($tampil)) {
 	else{
 		$path="assets/img/guru/default.png";
 	}
-
 ?>
 
 <br>
@@ -35,11 +32,11 @@ while ($result=mysql_fetch_array($tampil)) {
 	<div class="col-md-6 img-thumbnail bg-light">
 		<div class="row py-1">
 				<div class="font-weight-bold col-md-4">Nama Lengkap</div>
-				<div class="col-md-6"><?php echo $result['nama']; ?></div>
+				<div class="col-md-6"><?php echo $result['nama_guru']; ?></div>
 			</div>
 			<div class="row py-1">
 				<div class="font-weight-bold col-md-4">Tempat Lahir</div>
-				<div class="col-md-6"><?php echo $result['tempatLahir']; ?></div>
+				<div class="col-md-6"><?php echo $result['tempat_lahir']; ?></div>
 			</div>
 			<div class="row py-1">
 				<div class="font-weight-bold col-md-4">Tanggal Lahir</div>
@@ -51,7 +48,11 @@ while ($result=mysql_fetch_array($tampil)) {
 			</div>
 			<div class="row py-1">
 				<div class="font-weight-bold col-md-4">Jenis Kelamin</div>
-				<div class="col-md-6"><?php echo $result['gender']; ?></div>
+				<div class="col-md-6"><?php echo $result['jenis_kelamin']; ?></div>
+			</div>
+            <div class="row py-1">
+				<div class="font-weight-bold col-md-4">Alamat</div>
+				<div class="col-md-6"><?php echo $result['alamat']; ?></div>
 			</div>
 			<div class="row py-1">
 				<div class="font-weight-bold col-md-4">Jabatan</div>
@@ -61,8 +62,7 @@ while ($result=mysql_fetch_array($tampil)) {
 				<div class="font-weight-bold col-md-4">Mata Pelajaran</div>
 				<div class="col-md-6"><?php
 				
-				$query2="select mp.nama as mapel FROM guru g JOIN jabatan j ON j.idJabatan=g.idJabatan join tugasmapel tm on tm.nip=g.nip join matapelajaran mp on mp.idMapel=tm.idMapel where g.nip=$nip";
-
+				$query2="select mp.nama as mapel FROM guru g JOIN jabatan j ON j.kode_jabatan=g.kode_jabatan join tugasmapel tm on tm.nip=g.nip join matapelajaran mp on mp.idMapel=tm.idMapel where g.nip=$nip";
 				$aksi=mysql_query($query2);
 				while ($result2=mysql_fetch_array($aksi)) {
 					echo "- ".$result2['mapel']."<br>";

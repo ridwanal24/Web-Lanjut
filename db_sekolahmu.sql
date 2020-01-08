@@ -1,20 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
--- http://www.phpmyadmin.net
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 30 Des 2019 pada 05.21
--- Versi Server: 5.6.21
--- PHP Version: 5.6.3
+-- Host: localhost
+-- Generation Time: Jan 07, 2020 at 05:41 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `db_sekolahmu`
@@ -23,16 +25,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
-CREATE TABLE IF NOT EXISTS `admin` (
+CREATE TABLE `admin` (
   `username` varchar(100) NOT NULL,
   `pass` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`username`, `pass`) VALUES
@@ -41,59 +43,61 @@ INSERT INTO `admin` (`username`, `pass`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `agenda`
+-- Table structure for table `agenda`
 --
 
-CREATE TABLE IF NOT EXISTS `agenda` (
-`id_agenda` int(255) NOT NULL,
+CREATE TABLE `agenda` (
+  `id_agenda` int(255) NOT NULL,
   `title` varchar(500) NOT NULL,
   `descp` varchar(10000) DEFAULT NULL,
   `tanggal` date NOT NULL,
   `kategori` varchar(20) NOT NULL,
   `image` varchar(300) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `agenda`
+-- Dumping data for table `agenda`
 --
 
 INSERT INTO `agenda` (`id_agenda`, `title`, `descp`, `tanggal`, `kategori`, `image`) VALUES
-(17, 'PRAKTEK KERJA LAPANGAN GEL.1', '<p>Peserta Magang:<br />\r\n1. Wajib Membawa Laptop.<br />\r\n2. Membawa Surat Rekomendasi Dari Sekolah<br />\r\n3. Tidak Mendapat Gajiâ€Š&mdash;â€ŠUang Transortasiâ€Š&mdash;â€ŠUang Makan.<br />\r\n4. Tidak Mendapat Penginapan, bagi yang tinggal di luar kota.<br />\r\n5. Durasi Magang selama 3 Bulan, Mulai Senin hingga Jumat dan libur di Hari Besar / Tanggal Merah<br />\r\n6. Mulai Pukul 08:00 sampai Pukul 16:00</p>\r\n\r\n<p>Materi Magang/Prakerin<br />\r\n&ndash; Pondasi Internet Marketing<br />\r\n&ndash; Riset Online<br />\r\n&ndash; Video Marketing<br />\r\n&ndash; Social Media Marketing<br />\r\n&ndash; Fb Marketing<br />\r\n&ndash; Blog Marketing</p>\r\n\r\n<p>Siswa Program Magang harus mentaati Tata Tertib:<br />\r\n1. Pakaian<br />\r\nBagi Siswa SMK diwajibkan memakai baju seragam sekolah atau baju seragam praktek (menurut sekolah masing-masing) dan harus memasukkan bajunya ke dalam bagi putra.<br />\r\n2. Perilaku<br />\r\nPerilaku selama di lingkungan magang, mahasiswa magang harus jujur, bertanggung jawab, berlaku sopan, disiplin, dan mematuhi semua tata tertib program magang.<br />\r\n3. Kehadiran<br />\r\n3.1 Siswa magang harus hadir tepat waktu sebagaimana yang dijadwalkan<br />\r\nmulai Pukul 08:00 sampai Pukul 16:00<br />\r\n3.2 Siswa Sakit Wajib membawa surat Dokter<br />\r\nApabila Siswa Alpa (Tanpa Keterangan), Mengganti Hari atau Mengerjakan Tugas tambahan</p>\r\n\r\n<p>Bagi Siswa kerja praktek/magang yang melanggar tata tertib dan ketentuan yang berlaku tersebut di atas akan dikenakan sanksi sebagai berikut&nbsp;:<br />\r\n&bull; Peringatan lisan atau tidak diperbolehkan masuk praktek dan magang.<br />\r\n&bull; Pemutusan kerja praktek/magang dengan surat peringatan ke Sekolah yang bersangkutan dan tanpa diberikan sertifikat.</p>\r\n\r\n<p>Hubungi&nbsp;:</p>\r\n\r\n<p>Ibu Nita Hayuta</p>\r\n\r\n<p>WA : 082-220-228-118</p>\r\n', '2020-01-07', 'Praktek Kerja Lapang', 'pkl.jpg');
+(1, 'aa', '<p><strong>Peserta Magang:</strong><br />\r\n1. Wajib Membawa Laptop.<br />\r\n2. Membawa Surat Rekomendasi Dari Sekolah<br />\r\n3. Tidak Mendapat Gajiâ€Š&mdash;â€ŠUang Transortasiâ€Š&mdash;â€ŠUang Makan.<br />\r\n4. Tidak Mendapat Penginapan, bagi yang tinggal di luar kota.<br />\r\n5. Durasi Magang selama 3 Bulan, Mulai Senin hingga Jumat dan libur di Hari Besar / Tanggal Merah<br />\r\n6. Mulai Pukul 08:00 sampai Pukul 16:00</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Materi Magang/Prakerin<br />\r\n&ndash; Pondasi Internet Marketing<br />\r\n&ndash; Riset Online<br />\r\n&ndash; Video Marketing<br />\r\n&ndash; Social Media Marketing<br />\r\n&ndash; Fb Marketing<br />\r\n&ndash; Blog Marketing</p>\r\n\r\n<p>Siswa Program Magang harus mentaati Tata Tertib:<br />\r\n1. Pakaian<br />\r\nBagi Siswa SMK diwajibkan memakai baju seragam sekolah atau baju seragam praktek (menurut sekolah masing-masing) dan harus memasukkan bajunya ke dalam bagi putra.<br />\r\n2. Perilaku<br />\r\nPerilaku selama di lingkungan magang, mahasiswa magang harus jujur, bertanggung jawab, berlaku sopan, disiplin, dan mematuhi semua tata tertib program magang.<br />\r\n3. Kehadiran<br />\r\n3.1 Siswa magang harus hadir tepat waktu sebagaimana yang dijadwalkan<br />\r\nmulai Pukul 08:00 sampai Pukul 16:00<br />\r\n3.2 Siswa Sakit Wajib membawa surat Dokter<br />\r\nApabila Siswa Alpa (Tanpa Keterangan), Mengganti Hari atau Mengerjakan Tugas tambahan</p>\r\n\r\n<p>Bagi Siswa kerja praktek/magang yang melanggar tata tertib dan ketentuan yang berlaku tersebut di atas akan dikenakan sanksi sebagai berikut&nbsp;:<br />\r\n&bull; Peringatan lisan atau tidak diperbolehkan masuk praktek dan magang.<br />\r\n&bull; Pemutusan kerja praktek/magang dengan surat peringatan ke Sekolah yang bersangkutan dan tanpa diberikan sertifikat.</p>\r\n\r\n<p>Hubungi&nbsp;:</p>\r\n\r\n<p>Ibu Nita Hayuta</p>\r\n\r\n<p>WA : 082-220-228-118</p>\r\n', '2020-01-01', 'Kunjungan Industri', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `artikel`
+-- Table structure for table `artikel`
 --
 
-CREATE TABLE IF NOT EXISTS `artikel` (
-`idArtikel` int(11) NOT NULL,
+CREATE TABLE `artikel` (
+  `idArtikel` int(11) NOT NULL,
   `judul` varchar(100) DEFAULT NULL,
   `text` varchar(2000) DEFAULT NULL,
   `pathImage` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `artikel`
+-- Dumping data for table `artikel`
 --
 
 INSERT INTO `artikel` (`idArtikel`, `judul`, `text`, `pathImage`) VALUES
-(1, 'IQ Tinggi Tak Selalu Berarti Cerdas Luar Biasa. Ini 6 Fakta Tentang Tes IQ yang Harus Kamu Tahu', '1. Fungsi asli tes IQ bukanlah mengukur kecerdasan. Melainkan untuk melihat kesesuaian antara umur dengan kepribadian\r\n2. Sekarang tes IQ digunakan untuk mengukur kecerdasan. Padahal dulu IQ digunakan untuk mengukur keterbelakangan mental\r\n3. Ada yang jago matematika, ada yang jago menggambar. Otak manusia tak bisa ditentukan kecerdasannya dalam kerangka hitam-putih saja\r\n4. Katanya kalau IQ-nya tinggi, soal apapun bisa dikerjakan dengan cepat. Padahal Einstein yang secerdas itu pun terkenal lamban menjawab pertanyaan\r\n5. Hasil IQ tak selalu tepat dan menggambarkan “apa adanya” dirimu. Bahkan score IQ bisa berubah-ubah setiap waktu\r\n7. IQ bisa menentukan kesuksesan seseorang di masa depan itu mitos semata. Butuh lebih dari sekadar IQ tinggi untuk bisa berjaya', NULL);
+(1, 'IQ Tinggi Tak Selalu Berarti Cerdas Luar Biasa. Ini 6 Fakta Tentang Tes IQ yang Harus Kamu Tahu', '1. Fungsi asli tes IQ bukanlah mengukur kecerdasan. Melainkan untuk melihat kesesuaian antara umur dengan kepribadian\r\n2. Sekarang tes IQ digunakan untuk mengukur kecerdasan. Padahal dulu IQ digunakan untuk mengukur keterbelakangan mental\r\n3. Ada yang jago matematika, ada yang jago menggambar. Otak manusia tak bisa ditentukan kecerdasannya dalam kerangka hitam-putih saja\r\n4. Katanya kalau IQ-nya tinggi, soal apapun bisa dikerjakan dengan cepat. Padahal Einstein yang secerdas itu pun terkenal lamban menjawab pertanyaan\r\n5. Hasil IQ tak selalu tepat dan menggambarkan “apa adanya” dirimu. Bahkan score IQ bisa berubah-ubah setiap waktu\r\n7. IQ bisa menentukan kesuksesan seseorang di masa depan itu mitos semata. Butuh lebih dari sekadar IQ tinggi untuk bisa berjaya', NULL),
+(2, 'Cara Buat Pastel Bakar Horeng', 'artikel/text/2.txt', 'no'),
+(3, 'Cara', 'artikel/text/3.txt', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ekstra`
+-- Table structure for table `ekstra`
 --
 
-CREATE TABLE IF NOT EXISTS `ekstra` (
-`idEkstra` int(11) NOT NULL,
+CREATE TABLE `ekstra` (
+  `idEkstra` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
   `deskripsi` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ekstra`
+-- Dumping data for table `ekstra`
 --
 
 INSERT INTO `ekstra` (`idEkstra`, `nama`, `deskripsi`) VALUES
@@ -102,23 +106,23 @@ INSERT INTO `ekstra` (`idEkstra`, `nama`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `fasilitas`
+-- Table structure for table `fasilitas`
 --
 
-CREATE TABLE IF NOT EXISTS `fasilitas` (
-`idFasilitas` int(11) NOT NULL,
+CREATE TABLE `fasilitas` (
+  `idFasilitas` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
   `jumlah` int(11) DEFAULT NULL,
   `pathImg` varchar(100) DEFAULT NULL,
   `deskripsi` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `fasilitas`
+-- Dumping data for table `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`) VALUES
-(1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum''at.'),
+(1, 'Masjid', 1, NULL, 'Masjid cukup untuk seluruh siswa dan guru maupun karyawan sekolah untuk menunaikan ibadah. Diadakan secara rutin sholat zuhur berjamaah dan sholat Jum\'at.'),
 (2, 'Aula', 1, NULL, 'Aula digunakan untuk agenda penting semisal musyawarah antara guru dengan orang tua wali, pembekalan UN, pentas seni, dan lain sebagainya.'),
 (3, 'Kantin', 1, NULL, 'Kantin sangat dijaga kebersihannya. Makanan yang tersedia cukup bervariasi sehingga membuat siswa bisa tenang sejenak setelah belajar seharian.'),
 (4, 'Perpustakaan', 1, NULL, 'Sudah menerapkan perpustakaan online, sehingga proses peminjaman buku serta pengembalian dan pengecekan buku lebih cepat.'),
@@ -143,17 +147,17 @@ INSERT INTO `fasilitas` (`idFasilitas`, `nama`, `jumlah`, `pathImg`, `deskripsi`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `galeri`
+-- Table structure for table `galeri`
 --
 
-CREATE TABLE IF NOT EXISTS `galeri` (
-`idGaleri` int(11) NOT NULL,
+CREATE TABLE `galeri` (
+  `idGaleri` int(11) NOT NULL,
   `pathVideo` varchar(100) DEFAULT NULL,
   `pathImg` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=660100006 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `galeri`
+-- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`idGaleri`, `pathVideo`, `pathImg`) VALUES
@@ -166,46 +170,46 @@ INSERT INTO `galeri` (`idGaleri`, `pathVideo`, `pathImg`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `guru`
+-- Table structure for table `guru`
 --
 
-CREATE TABLE IF NOT EXISTS `guru` (
+CREATE TABLE `guru` (
   `nip` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
+  `nama_guru` varchar(100) NOT NULL,
   `alamat` varchar(100) DEFAULT NULL,
-  `gender` char(1) NOT NULL,
-  `tglLahir` date DEFAULT NULL,
-  `tempatLahir` varchar(100) DEFAULT NULL,
+  `jenis_kelamin` varchar(100) NOT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `tempat_lahir` varchar(100) DEFAULT NULL,
   `pass` int(11) DEFAULT NULL,
-  `idJabatan` int(11) DEFAULT NULL,
+  `kode_jabatan` int(11) DEFAULT NULL,
   `agama` varchar(100) NOT NULL,
-  `pathImg` varchar(100) DEFAULT NULL
+  `image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `guru`
+-- Dumping data for table `guru`
 --
 
-INSERT INTO `guru` (`nip`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `pass`, `idJabatan`, `agama`, `pathImg`) VALUES
-(100001, 'Muhammad Ruslan', 'Jalan Kuningan No. 2 Depok Sleman', 'L', '2019-12-25', 'Bantul', 1234, 5, 'Kristen Protestan', ''),
+INSERT INTO `guru` (`nip`, `nama_guru`, `alamat`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `pass`, `kode_jabatan`, `agama`, `image`) VALUES
+(100001, 'Muhammad Ruslan', 'Jalan Kuningan No. 2 Depok Sleman', 'L', '2019-12-25', 'Bantul', 1234, 4, 'Kristen Protestan', ''),
 (100002, 'Justin Beiber', 'Karang Tengah, Tulungagung, Jawa', 'L', '1912-11-11', 'Semarang', NULL, 1, 'Islam', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jabatan`
+-- Table structure for table `jabatan`
 --
 
-CREATE TABLE IF NOT EXISTS `jabatan` (
-`idJabatan` int(11) NOT NULL,
-  `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+CREATE TABLE `jabatan` (
+  `kode_jabatan` int(11) NOT NULL,
+  `jabatan` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jabatan`
+-- Dumping data for table `jabatan`
 --
 
-INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
+INSERT INTO `jabatan` (`kode_jabatan`, `jabatan`) VALUES
 (1, 'Kepala Sekolah'),
 (2, 'Guru Bahasa'),
 (3, 'Guru Olahraga'),
@@ -216,16 +220,16 @@ INSERT INTO `jabatan` (`idJabatan`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jurusan`
+-- Table structure for table `jurusan`
 --
 
-CREATE TABLE IF NOT EXISTS `jurusan` (
-`idJurusan` int(11) NOT NULL,
+CREATE TABLE `jurusan` (
+  `idJurusan` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jurusan`
+-- Dumping data for table `jurusan`
 --
 
 INSERT INTO `jurusan` (`idJurusan`, `nama`) VALUES
@@ -235,30 +239,40 @@ INSERT INTO `jurusan` (`idJurusan`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kegiatan`
+-- Table structure for table `kegiatan`
 --
 
-CREATE TABLE IF NOT EXISTS `kegiatan` (
-`idEvent` int(11) NOT NULL,
-  `judul` varchar(100) DEFAULT NULL,
-  `isi` varchar(255) DEFAULT NULL,
-  `tanggal` datetime DEFAULT NULL
+CREATE TABLE `kegiatan` (
+  `id_event` int(200) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `descp` varchar(10000) DEFAULT NULL,
+  `tanggal` datetime DEFAULT NULL,
+  `posting` varchar(20) NOT NULL,
+  `kategori` varchar(20) NOT NULL,
+  `image` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kegiatan`
+--
+
+INSERT INTO `kegiatan` (`id_event`, `title`, `descp`, `tanggal`, `posting`, `kategori`, `image`) VALUES
+(2, 'aa', '<p><em><strong>bb</strong></em></p>\r\n', '2020-01-07 21:08:20', 'Akademik', 'Lomba', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
-CREATE TABLE IF NOT EXISTS `kelas` (
-`idKelas` int(11) NOT NULL,
+CREATE TABLE `kelas` (
+  `idKelas` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `idJurusan` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`idKelas`, `nama`, `idJurusan`) VALUES
@@ -272,10 +286,10 @@ INSERT INTO `kelas` (`idKelas`, `nama`, `idJurusan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kritiksaran`
+-- Table structure for table `kritiksaran`
 --
 
-CREATE TABLE IF NOT EXISTS `kritiksaran` (
+CREATE TABLE `kritiksaran` (
   `idkritik` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL,
   `isi` varchar(255) DEFAULT NULL,
@@ -285,7 +299,7 @@ CREATE TABLE IF NOT EXISTS `kritiksaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kritiksaran`
+-- Dumping data for table `kritiksaran`
 --
 
 INSERT INTO `kritiksaran` (`idkritik`, `nama`, `isi`, `date`, `status`, `bintang`) VALUES
@@ -302,16 +316,16 @@ INSERT INTO `kritiksaran` (`idkritik`, `nama`, `isi`, `date`, `status`, `bintang
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `matapelajaran`
+-- Table structure for table `matapelajaran`
 --
 
-CREATE TABLE IF NOT EXISTS `matapelajaran` (
-`idMapel` int(11) NOT NULL,
+CREATE TABLE `matapelajaran` (
+  `idMapel` int(11) NOT NULL,
   `nama` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `matapelajaran`
+-- Dumping data for table `matapelajaran`
 --
 
 INSERT INTO `matapelajaran` (`idMapel`, `nama`) VALUES
@@ -325,29 +339,41 @@ INSERT INTO `matapelajaran` (`idMapel`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengumuman`
+-- Table structure for table `pengumuman`
 --
 
-CREATE TABLE IF NOT EXISTS `pengumuman` (
-`idPengumuman` int(11) NOT NULL,
-  `judul` varchar(100) DEFAULT NULL,
-  `isi` varchar(255) DEFAULT NULL,
-  `tanggal` datetime DEFAULT NULL
+CREATE TABLE `pengumuman` (
+  `id_pengumuman` int(20) NOT NULL,
+  `title` varchar(500) NOT NULL,
+  `descp` varchar(10000) DEFAULT NULL,
+  `tanggal` datetime NOT NULL,
+  `posting` varchar(20) NOT NULL,
+  `kategori` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+INSERT INTO `pengumuman` (`id_pengumuman`, `title`, `descp`, `tanggal`, `posting`, `kategori`) VALUES
+(1, 'aa', '<p>aab</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;</p>\r\n', '2020-01-07 16:52:43', 'Akademik', 'Informasi'),
+(2, 'aa', '<p style=\"text-align: right;\">bb</p>\r\n', '2020-01-07 17:04:38', 'Akademik', 'Informasi'),
+(9, 'KEGIATAN PRA MASA PENGENALAN LINGKUNGAN SEKOLAH TAHUN 2019', 'Dalam rangka mengikuti kegiatan Pra Masa Pengenalan Lingkungan Sekolah / Pra-MPLS, dihimbau kepada seluruh Peserta Didik yang diterima di SMA Negeri 2 Balige Tahun Pembelajaran 2019/2020 supaya hadir pada:  Hari/Tanggal : Sabtu, 06 Juli 2019 Pukul : 07.30 WIB Tempat : Lapangan Upacara SMAN 2 Balige Pakaian :  Baju kaos warna putih lengan panjang atau pendek berkerah Celana training sport Sepatu olahraga Potongan rambut sesuai dengan petunjuk di Papan Pengumuman Sekolah Membawa Angket yang sudah diisi, format hasil wawancara, air minum secukupnya, serta peralatan dengan ketentuan terlampir.     Demikian kami sampaikan pengumuman ini. Atas perhatian dan kehadirannya kami sampaikan terimakasih.', '2019-12-15 18:27:43', 'Akademik', 'Informasi'),
+(10, 'PERUBAHAN JADWAL DAN SESI UJIAN PPDB 2019 SMAN 2 BALIGE JALUR TESTING', 'Informasi kepada semua Calon Peserta Didik yang yang mendaftar melalui Jalur Testing PPDB SMAN 2 Balige tahun 2019. Saat ini pembagian jadwal ujian dan sesi yang tadinya dilakukan oleh Kantor Cabang Dinas Pendidikan Balige diambil alih oleh Dinas Pendidikan Provinsi Sumatera Utara.  Calon Peserta Didik dapat melihat perubahan jadwal dan sesi ujian melalui web ppdb.disdik.sumutprov.go.id dengan login menggunakan akun masing-masing.  Mohon maaf atas ketidaknyamanan ini.  Demikian disampaikan. Terimakasih.', '2019-12-15 21:07:51', 'Humas', 'Informasi');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `profilsekolah`
+-- Table structure for table `profilsekolah`
 --
 
-CREATE TABLE IF NOT EXISTS `profilsekolah` (
+CREATE TABLE `profilsekolah` (
   `idProfil` int(11) NOT NULL,
   `nip` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `profilsekolah`
+-- Dumping data for table `profilsekolah`
 --
 
 INSERT INTO `profilsekolah` (`idProfil`, `nip`) VALUES
@@ -356,10 +382,10 @@ INSERT INTO `profilsekolah` (`idProfil`, `nip`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sambutan`
+-- Table structure for table `sambutan`
 --
 
-CREATE TABLE IF NOT EXISTS `sambutan` (
+CREATE TABLE `sambutan` (
   `idSambutan` int(11) NOT NULL,
   `nip` int(11) DEFAULT NULL,
   `isi` varchar(255) DEFAULT NULL,
@@ -369,11 +395,11 @@ CREATE TABLE IF NOT EXISTS `sambutan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `siswa`
+-- Table structure for table `siswa`
 --
 
-CREATE TABLE IF NOT EXISTS `siswa` (
-`nis` int(11) NOT NULL,
+CREATE TABLE `siswa` (
+  `nis` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `gender` char(1) NOT NULL,
@@ -383,10 +409,10 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `pass` int(11) DEFAULT NULL,
   `agama` varchar(100) DEFAULT NULL,
   `pathImg` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=901 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `siswa`
+-- Dumping data for table `siswa`
 --
 
 INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir`, `idKelas`, `pass`, `agama`, `pathImg`) VALUES
@@ -461,16 +487,16 @@ INSERT INTO `siswa` (`nis`, `nama`, `alamat`, `gender`, `tglLahir`, `tempatLahir
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tugasmapel`
+-- Table structure for table `tugasmapel`
 --
 
-CREATE TABLE IF NOT EXISTS `tugasmapel` (
+CREATE TABLE `tugasmapel` (
   `nip` int(11) DEFAULT NULL,
   `idMapel` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tugasmapel`
+-- Dumping data for table `tugasmapel`
 --
 
 INSERT INTO `tugasmapel` (`nip`, `idMapel`) VALUES
@@ -489,103 +515,108 @@ INSERT INTO `tugasmapel` (`nip`, `idMapel`) VALUES
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
- ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `agenda`
 --
 ALTER TABLE `agenda`
- ADD PRIMARY KEY (`id_agenda`);
+  ADD PRIMARY KEY (`id_agenda`);
 
 --
 -- Indexes for table `artikel`
 --
 ALTER TABLE `artikel`
- ADD PRIMARY KEY (`idArtikel`);
+  ADD PRIMARY KEY (`idArtikel`);
 
 --
 -- Indexes for table `ekstra`
 --
 ALTER TABLE `ekstra`
- ADD PRIMARY KEY (`idEkstra`);
+  ADD PRIMARY KEY (`idEkstra`);
 
 --
 -- Indexes for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
- ADD PRIMARY KEY (`idFasilitas`);
+  ADD PRIMARY KEY (`idFasilitas`);
 
 --
 -- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
- ADD PRIMARY KEY (`idGaleri`);
+  ADD PRIMARY KEY (`idGaleri`);
 
 --
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
- ADD PRIMARY KEY (`nip`), ADD KEY `idJabatan` (`idJabatan`);
+  ADD PRIMARY KEY (`nip`),
+  ADD KEY `idJabatan` (`kode_jabatan`);
 
 --
 -- Indexes for table `jabatan`
 --
 ALTER TABLE `jabatan`
- ADD PRIMARY KEY (`idJabatan`);
+  ADD PRIMARY KEY (`kode_jabatan`);
 
 --
 -- Indexes for table `jurusan`
 --
 ALTER TABLE `jurusan`
- ADD PRIMARY KEY (`idJurusan`);
+  ADD PRIMARY KEY (`idJurusan`);
 
 --
 -- Indexes for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
- ADD PRIMARY KEY (`idEvent`);
+  ADD PRIMARY KEY (`id_event`);
 
 --
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
- ADD PRIMARY KEY (`idKelas`), ADD KEY `idJurusan` (`idJurusan`);
+  ADD PRIMARY KEY (`idKelas`),
+  ADD KEY `idJurusan` (`idJurusan`);
 
 --
 -- Indexes for table `matapelajaran`
 --
 ALTER TABLE `matapelajaran`
- ADD PRIMARY KEY (`idMapel`);
+  ADD PRIMARY KEY (`idMapel`);
 
 --
 -- Indexes for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
- ADD PRIMARY KEY (`idPengumuman`);
+  ADD PRIMARY KEY (`id_pengumuman`);
 
 --
 -- Indexes for table `profilsekolah`
 --
 ALTER TABLE `profilsekolah`
- ADD PRIMARY KEY (`idProfil`), ADD KEY `nip` (`nip`);
+  ADD PRIMARY KEY (`idProfil`),
+  ADD KEY `nip` (`nip`);
 
 --
 -- Indexes for table `sambutan`
 --
 ALTER TABLE `sambutan`
- ADD PRIMARY KEY (`idSambutan`);
+  ADD PRIMARY KEY (`idSambutan`);
 
 --
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
- ADD PRIMARY KEY (`nis`), ADD KEY `idKelas` (`idKelas`);
+  ADD PRIMARY KEY (`nis`),
+  ADD KEY `idKelas` (`idKelas`);
 
 --
 -- Indexes for table `tugasmapel`
 --
 ALTER TABLE `tugasmapel`
- ADD KEY `nip` (`nip`), ADD KEY `idMapel` (`idMapel`);
+  ADD KEY `nip` (`nip`),
+  ADD KEY `idMapel` (`idMapel`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -595,96 +626,109 @@ ALTER TABLE `tugasmapel`
 -- AUTO_INCREMENT for table `agenda`
 --
 ALTER TABLE `agenda`
-MODIFY `id_agenda` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+  MODIFY `id_agenda` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-MODIFY `idArtikel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idArtikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `ekstra`
 --
 ALTER TABLE `ekstra`
-MODIFY `idEkstra` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idEkstra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `idFasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=660100006;
+  MODIFY `idGaleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=660100006;
+
 --
 -- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
-MODIFY `idJabatan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `kode_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `idJurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
-MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_event` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `idKelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `matapelajaran`
 --
 ALTER TABLE `matapelajaran`
-MODIFY `idMapel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `idMapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-MODIFY `idPengumuman` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengumuman` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=901;
+  MODIFY `nis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
+
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `guru`
+-- Constraints for table `guru`
 --
 ALTER TABLE `guru`
-ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`idJabatan`) REFERENCES `jabatan` (`idJabatan`);
+  ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`kode_jabatan`) REFERENCES `jabatan` (`kode_jabatan`);
 
 --
--- Ketidakleluasaan untuk tabel `kelas`
+-- Constraints for table `kelas`
 --
 ALTER TABLE `kelas`
-ADD CONSTRAINT `kelas_ibfk_1` FOREIGN KEY (`idJurusan`) REFERENCES `jurusan` (`idJurusan`);
+  ADD CONSTRAINT `kelas_ibfk_1` FOREIGN KEY (`idJurusan`) REFERENCES `jurusan` (`idJurusan`);
 
 --
--- Ketidakleluasaan untuk tabel `profilsekolah`
+-- Constraints for table `profilsekolah`
 --
 ALTER TABLE `profilsekolah`
-ADD CONSTRAINT `profilsekolah_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`);
+  ADD CONSTRAINT `profilsekolah_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`);
 
 --
--- Ketidakleluasaan untuk tabel `siswa`
+-- Constraints for table `siswa`
 --
 ALTER TABLE `siswa`
-ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`idKelas`) REFERENCES `kelas` (`idKelas`);
+  ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`idKelas`) REFERENCES `kelas` (`idKelas`);
 
 --
--- Ketidakleluasaan untuk tabel `tugasmapel`
+-- Constraints for table `tugasmapel`
 --
 ALTER TABLE `tugasmapel`
-ADD CONSTRAINT `tugasmapel_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`),
-ADD CONSTRAINT `tugasmapel_ibfk_2` FOREIGN KEY (`idMapel`) REFERENCES `matapelajaran` (`idMapel`);
+  ADD CONSTRAINT `tugasmapel_ibfk_1` FOREIGN KEY (`nip`) REFERENCES `guru` (`nip`),
+  ADD CONSTRAINT `tugasmapel_ibfk_2` FOREIGN KEY (`idMapel`) REFERENCES `matapelajaran` (`idMapel`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

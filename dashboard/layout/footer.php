@@ -4,7 +4,7 @@
   <br>
    -->
   <!-- Footer -->
-  <footer class="py-5 bg-primary">
+  <footer class="py-5 bg-light">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Start Bootstrap 2019</p>
     </div>

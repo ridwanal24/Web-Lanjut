@@ -1,11 +1,12 @@
 <?php
 session_start();
 include 'koneksi.php';
-include 'layout/header.php';
+include '../layout/header.php';
 if (isset( $_SESSION['status'])) {
 	# code...
 
 ?>
+<br><br><br>
 <div class="container-fluid">
 	<br>
 	<center><p class="h1">DATA AGENDA</p></center>
@@ -27,9 +28,8 @@ if (isset( $_SESSION['status'])) {
 		<td><div align="center"><strong>Id</strong></div></td>
 		<td><div align="center"><strong>Tanggal</strong></div></td>
 		<td><div align="center"><strong>Kategori</strong></div></td>
-		<td><div align="center"><strong>Gambar</strong></div></td>
 		<td><div align="center"><strong>Agenda</strong></div></td>
-		<td><div align="center"><strong>Isi Agenda</strong></div></td>
+		<td><div align="center"><strong>Detail Agenda</strong></div></td>
 		<td colspan="2"><div align="center"><strong>Aksi</strong></div></td>
 		</tr>
 			<?php
@@ -56,11 +56,11 @@ if (isset( $_SESSION['status'])) {
 			<tr bgcolor="#FFFFFF">
 			<td align="center"><?php echo $no ; ?></td>
 			<td align="center"><?php echo $dataTampil['id_agenda']; ?></td>
-			<td align="center"><?php echo date('d-m-Y', strtotime($dataTampil['tanggal'])); ?></td>
+			<td align="center"><?php echo date('d-F-Y', strtotime($dataTampil['tanggal'])); ?></td>
 			<td align="center"><?php echo $dataTampil['kategori']; ?></td>
-			<td align="center"><?php echo "<img src='images/$dataTampil[image]' width='70' height='90' />";?></td>
 			<td align="center"><?php echo $dataTampil['title']; ?></td>
-			<td align="left"><?php echo $dataTampil['descp']; ?></td>
+			<td align="center"><a href="../../detail_agenda.php?id_agenda=<?php echo $dataTampil['id_agenda'] ; ?>"><img src="gambar/detail.png" width="20"></a>
+			</td></td>
 			<td>
 			<div align="center">
 			<a href="agenda_hapus.php?id_agenda=<?php echo $dataTampil['id_agenda'] ; ?>" onclick="javascript: return confirm('Anda yakin hapus ?')"><img src="gambar/hapus.png" width="20"></a>
@@ -75,6 +75,7 @@ if (isset( $_SESSION['status'])) {
 			<tr bgcolor="#FFFFFF">
 			<td colspan="11">
 			<?php
+
 			//hitung jumlah data
 			$jml_data = mysql_num_rows(mysql_query("SELECT * FROM agenda"));
 			//Jumlah halaman
@@ -122,5 +123,5 @@ if (isset( $_SESSION['status'])) {
 	<br>
 	<?php
 }
-include 'layout/footer.php';
+include '../layout/footer.php';
 ?>
