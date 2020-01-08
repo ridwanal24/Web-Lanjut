@@ -39,7 +39,7 @@ $id = $_POST['id'];
     /*End of Upload Gambar*/
 
     /*Add To Database*/
-    $query = "update sambutan set judul='$title', text='sambutan/text/$id.txt', pathImage='$img' where idArtikel=$id";
+    $query = "update sambutan set judul='$title', text='sambutan/text/$id.txt' where idSambutan=$id";
     $hasil = mysql_query($query);
     /*End of Add To Database*/
 if($hasil){
