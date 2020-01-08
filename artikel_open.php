@@ -26,11 +26,17 @@ while ($data = mysql_fetch_array($action)) {
 		<p class="h4"><?php echo $title; ?></p>
 		<p class="font-italic text-muted">Posted on : <?php echo $date; ?></p>
 		<div class="row">
-			<div class="col-12">
-				<img class="img-fluid" src="<?php echo $img;?>">
+			<div class="col-12 p-3">
+				<img width="75%" class="img-fluid mx-auto d-block" src="<?php echo $img;?>">
 				<p class="text-left"><?php echo $artikel ;?></p>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row mb-5">
+	<div class="col-10 p-3 mx-auto bg-white rounded shadow">
+		<center><a class="btn btn-primary" href="index.php">Back to Home</a></center>
 	</div>
 </div>
 
