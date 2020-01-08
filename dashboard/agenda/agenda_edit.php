@@ -44,8 +44,14 @@ if (isset( $_SESSION['status'])) {
 						<div class="form-group col-6">
 							<label>Foto</label>
 							<div class="custom-file">
-								<input type="file" class="custom-file-input" name="file" value="<?php echo $image;?>" >
-								<label class="custom-file-label">Pilih File</label>
+								<input type="file" class="custom-file-input" name="file">
+								<label class="custom-file-label"><?php
+									if (empty($image)) {
+										echo 'Pilih File';
+									} else {
+										echo 'Foto Sudah Ada';
+									}
+								?></label>
 							</div>
 						</div>
 					</div>
