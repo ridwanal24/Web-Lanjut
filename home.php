@@ -4,6 +4,7 @@ include 'layout/header.php';
 include 'koneksi.php';
 ?>
 
+<<<<<<< HEAD
 <div class="row my-5 text-center">
   <div class="col-12 mx-auto">
   
@@ -19,6 +20,68 @@ Semoga Allah SWT meridhoinya dan masyarakat dapat mengambil manfaat yang sebesar
 
   </div>
 </div>
+=======
+<style type="text/css">
+        .masthead {
+  height: 50vh;
+  min-height: 500px;
+  background-image:  url("assets/img/banner.jpg");
+  opacity: .8;
+  filter: alpha(opacity=80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+    </style>
+    <!-- Core Stylesheet -->
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<header class="masthead ">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light text-white"><strong>Sekolahku Negeri 1 Yogyakarta<strong></h1>
+        <p class="lead text-white">A great starter layout for a landing page</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ***** Top Feature Area Start ***** -->
+<div class="fancy-top-features-area bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="fancy-top-features-content">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-4">
+                                <div class="single-top-feature">
+                                    <h5><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Reliability</h5>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="single-top-feature">
+                                    <h5><i class="fa fa-clock-o" aria-hidden="true"></i> Expertise</h5>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="single-top-feature">
+                                    <h5><i class="fa fa-diamond" aria-hidden="true"></i> Quality</h5>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <!-- ***** Top Feature Area End ***** -->
+>>>>>>> f9aa4e469d3e7ab5bace969941f414b38027cf2c
 
 <!-- Page Article -->
 <div class="row m-0 mt-5 text-center">
@@ -106,8 +169,14 @@ Semoga Allah SWT meridhoinya dan masyarakat dapat mengambil manfaat yang sebesar
     <hr>
   </div>
   <div class="col-4"></div>
+<<<<<<< HEAD
 </div>-->
 <br>
+=======
+</div>
+
+    <br>
+>>>>>>> f9aa4e469d3e7ab5bace969941f414b38027cf2c
 <br>
 <br>
 <?php

@@ -33,7 +33,7 @@ else{
 					<tr>
 						<td><label for="pathImg">Gambar</label></td>
 						<td> : </td>
-						<td><input type="file" accept="image/*" name="gbr" id="gbr" class="input1" placeholder="gambar" value="<?php echo $row['pathImg'];?>"/></td>
+						<td><input type="file" name="file" class="input1" value="<?php echo $row['pathImg'];?>"/></td>
 					</tr>
 				    <tr>
 					    <td></td>

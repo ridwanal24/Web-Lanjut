@@ -14,7 +14,7 @@
 
     if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
         if($ukuran < 5044070){          
-            move_uploaded_file($file_tmp, '../../assets/img/galeri/'.$idGaleri.'.png');
+            move_uploaded_file($file_tmp, '../../assets/img/galeri/'.$idGaleri.'.jpg');
             $img = "yes";
         }else{
             echo 'UKURAN FILE TERLALU BESAR';
