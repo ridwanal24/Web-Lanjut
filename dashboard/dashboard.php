@@ -141,7 +141,7 @@ if ((!isset($_SESSION['status'])) AND ($_SESSION['status']!="Admin")) {
       <div class="card shadow h-100">
         <img class="card-img-top" src="img/schprof.png" alt="">
         <div class="card-body">
-          <a class="btn btn-primary card-title" href="profil_sch/">Profil Sekolah</a>
+          <a class="btn btn-primary card-title" href="event/event_data.php">Event</a>
         </div>
       </div>
     </div>
