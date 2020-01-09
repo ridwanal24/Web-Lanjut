@@ -21,6 +21,7 @@ if (isset( $_SESSION['status'])) {
 						<th scope="col">No</th>
 						<th scope="col">Tanggal</th>
 						<th scope="col">Agenda</th>
+						<th scope="col">Aksi</th>
 
 					</tr>
 				</thead>

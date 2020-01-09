@@ -26,7 +26,7 @@ Semoga Allah SWT meridhoinya dan masyarakat dapat mengambil manfaat yang sebesar
     <h5 class="text-muted text-left my-3">ARTIKEL</h5>
     <hr>
     <?php
-    $query = "SELECT * from artikel limit 2";
+    $query = "SELECT * from artikel ORDER BY date desc limit 2";
     $action = mysql_query($query);
     while ($data = mysql_fetch_array($action)) {
       /*File Artikel*/

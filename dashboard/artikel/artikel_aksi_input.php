@@ -38,7 +38,7 @@ include 'koneksi.php';
     /*End of Upload Gambar*/
 
     /*Add To Database*/
-    $query = "insert into artikel(idArtikel, judul, text, pathImage, date) values ($id,'$title','artikel/text/$id.txt')";
+    $query = "insert into artikel(idArtikel, judul, text, pathImage, date) values ($id,'$title','artikel/text/$id.txt','$img','$date')";
     $hasil = mysql_query($query);
     /*End of Add To Database*/
     

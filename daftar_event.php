@@ -29,7 +29,7 @@ if (isset( $_SESSION['status'])) {
 				<tbody>
 
 					<?php	
-					$query = "SELECT * FROM event ORDER BY id_event DESC";
+					$query = "SELECT * FROM kegiatan ORDER BY id_event DESC";
 					$show=mysql_query($query);
 					$nomor=1;
 					while ($result=mysql_fetch_array($show)) {

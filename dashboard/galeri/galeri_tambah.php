@@ -1,11 +1,16 @@
 <?php
 session_start();
 include '../layout/header.php';
+include 'koneksi.php';
 if (empty($_SESSION['username']) AND empty($_SESSION['passuser'])) {
 	echo "<center>Untuk mengakses halaman ini, Anda harus login <br>";
 	echo "<a href=index.php><b>LOGIN</b></a></center>";
 }
 else{
+	$query = "select max(idGaleri) as id from galeri";
+	$action = mysql_query($query);
+	while($data = mysql_fetch_array($action)){
+		$id=$data['id'];
 	?>
 <br>
 	<form action="galeri_aksi_input.php" method="post" enctype="multipart/form-data">
@@ -30,5 +35,6 @@ else{
 		<!-- </body>
 			</html> -->
 <?php }
+}
     include '../layout/footer.php';
 ?>

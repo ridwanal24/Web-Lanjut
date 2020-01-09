@@ -22,7 +22,7 @@ if (isset( $_SESSION['status'])) {
 					</div>
 					<div class="form-group">
 						<label>Tanggal</label>
-						<input class="form-control" type="date" placeholder="Tanggal" name="tanggal" placeholder="Diisi oleh system" disabled="disabled">
+						<input class="form-control" type="date" placeholder="Tanggal" name="tanggal" >
 					</div>
 					<div class="form-group">
 						<label>Posting</label>
