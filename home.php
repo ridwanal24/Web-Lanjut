@@ -8,7 +8,9 @@ include 'koneksi.php';
         .masthead {
   height: 50vh;
   min-height: 500px;
-  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-image:  url("assets/img/banner.jpg");
+  opacity: .8;
+  filter: alpha(opacity=80);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,12 +18,12 @@ include 'koneksi.php';
     </style>
 </head>
 
-<header class="masthead">
+<header class="masthead ">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
-        <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
-        <p class="lead">A great starter layout for a landing page</p>
+        <h1 class="font-weight-light text-white"><strong>Sekolahku Negeri 1 Yogyakarta<strong></h1>
+        <p class="lead text-white">A great starter layout for a landing page</p>
       </div>
     </div>
   </div>
