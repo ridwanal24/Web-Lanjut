@@ -4,6 +4,22 @@ include 'layout/header.php';
 include 'koneksi.php';
 ?>
 
+<div class="row my-5 text-center">
+  <div class="col-12 mx-auto">
+  
+  <div class=" jumbotron bg-white rounded shadow">
+  <h1 class="display-4">Sambutan</h1>
+  <p class="lead" align="justify"><small>Assalamu'alaikum Warahmatullahi Wabarakaatuh.
+Salam sejahtera dan tetap semangat. Selamat datang di website SMAN 78 Jakarta
+Sebagai media informasi dan komunikasi web SMAN 78 dibangun dan dikembangkan dalam rangka meningkatkan layanan sekolah kepada peserta didik, orang tua, masyarakat dan stakeholder. Kualitas layanan menjadi salah satu misi sekolah dan kaitannya dengan transparansi dan akuntabilitas sekolah. Melaksanakan amanah sebagai pimpinan di SMAN 78, harapan untuk menjadikan sekolah besar dengan bertabur prestasi baik akademik maupun non akademik terus meningkat. Sekolah yang akan melahirkan generasi yang kreatif, inovatif, religius yang berwawasan lingkungan serta mengabdi kepada bangsa dan negara. Mendorong terus berkembangnya inovasi dan kreasi warga sekolah. Meningkatkan kekeluargaan dan kerjasama dengan seluruh komponen berlandaskan semangat 5S (senyum, sapa, salam, sopan dan santun). Dari lubuk hati yang dalam, saya mengajak seluruh warga sekolah,orang tua, masyarakat dan stakeholder, marilah kita bergandeng tangan dan berkolaborasi untuk menciptakan sekolah yang nyaman, aman dan menyenangkan bagi putra-putri kita dalam menuntut ilmu. Tetap mempertahankan image SMAN 78 sebagai sekolah unggulan baik di Jakarta Barat, DKI Jakarta maupun Indonesia serta 'Sekolah tempat kunjungan/rujukan sekolah lain dari seluruh Indonesia' karena keunggulan yang telah dimiliki, sekolah penyelenggara Sistem Kredit Semester (SKS), pelayanan bagi peserta didik yang memiliki potensi untuk menyelesaikan pendidikan di SMA selama 4 semester, dan adaptasi kurikulum dan penilaian melalui kerjasama dan afiliasi dengan University Of Cambridge International Examination dalam melaksanakan ujian internasional pada tingkat IGCSE dan As/A Level. Hingga pada akhirnya mencapai visi sekolah yang berprestasi hingga tingkat dunia.
+<br>
+Semoga Allah SWT meridhoinya dan masyarakat dapat mengambil manfaat yang sebesar-besarnya dengan segala usaha dan upaya SMA Negeri 78.
+<br>Wassalamu'alaikum Warohmatullahi Wabarokatuh.</small></p>
+</div>
+
+  </div>
+</div>
+
 <!-- Page Article -->
 <div class="row m-0 mt-5 text-center">
   <div id="artikel" class="col-6 rounded mx-auto bg-white shadow">
@@ -84,13 +100,13 @@ include 'koneksi.php';
 </div>
 <!-- /.row -->
 
-<div class="row mt-5">
+<!--<div class="row mt-5">
   <div class="col-6 bg-white shadow mx-auto rounded p-3">
     <h5 class="text-muted">FASILITAS</h5>
     <hr>
   </div>
   <div class="col-4"></div>
-</div>
+</div>-->
 <br>
 <br>
 <br>

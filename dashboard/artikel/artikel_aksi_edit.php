@@ -3,7 +3,6 @@ include "koneksi.php";
 $id = $_POST['id']; 
     $title = $_POST['title'];
     $isi = $_POST['isi'];
-    $img = "no";
 
     /*Create File Article*/
     $path="artikel/text/";

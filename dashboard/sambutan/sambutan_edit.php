@@ -18,7 +18,7 @@ else{
 	while ($data = mysql_fetch_array($action)) {
 		$title = $data['judul'];
 		$deskripsi = $data['deskripsi'];
-		$sambutan = fopen($data['text'], "r");
+		$sambutan = fopen($data["sambutan/text/".$data['idSambutan'], "r");
 		$text = fread($sambutan, filesize($data['text']));
 		?>
 		<div class="container-fluid">

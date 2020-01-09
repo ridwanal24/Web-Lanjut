@@ -41,9 +41,6 @@
             <a class="nav-link text-secondary" href="galeri.php">Galeri</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="artikel.php">Artikel</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link text-secondary" href="profil_sekolah.php">Profil Sekolah</a>
           </li>
 
