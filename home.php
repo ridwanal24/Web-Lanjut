@@ -4,6 +4,29 @@ include 'layout/header.php';
 include 'koneksi.php';
 ?>
 
+<style type="text/css">
+        .masthead {
+  height: 50vh;
+  min-height: 500px;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+    </style>
+</head>
+
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
+        <p class="lead">A great starter layout for a landing page</p>
+      </div>
+    </div>
+  </div>
+</header>
+
 <!-- Page Article -->
 <div class="row m-0 mt-5 text-center">
   <div id="artikel" class="col-6 rounded mx-auto bg-white shadow">

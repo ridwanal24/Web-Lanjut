@@ -11,7 +11,7 @@ include 'layout/header.php';
 
     <br>
     <div class="row">
-      <div class="col-md-2"></div>
+      <div class=""></div>
       <?php
       $db = new mysqli("localhost","root","","db_sekolahmu");
       $sql = "SELECT pathImg, pathVideo FROM galeri ";
